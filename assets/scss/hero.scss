@@ -1,0 +1,25 @@
+@mixin mobileHero{
+  div#hero{
+    width: 100%;
+    overflow: hidden;
+    position:relative;
+    figure{
+      @include centered;
+      img{
+        width: 200%;
+      }
+    }
+    div#banner{
+      @include centered;
+      position:absolute;
+      bottom: 0;
+      height: 15vh;
+      background-color: rgba(0,152,219, 0.5);
+    }
+  }
+}
+@mixin minHero{}
+@mixin medHero{}
+@mixin maxHero{}
+
+

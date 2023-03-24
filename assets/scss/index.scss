@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+@import "header";
+@import "hero";
+
+
+@mixin centered {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+@media only all and (min-width: 0) {
+  @include mobileHeader;
+  @include mobileHero;
+  main{
+    padding-top: 0rem;
+    min-height: 100vh;
+    margin-bottom: 2.5rem;
+  }
+  footer{
+    height: 10rem;
+    width: 100%;
+    background-color: rgba(25,25,25,1);
+    text-align:center;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+  }
+}
+@media only all and (min-width: 760px) {
+  @include minHeader;
+  @include minHero;
+}
+@media only all and (min-width: 992px) {
+  @include medHeader;
+  @include medHero;
+}
+@media only all and (min-width: 1200px) {
+  @include maxHeader;
+  @include maxHeader;
+}
