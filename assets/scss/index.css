@@ -112,6 +112,7 @@
   }
   div#hero {
     width: 100%;
+    height: 70vh;
     overflow: hidden;
     position: relative;
   }
@@ -125,7 +126,7 @@
     width: 100%;
   }
   div#hero figure img {
-    width: 200%;
+    width: 250%;
   }
   div#hero div#banner {
     display: flex;
@@ -209,8 +210,21 @@
     border-color: rgb(0, 152, 219);
     width: 100%;
   }
+  header nav#mainNav ul li a.current.current, header nav#mainNav ul li a:hover.current, header nav#mainNav ul li a:active.current, header nav#mainNav ul li a:focus.current {
+    color: rgb(0, 152, 219);
+    font-weight: bolder;
+  }
   header.isOpen {
     height: 5rem;
+  }
+  div#hero {
+    height: 90vh;
+  }
+  div#hero div#banner {
+    width: 20vw;
+    height: 20vw;
+    bottom: 15%;
+    right: 2.5rem;
   }
 }
 @media only all and (min-width: 1200px) {

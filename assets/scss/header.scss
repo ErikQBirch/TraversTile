@@ -172,6 +172,10 @@
                 border-color: rgb(0,152,219);
                 width: 100%;
               }
+              &.current{
+                color: rgb(0,152,219);
+                font-weight: bolder;
+              }
             }
           }
         }

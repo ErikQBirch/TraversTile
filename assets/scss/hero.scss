@@ -1,12 +1,13 @@
 @mixin mobileHero{
   div#hero{
     width: 100%;
+    height: 70vh;
     overflow: hidden;
     position:relative;
     figure{
       @include centered;
       img{
-        width: 200%;
+        width: 250%;
       }
     }
     div#banner{
@@ -18,8 +19,32 @@
     }
   }
 }
-@mixin minHero{}
-@mixin medHero{}
+@mixin minHero{
+  div#hero{
+    figure{
+      img{
+      }
+    }
+    div#banner{
+    }
+  }
+}
+@mixin medHero{
+  div#hero{
+    height: 90vh;
+    // border: 
+    figure{
+      img{
+      }
+    }
+    div#banner{
+      width: 20vw;
+      height: 20vw;
+      bottom: 15%;
+      right: 2.5rem;
+    }
+  }
+}
 @mixin maxHero{}
 
 
