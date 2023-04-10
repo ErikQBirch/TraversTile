@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, p, div, article {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 @media only all and (min-width: 0) {
   header {
     height: 7.5rem;
@@ -141,6 +145,9 @@
     height: 15vh;
     background-color: rgba(0, 152, 219, 0.5);
   }
+  div#hero div#banner:hover, div#hero div#banner:active, div#hero div#banner:focus {
+    background-color: rgba(236, 145, 74, 0.5);
+  }
   main {
     padding-top: 0rem;
     min-height: 100vh;
@@ -155,6 +162,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+@media only all and (min-width: 760px) {
+  div#hero figure img {
+    width: 150%;
   }
 }
 @media only all and (min-width: 992px) {
@@ -218,12 +230,15 @@
     height: 5rem;
   }
   div#hero {
-    height: 90vh;
+    height: 80vh;
+  }
+  div#hero figure img {
+    width: 100%;
   }
   div#hero div#banner {
-    width: 20vw;
+    width: 40vw;
     height: 20vw;
-    bottom: 15%;
+    bottom: 20%;
     right: 2.5rem;
   }
 }

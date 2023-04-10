@@ -16,6 +16,9 @@
       bottom: 0;
       height: 15vh;
       background-color: rgba(0,152,219, 0.5);
+      &:hover, &:active, &:focus{
+        background-color:rgba(236,145,74, 0.5);
+      }
     }
   }
 }
@@ -23,6 +26,7 @@
   div#hero{
     figure{
       img{
+        width: 150%;
       }
     }
     div#banner{
@@ -31,16 +35,17 @@
 }
 @mixin medHero{
   div#hero{
-    height: 90vh;
+    height: 80vh;
     // border: 
     figure{
       img{
+        width: 100%;
       }
     }
     div#banner{
-      width: 20vw;
+      width: 40vw;
       height: 20vw;
-      bottom: 15%;
+      bottom: 20%;
       right: 2.5rem;
     }
   }

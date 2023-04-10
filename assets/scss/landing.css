@@ -1,1 +1,137 @@
-/*# sourceMappingURL=landing.css.map */
+@media only all and (min-width: 0) {
+  #gallerySection h1 {
+    width: 100%;
+    text-align: center;
+  }
+  #gallerySection article {
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  #gallerySection article a {
+    width: 100%;
+    text-decoration: none;
+  }
+  #gallerySection article a figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  #gallerySection article a figure img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    width: 100vw;
+  }
+  #gallerySection article a h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: rgb(0, 152, 219);
+  }
+  #gallerySection article a:hover h2, #gallerySection article a:active h2, #gallerySection article a:focus h2 {
+    color: rgb(236, 145, 74);
+    text-decoration: underline;
+  }
+  #gallerySection a#moreLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem 2.5rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: rgba(0, 152, 219, 0.5);
+    color: black;
+    text-decoration: none;
+  }
+  #gallerySection a#moreLink:hover, #gallerySection a#moreLink:active {
+    background-color: rgb(236, 145, 74);
+  }
+  #aboutSection a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
+  #aboutSection a figure {
+    width: 100%;
+  }
+  #aboutSection a figure img {
+    width: 100%;
+  }
+  #aboutSection a div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+  }
+}
+@media only all and (min-width: 760px) {
+  #gallerySection article {
+    margin: 1rem auto;
+    width: 80%;
+  }
+  #gallerySection article a {
+    display: flex;
+    flex-direction: row;
+  }
+  #gallerySection article a figure {
+    width: 70%;
+    overflow: hidden;
+  }
+  #gallerySection article a h2 {
+    position: initial;
+    width: 30%;
+    background-color: rgba(0, 152, 219, 0.75);
+    color: white;
+  }
+  #gallerySection article a:hover h2, #gallerySection article a:active h2, #gallerySection article a:focus h2 {
+    color: white;
+    background-color: rgba(236, 145, 74, 0.75);
+  }
+  #gallerySection article:nth-of-type(2n) a {
+    flex-direction: row-reverse;
+  }
+}
+@media only all and (min-width: 992px) {
+  #gallerySection article {
+    width: 60%;
+  }
+  #gallerySection article:nth-of-type(2n) a {
+    flex-direction: row-reverse;
+  }
+}/*# sourceMappingURL=landing.css.map */
