@@ -165,6 +165,10 @@ h1, h2, h3, h4, h5, p, div, article {
   }
 }
 @media only all and (min-width: 760px) {
+  div#hero {
+    border-top: 2rem solid rgb(96, 96, 98);
+    border-bottom: 2rem solid rgb(96, 96, 98);
+  }
   div#hero figure img {
     width: 150%;
   }

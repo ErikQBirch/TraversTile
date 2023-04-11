@@ -1,0 +1,116 @@
+
+@mixin mobileCarousel {
+    position:relative;
+    #carousel{
+      color: white;
+      width: 100%;
+      height: 60vh;
+      // background-color:rgba(0,0,0,0.5);
+      overflow:hidden;
+      cursor: pointer;
+      #slideHolder{
+        display:flex;
+        width: fit-content;
+        height: 60vh;
+        div{
+          width: 100vw;
+          height: 60vh;
+          overflow:hidden;
+          display:flex;
+          flex-direction: column;
+          align-items:center;
+          justify-content:center;
+          img{
+            height: 60vh;
+            // width: 100vw;
+          }
+        }
+      }
+      #slideControls{
+        position:absolute;
+        top:0;
+        height: 60vh;
+        width: 100%;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        button{
+          color:rgba(255,255,255,0.75);
+          background-color: rgba(0,0,0,0.5);
+          font-size: 5rem;
+          width: 3.5rem;
+          border:none;          
+          border-radius: 5px;
+          transition: background-color 0.25s;
+          cursor:pointer;
+          &:hover,&:active,&:focus{
+            background-color: rgba(0,75,255,0.5);
+          }
+        }
+      }
+    }
+    #carousel_nav{
+      display:flex;
+      width: 50%;
+      justify-content: center;
+      margin: 1rem auto;
+      
+      button{
+        margin: 0 0.25rem;
+        border:none;
+        background-color: transparent;
+        transition: color 0.25s;
+        color: white;
+        cursor:pointer;
+      }
+      button.currentBtn{
+        color: rgba(255,255,255,0.5);
+      }
+      button{
+        &:hover,&:active,&:focus{
+          color:rgb(0,152,219);
+        }
+      }
+    }
+    #carousel_note {
+      margin: 1rem auto;
+      display:flex;
+      width: fit-content;
+      color:white;
+    }
+}
+@mixin minCarousel {
+  // main{
+  //   margin-top: 0;
+  // }
+}
+@mixin medCarousel {
+  #carousel{
+    outline: 5px solid black;
+    width: 45vw;
+    margin: 0 auto;
+    #slideHolder{
+      figure{
+        width: 45vw;
+        img{
+        }
+      }
+    }
+    #slideControls{
+      width: 45vw;
+      button{     
+      }
+      button:hover,
+      button:active{
+      }
+    }
+  }
+  #carousel_nav{
+    button{}
+    button.currentBtn{
+
+    }
+  }
+}
+@mixin maxCarousel {
+}

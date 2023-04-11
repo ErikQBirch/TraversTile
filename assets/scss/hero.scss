@@ -24,6 +24,8 @@
 }
 @mixin minHero{
   div#hero{
+    border-top: 2rem solid rgb(96,96,98);
+    border-bottom: 2rem solid rgb(96,96,98);
     figure{
       img{
         width: 150%;
