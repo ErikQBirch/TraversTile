@@ -49,10 +49,14 @@
             // color:rgba(0,152,219, 1);
             color:transparent;
           }
-          &:hover, &:active, &:focus{
+          &:hover{
             h2{
-              // background-color: rgba(0,152,219, 0.5);
-              color:rgb(236,145,74);
+              background-color: rgba(0,152,219, 0.5);
+            }
+          }
+          &:active, &:focus{
+            h2{
+              background-color:rgba(236,145,74,0.5);
               text-decoration: underline
             }
           }
@@ -74,44 +78,51 @@
     }
   }
   #aboutSection{
-    a{
-      @include centered;
-      position: relative;
-      margin: 2.5rem 0;
-      color: white;
-      overflow:hidden;
-      figure{
-        width: 100%;
-        background-color: rgb(96,96,98);;
-        img{
-          width: 100%;
-        }
-      }  
-      div{
-        @include centered();
-        position: absolute;
-        height: 100%;
-        top:0;
-        background-color: rgba(0,0,0,0.5);
-        justify-content: flex-end;
-        h1,p {
-          background-color: rgba(0,152,219, 0.25);
-          margin: 0;
-          width: 100%;
-          padding: 0 5vw;
-        }
-        h1{
-          padding-top: 1rem;
-        }
-        p{
-          padding-bottom: 1rem;
-        }
+    position:relative;
+    margin: 2.5rem auto;
+    height: 30rem;
+    overflow:hidden;
+    display:flex;
+    background-image: url("../resources/imgs/landing/landing6.webp");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    figure{
+      @include centered();
+      justify-content: flex-start;
+      background-color: rgb(96,96,98);
+      overflow: hidden;
+      img{
+        width: 135%;
       }
-      &:hover, &:active, &:focus{
-        div{
-          h1,p{
-            background-color:rgba(236,145,74, 0.5);
+    } 
+    div{
+      @include centered();
+      position: absolute;
+      height: 100%;
+      top:0;
+      background-color: rgba(0,0,0,0.5);
+      justify-content: flex-end;
+      a{
+          color: white;
+          text-decoration: none;
+          h1,p {
+            background-color: rgba(0,152,219, 0.25);
+            margin: 0;
+            width: 100%;
+            padding: 0 5vw;
           }
+          h1{
+            padding-top: 1rem;
+          }
+          p{
+            padding-bottom: 1rem;
+          }
+          &:hover, &:active, &:focus{
+    
+              h1,p{
+                background-color:rgba(236,145,74, 0.5);
+              }
         }
       }
     }
@@ -176,21 +187,19 @@
   }
   #aboutSection{
     width: 80%;
-    margin: auto;
-    a{
-      height: 25rem;
-      justify-content: flex-start;
-      figure{
-        img{
-        }
-      }  
-      div{
-        h1,p {
-        }
-        h1{
-        }
-        p{
-        }
+    figure{
+      img{
+        width: 100%;
+      }
+    }  
+    div{
+      a{
+          h1,p {
+          }
+          h1{
+          }
+          p{
+          }     
       }
     }
   }
@@ -243,35 +252,42 @@
   }
   #aboutSection{
     width: 100%;
+  
     // background-color:rgba(0,0,0,0.75);
-    a{
-      width: 80%;
-      margin: 5rem auto;
-      flex-direction: row;
-      text-decoration:none;
-      align-items: flex-start;
-      figure{
-        img{
-        }
-      }  
-      div{
-        position: initial;
-        background-color: rgba(0,152,219, 1);
-        justify-content: flex-start;
-        h1,p {
-          background-color: transparent;
-        
-            margin-bottom: 1rem;
-        }
+    width: 80%;
+    margin: 5rem auto;
+    flex-direction: row;
+    text-decoration:none;
+    align-items: flex-start;
+    figure{
+      img{
+        width: 125%;
       }
-      &:hover, &:active, &:focus{
-        div{
-          background-color:rgba(236,145,74, 1);
-          h1,p{
+    }  
+    div{
+      position: initial;
+      justify-content: center;
+      a{
+        width: 75%;
+        margin: 0 auto;
+        background-color: rgba(0,152,219, 0.5);
+        justify-content: flex-start;
+    
+          h1,p {
             background-color: transparent;
+          
+              margin-bottom: 1rem;
           }
-        }
-    }
+        
+        &:hover, &:active, &:focus{
+          
+            background-color:rgba(236,145,74, 0.5);
+            h1,p{
+              background-color: transparent;
+            }
+          
+      }
+      }
     }
   }
 }

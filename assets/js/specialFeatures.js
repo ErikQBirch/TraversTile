@@ -10,7 +10,7 @@ export const specialFeatures = {
       slideHolder = helperFunctions.generateElement('div',"slideHolder"),
       slideControls = this.carousel_slideControls(),
       carousel_nav = helperFunctions.generateElement('div', "carousel_nav"),
-      carousel_note = helperFunctions.generateElement('span',"carousel_note","","Click/Tap to enlarge")
+      carousel_note = helperFunctions.generateElement('a',"carousel_note","","See More","../pages/reviews.html")
     ){
       
       carouselArray.forEach(item => {
@@ -119,20 +119,6 @@ export const specialFeatures = {
         slideHolder.style.transform = `translate(${-slideWidth*this.index}px)`;
         slideHolder.style.transition = '0.75s';
       },
-      previewCurrentSlide: function(
-        imgPath,
-        main = document.querySelector('main'),
-        section = helperFunctions.generateElement('section',"preview"),
-        figure = helperFunctions.generateElement('figure'),
-        img = helperFunctions.generateElement('img',"","","",imgPath),
-        note = helperFunctions.generateElement('span',"","","Click/Tap anywhere to close")
-      ){
-        main = helperFunctions.nestChildren(main, section,figure,img);
-        section.appendChild(note);
-        section.addEventListener('click',()=>{
-          section.remove();
-        })
-      },
       setUp: function(
         carousel = document.getElementById('carousel'),
         slideHolder = document.getElementById('slideHolder'),
@@ -201,7 +187,7 @@ export const specialFeatures = {
           if (e.target.id == "slideControls"){
             let currentSlide = document.querySelector('.currentSlide');
             let currentImg = currentSlide.children[0].src;
-            this.previewCurrentSlide(currentImg);
+            // this.previewCurrentSlide(currentImg);
           }
         });
 

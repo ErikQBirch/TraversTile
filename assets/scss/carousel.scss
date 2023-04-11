@@ -4,24 +4,25 @@
     #carousel{
       color: white;
       width: 100%;
-      height: 60vh;
+      height: 50vh;
       // background-color:rgba(0,0,0,0.5);
       overflow:hidden;
-      cursor: pointer;
+      // cursor: pointer;
       #slideHolder{
         display:flex;
         width: fit-content;
-        height: 60vh;
+        height: 50vh;
         div{
           width: 100vw;
-          height: 60vh;
+          height: 50vh;
+          padding: 0 3.5rem;
           overflow:hidden;
           display:flex;
           flex-direction: column;
           align-items:center;
           justify-content:center;
           img{
-            height: 60vh;
+            height: 50vh;
             // width: 100vw;
           }
         }
@@ -29,7 +30,7 @@
       #slideControls{
         position:absolute;
         top:0;
-        height: 60vh;
+        height: 50vh;
         width: 100%;
         display:flex;
         align-items:center;
@@ -44,7 +45,7 @@
           transition: background-color 0.25s;
           cursor:pointer;
           &:hover,&:active,&:focus{
-            background-color: rgba(0,75,255,0.5);
+            background-color: rgba(0,152,219, 0.5);
           }
         }
       }
@@ -74,9 +75,16 @@
     }
     #carousel_note {
       margin: 1rem auto;
+      padding: 1rem;
       display:flex;
       width: fit-content;
       color:white;
+      &:hover{
+        color:rgb(0,152,219);
+      }
+      &:active, &:focus{
+        color:rgba(236,145,74,1);
+      }
     }
 }
 @mixin minCarousel {

@@ -51,8 +51,11 @@
     height: 100%;
     color: transparent;
   }
-  #gallerySection #sampleHolder article a:hover h2, #gallerySection #sampleHolder article a:active h2, #gallerySection #sampleHolder article a:focus h2 {
-    color: rgb(236, 145, 74);
+  #gallerySection #sampleHolder article a:hover h2 {
+    background-color: rgba(0, 152, 219, 0.5);
+  }
+  #gallerySection #sampleHolder article a:active h2, #gallerySection #sampleHolder article a:focus h2 {
+    background-color: rgba(236, 145, 74, 0.5);
     text-decoration: underline;
   }
   #gallerySection a#moreLink {
@@ -73,26 +76,32 @@
   #gallerySection a#moreLink:hover, #gallerySection a#moreLink:active {
     background-color: rgb(236, 145, 74);
   }
-  #aboutSection a {
+  #aboutSection {
+    position: relative;
+    margin: 2.5rem auto;
+    height: 30rem;
+    overflow: hidden;
+    display: flex;
+    background-image: url("../resources/imgs/landing/landing6.webp");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #aboutSection figure {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 100%;
-    position: relative;
-    margin: 2.5rem 0;
-    color: white;
+    justify-content: flex-start;
+    background-color: rgb(96, 96, 98);
     overflow: hidden;
   }
-  #aboutSection a figure {
-    width: 100%;
-    background-color: rgb(96, 96, 98);
+  #aboutSection figure img {
+    width: 135%;
   }
-  #aboutSection a figure img {
-    width: 100%;
-  }
-  #aboutSection a div {
+  #aboutSection div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,19 +114,23 @@
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: flex-end;
   }
-  #aboutSection a div h1, #aboutSection a div p {
+  #aboutSection div a {
+    color: white;
+    text-decoration: none;
+  }
+  #aboutSection div a h1, #aboutSection div a p {
     background-color: rgba(0, 152, 219, 0.25);
     margin: 0;
     width: 100%;
     padding: 0 5vw;
   }
-  #aboutSection a div h1 {
+  #aboutSection div a h1 {
     padding-top: 1rem;
   }
-  #aboutSection a div p {
+  #aboutSection div a p {
     padding-bottom: 1rem;
   }
-  #aboutSection a:hover div h1, #aboutSection a:hover div p, #aboutSection a:active div h1, #aboutSection a:active div p, #aboutSection a:focus div h1, #aboutSection a:focus div p {
+  #aboutSection div a:hover h1, #aboutSection div a:hover p, #aboutSection div a:active h1, #aboutSection div a:active p, #aboutSection div a:focus h1, #aboutSection div a:focus p {
     background-color: rgba(236, 145, 74, 0.5);
   }
   #reviewSection {
@@ -131,19 +144,19 @@
   #reviewSection #carousel {
     color: white;
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     overflow: hidden;
-    cursor: pointer;
   }
   #reviewSection #carousel #slideHolder {
     display: flex;
     width: -moz-fit-content;
     width: fit-content;
-    height: 60vh;
+    height: 50vh;
   }
   #reviewSection #carousel #slideHolder div {
     width: 100vw;
-    height: 60vh;
+    height: 50vh;
+    padding: 0 3.5rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -151,12 +164,12 @@
     justify-content: center;
   }
   #reviewSection #carousel #slideHolder div img {
-    height: 60vh;
+    height: 50vh;
   }
   #reviewSection #carousel #slideControls {
     position: absolute;
     top: 0;
-    height: 60vh;
+    height: 50vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -173,7 +186,7 @@
     cursor: pointer;
   }
   #reviewSection #carousel #slideControls button:hover, #reviewSection #carousel #slideControls button:active, #reviewSection #carousel #slideControls button:focus {
-    background-color: rgba(0, 75, 255, 0.5);
+    background-color: rgba(0, 152, 219, 0.5);
   }
   #reviewSection #carousel_nav {
     display: flex;
@@ -197,10 +210,17 @@
   }
   #reviewSection #carousel_note {
     margin: 1rem auto;
+    padding: 1rem;
     display: flex;
     width: -moz-fit-content;
     width: fit-content;
     color: white;
+  }
+  #reviewSection #carousel_note:hover {
+    color: rgb(0, 152, 219);
+  }
+  #reviewSection #carousel_note:active, #reviewSection #carousel_note:focus {
+    color: rgb(236, 145, 74);
   }
   #reviewSection #filter {
     background-color: rgba(0, 0, 0, 0.5);
@@ -238,11 +258,9 @@
   }
   #aboutSection {
     width: 80%;
-    margin: auto;
   }
-  #aboutSection a {
-    height: 25rem;
-    justify-content: flex-start;
+  #aboutSection figure img {
+    width: 100%;
   }
 }
 @media only all and (min-width: 992px) {
@@ -276,27 +294,33 @@
   }
   #aboutSection {
     width: 100%;
-  }
-  #aboutSection a {
     width: 80%;
     margin: 5rem auto;
     flex-direction: row;
     text-decoration: none;
     align-items: flex-start;
   }
-  #aboutSection a div {
+  #aboutSection figure img {
+    width: 125%;
+  }
+  #aboutSection div {
     position: initial;
-    background-color: rgb(0, 152, 219);
+    justify-content: center;
+  }
+  #aboutSection div a {
+    width: 75%;
+    margin: 0 auto;
+    background-color: rgba(0, 152, 219, 0.5);
     justify-content: flex-start;
   }
-  #aboutSection a div h1, #aboutSection a div p {
+  #aboutSection div a h1, #aboutSection div a p {
     background-color: transparent;
     margin-bottom: 1rem;
   }
-  #aboutSection a:hover div, #aboutSection a:active div, #aboutSection a:focus div {
-    background-color: rgb(236, 145, 74);
+  #aboutSection div a:hover, #aboutSection div a:active, #aboutSection div a:focus {
+    background-color: rgba(236, 145, 74, 0.5);
   }
-  #aboutSection a:hover div h1, #aboutSection a:hover div p, #aboutSection a:active div h1, #aboutSection a:active div p, #aboutSection a:focus div h1, #aboutSection a:focus div p {
+  #aboutSection div a:hover h1, #aboutSection div a:hover p, #aboutSection div a:active h1, #aboutSection div a:active p, #aboutSection div a:focus h1, #aboutSection div a:focus p {
     background-color: transparent;
   }
 }/*# sourceMappingURL=landing.css.map */

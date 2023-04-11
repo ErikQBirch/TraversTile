@@ -12,9 +12,11 @@ const pageStuff = {
     h1 = helperFunctions.generateElement('h1',"","","About"),
     textSample = helperFunctions.generateElement('p',"","","LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, ")
   ){
-    sectionHolder = helperFunctions.nestChildren(sectionHolder, link, figure, img);
-    link.appendChild(textHolder);
-    textHolder = helperFunctions.appendChildren(textHolder, h1, textSample)
+    // sectionHolder = helperFunctions.nestChildren(sectionHolder, link, figure, img);
+    sectionHolder = helperFunctions.nestChildren(sectionHolder, figure, img);
+    // link.appendChild(textHolder);
+    link = helperFunctions.appendChildren(link, h1, textSample)
+    sectionHolder = helperFunctions.nestChildren(sectionHolder, textHolder, link);
     return sectionHolder;
   },
   constructHTML: function(
