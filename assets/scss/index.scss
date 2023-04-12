@@ -3,6 +3,7 @@
 
 @import "header";
 @import "hero";
+@import "footer";
 
 
 @mixin centered {
@@ -33,24 +34,17 @@ h1,h2,h3,h4,h5,p,div,article{
     min-height: 100vh;
     margin-bottom: 2.5rem;
   }
-  footer{
-    height: 10rem;
-    width: 100%;
-    background-color: rgba(25,25,25,1);
-    text-align:center;
-    color:white;
-    display:flex;
-    align-items: center;
-    justify-content:center;
-  }
+  @include mobileFooter;
 }
 @media only all and (min-width: 760px) {
   @include minHeader;
   @include minHero;
+  @include minFooter;
 }
 @media only all and (min-width: 992px) {
   @include medHeader;
   @include medHero;
+  @include medFooter;
 }
 @media only all and (min-width: 1200px) {
   @include maxHeader;

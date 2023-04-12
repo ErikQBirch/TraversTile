@@ -1,5 +1,6 @@
 export const reviewDB = {
   "contentType" : "textObject",
+  "name":"Review",
   "array" : [
     {
       "name":"Erik Q. Birch",

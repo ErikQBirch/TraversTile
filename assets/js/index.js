@@ -1,12 +1,14 @@
 import { helperFunctions } from "./helperFunctions.js"
 import { navigation } from "./navigation.js";
+import { footer } from "./footer,.js";
+
 const pageStuff = {
   constructHTML: function(
     body = document.querySelector('body')
   ){
     body = helperFunctions.appendChildren(body, 
       this.header(),
-    //   this.footer()
+      this.footer()
     );
     navigation.postConstructionFunctions();
     this.favicon();
@@ -29,15 +31,6 @@ const pageStuff = {
       );
     return header_tag;
   },
-  fillerContent: function(){
-    let stuff = helperFunctions.generateElement('main',"","",
-    "STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>\
-    STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>\
-    STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>\
-    STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>\
-    STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>STUFF<br>");
-    return stuff;
-  },
   favicon: function(
     favicon = document.querySelector("link[rel~='icon']"),
     pathAdjuster = helperFunctions.getPathAdjuster(navigation.pageList)
@@ -51,9 +44,17 @@ const pageStuff = {
   },
   footer: function(
     footer_tag = helperFunctions.generateElement('footer'),
-    text = helperFunctions.generateElement('p',"","","Erik Q. Birch | ©2023 | TripleA™")
+    package_array = (footer.getNavigationPackage()),
+    text = helperFunctions.generateElement('p',"","","Erik Q. Birch | ©2023 | TripleA™"),
+    topHalf = helperFunctions.generateElement('div',"topHalf_footer"),
+    bottomHalf = helperFunctions.generateElement('div',"bottomHalf_footer")
   ){
-    footer_tag.appendChild(text);
+    package_array.forEach(item => {
+      topHalf.appendChild(item)
+    });
+    // console.log(package_array)
+    bottomHalf.appendChild(text);
+    footer_tag = helperFunctions.appendChildren(footer_tag, topHalf, bottomHalf);
     return footer_tag;
   },
   scrollEvents:{

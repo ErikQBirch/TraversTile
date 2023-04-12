@@ -4,6 +4,7 @@ export const specialFeatures = {
   carousel: {
     carousel_organism: function(
       contentType,
+      carouselName,
       carouselArray,
       counter = 0,
       carousel_tag = helperFunctions.generateElement('div',"carousel"),
@@ -53,7 +54,7 @@ export const specialFeatures = {
           case "img":
             returnedSlide = helperFunctions.generateElement('figure',`slide${counter}`, "slide");
             let img = helperFunctions.generateElement('img',"","","carouselImg",`../${item}`);
-            figure.appendChild(img);
+            returnedSlide.appendChild(img);
             break;
           case "textObject":
             returnedSlide = helperFunctions.generateElement('div',`slide${counter}`,"slide",)
