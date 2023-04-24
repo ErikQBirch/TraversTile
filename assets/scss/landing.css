@@ -1,4 +1,18 @@
 @media only all and (min-width: 0) {
+  #hero figure img.dyingImg {
+    animation-name: fadeOut;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
   #gallerySection h1 {
     width: 100%;
     text-align: center;
@@ -58,6 +72,9 @@
     background-color: rgba(236, 145, 74, 0.5);
     text-decoration: underline;
   }
+  #gallerySection #sampleHolder article:not(.material) {
+    display: none;
+  }
   #gallerySection a#moreLink {
     display: flex;
     flex-direction: column;
@@ -82,7 +99,6 @@
     height: 30rem;
     overflow: hidden;
     display: flex;
-    background-image: url("../resources/imgs/landing/landing6.webp");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -256,6 +272,9 @@
   #gallerySection #sampleHolder article:nth-of-type(2n) a {
     flex-direction: row-reverse;
   }
+  #gallerySection #sampleHolder article:not(.material) {
+    display: none;
+  }
   #aboutSection {
     width: 80%;
   }
@@ -268,9 +287,12 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
   #gallerySection #sampleHolder article {
-    margin: 0 1rem;
+    margin: 1rem;
+    width: 30vw;
     height: 100%;
   }
   #gallerySection #sampleHolder article a {
@@ -291,6 +313,9 @@
   }
   #gallerySection #sampleHolder article:nth-of-type(2n) a {
     flex-direction: column;
+  }
+  #gallerySection #sampleHolder article:not(.material) {
+    display: flex;
   }
   #aboutSection {
     width: 100%;

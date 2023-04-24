@@ -11,6 +11,22 @@
 }
 
 @media only all and (min-width: 0){
+  #hero{
+    figure{
+      img{}
+        img.dyingImg{
+        animation-name:fadeOut;
+        animation-duration: 5s;
+        animation-fill-mode:forwards;
+        z-index:1;
+      }
+      @keyframes fadeOut{
+      0%{opacity: 1}
+      100%{opacity: 0}
+      // 100%{opacity: }
+    }
+    }
+  }
   #gallerySection{
     h1{
       width: 100%;
@@ -63,6 +79,9 @@
         }
         
       }
+      article:not(.material){
+        display:none;
+      }
     }
     a#moreLink{
       @include centered;
@@ -83,7 +102,6 @@
     height: 30rem;
     overflow:hidden;
     display:flex;
-    background-image: url("../resources/imgs/landing/landing6.webp");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -180,6 +198,10 @@
           flex-direction: row-reverse;
         }
       }
+      
+      article:not(.material){
+        display:none;
+      }
     }
     a#moreLink{
 
@@ -212,8 +234,11 @@
       display:flex;
       flex-direction: row;
       width: 100%;
+      justify-content: space-evenly;
+      flex-wrap:wrap;
       article{
-        margin: 0 1rem;
+        margin: 1rem;
+        width: 30vw;
         height: 100%;
         a {     
           flex-direction: column;
@@ -244,6 +269,9 @@
           // flex-direction: row-reverse;
           flex-direction: column;
         }
+      }
+      article:not(.material){
+        display:flex;
       }
     }
     a#moreLink{

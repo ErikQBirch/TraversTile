@@ -8,13 +8,14 @@ const pageStuff = {
     sectionHolder = helperFunctions.generateElement('section',"aboutSection"),
     link = helperFunctions.generateElement('a',"","","","./pages/about.html"),
     figure = helperFunctions.generateElement('figure'),
-    img = helperFunctions.generateElement('img',"","","","assets/resources/imgs/landing/landing4.webp"),
+    img = helperFunctions.generateElement('img',"","","","assets/resources/imgs/landing/aboutLanding1.webp"),
     textHolder = helperFunctions.generateElement('div',""),
     h1 = helperFunctions.generateElement('h1',"","","About"),
     textSample = helperFunctions.generateElement('p',"","","LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, ")
   ){
     // sectionHolder = helperFunctions.nestChildren(sectionHolder, link, figure, img);
     sectionHolder = helperFunctions.nestChildren(sectionHolder, figure, img);
+    sectionHolder.style.backgroundImage = "url('assets/resources/imgs/landing/aboutLanding2.webp')"
     // link.appendChild(textHolder);
     link = helperFunctions.appendChildren(link, h1, textSample)
     sectionHolder = helperFunctions.nestChildren(sectionHolder, textHolder, link);
@@ -35,15 +36,28 @@ const pageStuff = {
     list = [
       {
         "item":"Porcelain",
-        "imgPath": "assets/resources/imgs/landing/landing1.webp"
+        "class":"material",
+        "imgPath": "assets/resources/imgs/landing/gallerySample1.webp"
       },
       {
         "item":"Stone",
-        "imgPath": "assets/resources/imgs/landing/landing2.webp"
+        "class":"material",
+        "imgPath": "assets/resources/imgs/landing/gallerySample2.webp"
       },
       {
         "item":"Ceramic",
-        "imgPath": "assets/resources/imgs/landing/landing3.webp"
+        "class":"material",
+        "imgPath": "assets/resources/imgs/landing/gallerySample3.webp"
+      },
+      {
+        "item":"Kitchens",
+        "class":"service",
+        "imgPath": "assets/resources/imgs/landing/gallerySample4.webp"
+      },
+      {
+        "item":"Bathrooms",
+        "class":"service",
+        "imgPath": "assets/resources/imgs/landing/gallerySample5.webp"
       }
     ],
     moreLink = helperFunctions.generateElement('a',"moreLink","","See More","./pages/gallery.html")
@@ -54,6 +68,7 @@ const pageStuff = {
       let figure = helperFunctions.generateElement('figure');
       let img = helperFunctions.generateElement('img',"","","",element.imgPath)
       option = helperFunctions.nestChildren(option, link, figure, img);
+      option.classList.add(`${element.class}`);
       let text = helperFunctions.generateElement('h2',"","",element.item);
       link.appendChild(text);
       sampleHolder.appendChild(option);
@@ -63,22 +78,13 @@ const pageStuff = {
     return gallerySection;
   },
   hero: function(
-    hero_tag = helperFunctions.generateElement('section',"hero"),
+    hero_tag = helperFunctions.generateElement('section',"hero","landing"),
     figure_tag = helperFunctions.generateElement('figure'),
     img_tag = helperFunctions.generateElement('img',"","dyingImg","","assets/resources/imgs/landing/banner1.webp"),
     img_tag2 = helperFunctions.generateElement('img',"","","","assets/resources/imgs/landing/banner2.webp"),
-      // carouselMolecule = helperFunctions.generateElement('div',"carouselMolecule"),
-    banner_tag = helperFunctions.generateElement('div', "banner","","Talk with an Expert Today! <a href='tel:208-749-6666'>208-749-6666</a>"),
+    banner_tag = helperFunctions.generateElement('a', "banner","","Talk with an Expert Today! <br>208-749-6666","tel:208-749-6666"),
   ){
     figure_tag = helperFunctions.appendChildren(figure_tag, img_tag, img_tag2);
-    // appendChild(img_tag);
-
-    // let carousel_organism_variable = specialFeatures.carousel.carousel_organism("img", imgOptions);
-    // console.log(carousel_organism_variable)
-    // carousel_organism_variable.forEach(element => {
-    //   carouselMolecule.appendChild(element);
-    // });
-    // hero_tag = helperFunctions.appendChildren(hero_tag, carouselMolecule, banner_tag)
     hero_tag = helperFunctions.appendChildren(hero_tag, figure_tag, banner_tag)
 
     return hero_tag

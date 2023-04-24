@@ -83,7 +83,17 @@ export const helperFunctions = {
         element.setAttribute('name', paramId);
         element.setAttribute('content',paramText);
         break;
-      default:
+      case 'label':
+        element.id = "";
+        element.setAttribute('for', paramId);
+        break;
+      case 'select':
+        element.setAttribute('name',paramId);
+        break;
+      case 'option':
+        element.setAttribute('value',paramText);
+        break;
+        default:
         break;
     }
 

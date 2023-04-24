@@ -4,6 +4,7 @@ export const navigation = {
   pageList: ["services","gallery","about","reviews","contact","deadEnd"],
   pathAdjuster: [],
   currentPage:  "",
+
   getNavigationPackage: function(){
     this.setGlobalVariables();
     let moleculePackage = [
@@ -13,6 +14,11 @@ export const navigation = {
       this.nav_molecule()
     ]
     return moleculePackage;
+  },
+  dropDowns: function(
+    navItem,
+  ){
+    return;
   },
   labelMainNav: function(
     header = document.querySelector('header'),
@@ -49,6 +55,9 @@ export const navigation = {
         if(this.currentPage == 'index'){
           a_tag.classList.add('current');
         } 
+      }
+      if (opt == "Gallery" || opt == "Services"){
+        this.dropDowns(opt);
       }
       
       ul_tag = helperFunctions.nestChildren(ul_tag, li_tag, a_tag);

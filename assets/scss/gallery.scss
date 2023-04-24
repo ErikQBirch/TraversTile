@@ -1,0 +1,33 @@
+@import "carousel";
+
+@mixin centered {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+  // margin: 0 auto;
+  width: 100%;
+}
+
+@media only all and (min-width: 0){
+  #gallery{
+    #selectionDiv{
+      @include centered;
+      div{
+        label{}
+        select{}
+      }
+      #div_option{
+        select:not(.show){
+          display:none;
+        }
+      }
+    }
+  }
+}
+@media only all and (min-width: 760px){}
+@media only all and (min-width: 992px){}
+@media only all and (min-width: 1200px){}
+
+
