@@ -3,154 +3,154 @@ export const galleryDB = {
   "name":"Gallery",
   "array": [
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Porcelain",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Porcelain",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Porcelain",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Porcelain",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Porcelain",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Porcelain",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Stone",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Stone",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Stone",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Stone",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Stone",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Ceramic",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Ceramic",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Ceramic",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Ceramic",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Travertine",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Travertine",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Travertine",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Marble",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Marble",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
+      "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
       "class1":"Glass",
-      "class2":"material"
+      "class2":"Material"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Kitchen",
-      "class2":"service"
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "class1":"Kitchens",
+      "class2":"Service"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Kitchen",
-      "class2":"service"
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "class1":"Kitchens",
+      "class2":"Service"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Kitchen",
-      "class2":"service"
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "class1":"Kitchens",
+      "class2":"Service"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Kitchen",
-      "class2":"service"
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "class1":"Kitchens",
+      "class2":"Service"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Kitchen",
-      "class2":"service"
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "class1":"Kitchens",
+      "class2":"Service"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Bathroom",
-      "class2":"service"
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "class1":"Bathrooms",
+      "class2":"Service"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Bathroom",
-      "class2":"service"
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "class1":"Bathrooms",
+      "class2":"Service"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Bathroom",
-      "class2":"service"
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "class1":"Bathrooms",
+      "class2":"Service"
     },
     {
-      "imgPath":"assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Bathroom",
-      "class2":"service"
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "class1":"Bathrooms",
+      "class2":"Service"
     },
   ]
 }

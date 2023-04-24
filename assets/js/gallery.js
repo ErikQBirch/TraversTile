@@ -10,9 +10,30 @@ const pageStuff = {
   },
   gallery: function(
     section = helperFunctions.generateElement('section',"gallery"),
-    selectDiv = this.selectDiv()
+    urlParams = new URLSearchParams(window.location.search),
+    urlOption = urlParams.get('option'),
+    selectDiv = this.selectDiv(urlParams),
   ){
-    section = helperFunctions.appendChildren(section, selectDiv);
+    let imgDiv; 
+
+    if (urlOption == "Material"){
+      imgDiv = this.showImgs("Material");
+    }
+    else if (urlOption == "Service"){
+      imgDiv = this.showImgs("Service");
+    }
+    else {
+      imgDiv = this.showImgs("Material");
+    }
+
+    try {
+
+    }
+    catch(err){}
+     
+
+    // console.log(selectDiv, imgDiv);
+    section = helperFunctions.appendChildren(section, selectDiv, imgDiv);
 
     return section;
   },
@@ -36,37 +57,102 @@ const pageStuff = {
     return main_tag;
   },
   selectDiv: function(
+    urlParams,
     selectionDiv = helperFunctions.generateElement('div',"selectionDiv"),
-    div_type = helperFunctions.generateElement('div',"div_type"),
+    imgDiv = helperFunctions.generateElement('div',"imgDiv"),
     material_btn = helperFunctions.generateElement('button',"","","Material"),
     service_btn = helperFunctions.generateElement('button',"","","Service"),
-
-    div_option = helperFunctions.generateElement('div',"div_option"),
-    label_option = helperFunctions.generateElement('label',"Option","","Option: "),    
-    select_material = helperFunctions.generateElement('select',"Material"),
-    select_service = helperFunctions.generateElement('select',"Service"),
-    array_m = ["Porcelain","Stone","Ceramic","Travertine","Marble","Glass"],
-    array_s = ["Kitchen","Bathroom"]
   ){
-
-    array_m.forEach(item => {
-      let option = helperFunctions.generateElement('option',"","",item)
-      select_material.appendChild(option);
-    });
-    array_s.forEach(item => {
-      let option = helperFunctions.generateElement('option',"","",item)
-      select_service.appendChild(option);
-    });
+    if (urlParams.get('option') == "Material"){
+      material_btn.disabled = true;
+      material_btn.classList.add('show');
+    }
+    else if (urlParams.get('option') == "Service"){
+      service_btn.disabled = true;
+      service_btn.classList.add('show');
+    }
+    else if (urlParams.get('option') == null){
+      material_btn.disabled = true;
+      material_btn.classList.add('show');
+    }
     
-    div_type = helperFunctions.appendChildren(div_type, material_btn, service_btn);
-    div_option = helperFunctions.appendChildren(div_option, label_option, select_material, select_service);
-
-    select_material.classList.add('show');
-
-    console.log(galleryDB.array);
-
-    selectionDiv = helperFunctions.appendChildren(selectionDiv, div_type, div_option);
+    selectionDiv = helperFunctions.appendChildren(selectionDiv, material_btn, service_btn);
     return selectionDiv;
+  },
+  showImgs: function(
+    showing,
+    urlParams = new URLSearchParams(window.location.search),
+    urlOption = urlParams.get('option'),
+    urlType = urlParams.get('type'),
+    standard = true,
+    imgDiv = helperFunctions.generateElement('div',"imgDiv"),
+    showingBtn = document.querySelector('button.show'),
+    array_m = ["Porcelain","Stone","Ceramic","Travertine","Marble","Glass"],
+    array_s = ["Kitchens","Bathrooms"],
+    array_using = []
+  ){
+    //STEP1: check which array will be used based on showing option
+    if (showing == "Material"){
+      array_using = array_m;
+    }
+    else if (showing = "Service"){
+      array_using = array_s;
+    }
+
+    //STEP2: check for urlType
+    //STEP2a: if none, assign urlType a value (base it off of whichever button has the "show" class if possible)
+    //STEP2b: if there is a urlType, page wasn't reached via header's nav bar (standard), base future urlType on "show" button
+    if (urlType == null){
+      try {
+        if(showingBtn.innerHTML == "Material"){
+          urlType = "Porcelain";
+        }
+        else if (showingBtn.innerHTML == "Service"){
+          urlType = "Kitchens";
+        }
+      }
+      catch(err){
+        urlType = "Porcelain";
+      }
+    }
+    else {
+      standard = false;
+      try{
+        if(showingBtn.innerHTML == urlOption){
+        }
+        else if (showingBtn.innerHTML == "Material"){
+          urlType = "Porcelain"
+        }
+        else if (showingBtn.innerHTML == "Service"){
+          urlType = "Kitchens";
+        }
+      }
+      catch(err){}
+    }
+
+    //STEP3: create sections based on urlType
+    array_using.forEach(str => {
+      let h2 = helperFunctions.generateElement('h2',"",str,str);
+      h2.classList.add('keeper');
+      let article = helperFunctions.generateElement('article',"",str);
+      galleryDB.array.forEach(obj => {
+        if ((obj.class1 == str) && (obj.class2 == showing)){
+          let figure = helperFunctions.generateElement('figure');
+          let img = helperFunctions.generateElement('img',"",`${obj.class1}`,"",`${obj.imgPath}`);
+          article = helperFunctions.nestChildren(article, figure, img);
+        }
+      });
+      imgDiv = helperFunctions.appendChildren(imgDiv, h2, article);
+    });
+
+
+    let holdArticle = imgDiv.querySelector(`article.${urlType}`);
+    let holdH2 = imgDiv.querySelector(`h2.${urlType}`);
+    imgDiv.insertBefore(holdArticle, imgDiv.children[0]);
+    imgDiv.insertBefore(holdH2, imgDiv.children[0]);
+
+
+    return imgDiv;
   },
   theEvents: {
     startEvents: function(){
@@ -76,44 +162,36 @@ const pageStuff = {
     optionChange: function(){
     },
     clickTypeBtns: function(
-      btnArray = Array.from(document.querySelector('#div_type').children),
-      option_array = document.querySelector('div#div_option').children
+      btnArray = Array.from(document.querySelector('#selectionDiv').children),
+      galleryElement = document.querySelector('#gallery')
     ){
-      console.log(btnArray);
       btnArray.forEach(btn=> {
         btn.addEventListener('click',()=>{
           let v = btn.innerHTML;
-          let array = option_array;
+          let oldImgDiv = document.querySelector('#imgDiv');
+          let newImgDiv;
+
+          let prevDisabledBtn = document.querySelector('.show');
+          prevDisabledBtn.disabled = false;
+          btn.disabled = true;
+
           if (v == "Material"){
-          array[1].classList.add('show');
-          array[2].classList.remove('show');
+            btnArray[0].classList.add('show');
+            btnArray[1].classList.remove('show');
+            newImgDiv = pageStuff.showImgs('Material');
           }
           else {
-          array[2].classList.add('show');
-          array[1].classList.remove('show');
+            btnArray[1].classList.add('show');
+            btnArray[0].classList.remove('show');
+            newImgDiv = pageStuff.showImgs('Service');
           }
-          console.log(v);
+          galleryElement.insertBefore(newImgDiv, oldImgDiv);
+          oldImgDiv.remove();
+          // console.log(v);
         })
       });
     },
     
-    // typeChange: function(
-    //   type_select = document.querySelector('select#Type'),
-    //   option_array = document.querySelector('div#div_option').children
-    // ){
-    //   type_select.addEventListener('change',()=>{
-    //     let array = (option_array)
-    //     let v = type_select.value;
-    //     if (v == "Material"){
-    //       array[1].classList.add('show');
-    //       array[2].classList.remove('show');
-    //     }
-    //     else if (v == "Service"){
-    //       array[2].classList.add('show');
-    //       array[1].classList.remove('show');
-    //     }
-    //   })
-    // }
   }
 }
 

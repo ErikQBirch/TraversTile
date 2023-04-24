@@ -72,7 +72,7 @@
     background-color: rgba(236, 145, 74, 0.5);
     text-decoration: underline;
   }
-  #gallerySection #sampleHolder article:not(.material) {
+  #gallerySection #sampleHolder article:not(.Material) {
     display: none;
   }
   #gallerySection a#moreLink {
@@ -272,9 +272,6 @@
   #gallerySection #sampleHolder article:nth-of-type(2n) a {
     flex-direction: row-reverse;
   }
-  #gallerySection #sampleHolder article:not(.material) {
-    display: none;
-  }
   #aboutSection {
     width: 80%;
   }
@@ -314,7 +311,7 @@
   #gallerySection #sampleHolder article:nth-of-type(2n) a {
     flex-direction: column;
   }
-  #gallerySection #sampleHolder article:not(.material) {
+  #gallerySection #sampleHolder article:not(.Material) {
     display: flex;
   }
   #aboutSection {

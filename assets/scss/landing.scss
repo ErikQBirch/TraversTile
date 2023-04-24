@@ -79,7 +79,7 @@
         }
         
       }
-      article:not(.material){
+      article:not(.Material){
         display:none;
       }
     }
@@ -199,9 +199,9 @@
         }
       }
       
-      article:not(.material){
-        display:none;
-      }
+      // article:not(.Material){
+      //   display:none;
+      // }
     }
     a#moreLink{
 
@@ -270,7 +270,7 @@
           flex-direction: column;
         }
       }
-      article:not(.material){
+      article:not(.Material){
         display:flex;
       }
     }

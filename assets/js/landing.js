@@ -36,27 +36,27 @@ const pageStuff = {
     list = [
       {
         "item":"Porcelain",
-        "class":"material",
+        "class":"Material",
         "imgPath": "assets/resources/imgs/landing/gallerySample1.webp"
       },
       {
         "item":"Stone",
-        "class":"material",
+        "class":"Material",
         "imgPath": "assets/resources/imgs/landing/gallerySample2.webp"
       },
       {
         "item":"Ceramic",
-        "class":"material",
+        "class":"Material",
         "imgPath": "assets/resources/imgs/landing/gallerySample3.webp"
       },
       {
         "item":"Kitchens",
-        "class":"service",
+        "class":"Service",
         "imgPath": "assets/resources/imgs/landing/gallerySample4.webp"
       },
       {
         "item":"Bathrooms",
-        "class":"service",
+        "class":"Service",
         "imgPath": "assets/resources/imgs/landing/gallerySample5.webp"
       }
     ],
@@ -64,7 +64,7 @@ const pageStuff = {
   ){
     list.forEach(element => {
       let option = helperFunctions.generateElement('article',"","galleryOption");
-      let link = helperFunctions.generateElement('a',"","","",`./pages/gallery.html?option=${element.item}`);
+      let link = helperFunctions.generateElement('a',"","","",`./pages/gallery.html?option=${element.class}&type=${element.item}`);
       let figure = helperFunctions.generateElement('figure');
       let img = helperFunctions.generateElement('img',"","","",element.imgPath)
       option = helperFunctions.nestChildren(option, link, figure, img);

@@ -14,13 +14,17 @@
   #gallery{
     #selectionDiv{
       @include centered;
+      flex-direction: row;
       div{
         label{}
         select{}
       }
-      #div_option{
-        select:not(.show){
-          display:none;
+    }
+    #imgDiv{
+      h2{}
+      figure{
+        img{
+          width: 100%;
         }
       }
     }

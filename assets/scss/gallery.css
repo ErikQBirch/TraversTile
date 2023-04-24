@@ -6,8 +6,9 @@
     justify-content: center;
     text-align: center;
     width: 100%;
+    flex-direction: row;
   }
-  #gallery #selectionDiv #div_option select:not(.show) {
-    display: none;
+  #gallery #imgDiv figure img {
+    width: 100%;
   }
 }/*# sourceMappingURL=gallery.css.map */
