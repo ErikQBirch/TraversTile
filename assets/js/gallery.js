@@ -8,11 +8,35 @@ const pageStuff = {
   ){
     body.insertBefore(this.main(), footer);
   },
+  dropDown: function(
+    selectedOpt,
+    dropDownDiv = helperFunctions.generateElement('div',"materialDropDown"),
+    label = helperFunctions.generateElement('label',"materialOptions", "","Search"),
+    select = helperFunctions.generateElement('select',"materialOptions"),
+    array_m = ["Porcelain","Stone","Ceramic","Travertine","Marble","Glass"],
+  ){
+    array_m.forEach(str => {
+      let option = helperFunctions.generateElement('option',"","",str);
+      console.log(str, selectedOpt)
+      if (str == selectedOpt){
+        // option.setAttribute('selected',true);
+        option.selected = true;
+      }
+      select.appendChild(option);
+    });
+
+    dropDownDiv = helperFunctions.appendChildren(dropDownDiv, label, select);
+
+    return dropDownDiv;
+  },
+
   gallery: function(
     section = helperFunctions.generateElement('section',"gallery"),
     urlParams = new URLSearchParams(window.location.search),
     urlOption = urlParams.get('option'),
+    urlType = urlParams.get('type'),
     selectDiv = this.selectDiv(urlParams),
+    materialDropDown = this.dropDown(urlType)
   ){
     let imgDiv; 
 
@@ -21,6 +45,7 @@ const pageStuff = {
     }
     else if (urlOption == "Service"){
       imgDiv = this.showImgs("Service");
+      materialDropDown.classList.add('hide');
     }
     else {
       imgDiv = this.showImgs("Material");
@@ -33,7 +58,7 @@ const pageStuff = {
      
 
     // console.log(selectDiv, imgDiv);
-    section = helperFunctions.appendChildren(section, selectDiv, imgDiv);
+    section = helperFunctions.appendChildren(section, selectDiv, materialDropDown, imgDiv);
 
     return section;
   },
@@ -56,6 +81,17 @@ const pageStuff = {
       main_tag = helperFunctions.appendChildren(main_tag, hero_tag, gallery_tag);
     return main_tag;
   },
+  reorder:function(
+    urlType,
+    imgDiv,
+    holdArticle = imgDiv.querySelector(`article.${urlType}`),
+    holdH2 = imgDiv.querySelector(`h2.${urlType}`) 
+  ){
+    imgDiv.insertBefore(holdArticle, imgDiv.children[0]);
+    imgDiv.insertBefore(holdH2, imgDiv.children[0]);
+    return imgDiv
+  },
+
   selectDiv: function(
     urlParams,
     selectionDiv = helperFunctions.generateElement('div',"selectionDiv"),
@@ -145,25 +181,31 @@ const pageStuff = {
       imgDiv = helperFunctions.appendChildren(imgDiv, h2, article);
     });
 
+    this.reorder(urlType, imgDiv);
 
-    let holdArticle = imgDiv.querySelector(`article.${urlType}`);
-    let holdH2 = imgDiv.querySelector(`h2.${urlType}`);
-    imgDiv.insertBefore(holdArticle, imgDiv.children[0]);
-    imgDiv.insertBefore(holdH2, imgDiv.children[0]);
+    
 
 
     return imgDiv;
   },
   theEvents: {
     startEvents: function(){
-      this.optionChange();
+      this.typeChange();
       this.clickTypeBtns();
     },
-    optionChange: function(){
+    typeChange: function(
+      select = document.querySelector('#materialOptions'),
+    ){
+      select.addEventListener('change',()=>{
+        let imgDiv = document.querySelector('#imgDiv')
+        console.log(imgDiv);
+        pageStuff.reorder(select.value,imgDiv);
+      })
     },
     clickTypeBtns: function(
       btnArray = Array.from(document.querySelector('#selectionDiv').children),
-      galleryElement = document.querySelector('#gallery')
+      galleryElement = document.querySelector('#gallery'),
+      materialDropDown = document.querySelector('#materialDropDown')
     ){
       btnArray.forEach(btn=> {
         btn.addEventListener('click',()=>{
@@ -178,11 +220,15 @@ const pageStuff = {
           if (v == "Material"){
             btnArray[0].classList.add('show');
             btnArray[1].classList.remove('show');
+            materialDropDown.classList.remove('hide');
             newImgDiv = pageStuff.showImgs('Material');
+            console.log(document.querySelector('#materialOptions').value)
+            pageStuff.reorder(document.querySelector('#materialOptions').value, newImgDiv)
           }
           else {
             btnArray[1].classList.add('show');
             btnArray[0].classList.remove('show');
+            materialDropDown.classList.add('hide');
             newImgDiv = pageStuff.showImgs('Service');
           }
           galleryElement.insertBefore(newImgDiv, oldImgDiv);

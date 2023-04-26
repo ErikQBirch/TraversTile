@@ -1,4 +1,3 @@
-
 @mixin mobileCarousel {
     position:relative;
     #carousel{
@@ -74,11 +73,14 @@
       }
     }
     #carousel_note {
+      @include centered;
       margin: 1rem auto;
       padding: 1rem;
-      display:flex;
+      // display:flex;
+      // justify-content: center;
       width: fit-content;
       color:white;
+      width: 100%;
       &:hover{
         color:rgb(0,152,219);
       }

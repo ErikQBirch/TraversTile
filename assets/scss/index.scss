@@ -16,6 +16,31 @@
   width: 100%;
 }
 
+@mixin linkStylization {
+  color: white;
+  text-decoration: none;
+  background-color:rgba(0,152,219, 0.75);
+  transition: all 0.5s;
+  &:hover, &:active, &:focus{
+    background-color:rgba(236,145,74, 0.75);
+  }
+}
+
+@mixin backToTop{
+  position:fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index:6;
+  padding: 0.5rem;
+  border-radius:50%;
+  background-color: rgba(0,152,219, 1);
+  color:white;
+  border:none;
+  &:hover{
+    background-color:rgba(236,145,74,1);
+  }
+}
+
 *{
   margin:0;
   padding:0;
@@ -35,6 +60,9 @@ h1,h2,h3,h4,h5,p,div,article{
     margin-bottom: 2.5rem;
   }
   @include mobileFooter;
+  #backToTop{
+    @include backToTop;
+  }
 }
 @media only all and (min-width: 760px) {
   @include minHeader;

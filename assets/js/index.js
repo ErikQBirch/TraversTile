@@ -8,7 +8,8 @@ const pageStuff = {
   ){
     body = helperFunctions.appendChildren(body, 
       this.header(),
-      this.footer()
+      this.footer(),
+      this.backToTop()
     );
     navigation.postConstructionFunctions();
     this.favicon();
@@ -52,27 +53,49 @@ const pageStuff = {
     footer_tag = helperFunctions.appendChildren(footer_tag, topHalf, bottomHalf);
     return footer_tag;
   },
-  scrollEvents:{
-    headerScroll: function(
-      header_tag = document.querySelector('header'),
-      sideMenu = document.querySelector('#sideMenu')
-    ){
-      // console.log(header_tag);
-      let currentScroll = 0;
-      window.onscroll = function(e){
-        let nextScroll = window.scrollY;
-        if (nextScroll > currentScroll){
-          if (window.innerWidth > 992){
-            header_tag.style.top = "-6rem";
+  backToTop: function(
+    btn = helperFunctions.generateElement('button',"backToTop","",`<i class="fa-solid fa-chevron-up"></i>`)
+  ){
+    btn.addEventListener('click',()=>{
+      window.scrollTo({top: 0, behavior: 'smooth'})
+    })
+    window.addEventListener('scroll', (e)=>{
+      let scroll = window.scrollY;
+      try{
+          if (scroll > 0){
+              btn.style.opacity=1;
           }
-        }
-        else {
-          header_tag.style.top = "0rem";
-        }
-        currentScroll = nextScroll;
+          else{
+              btn.style.opacity=0
+          }
+          
       }
-    }
-  }
+      catch(err){console.log(err)};
+    })
+    return btn;
+  },
+  
+  // scrollEvents:{
+  //   headerScroll: function(
+  //     header_tag = document.querySelector('header'),
+  //     sideMenu = document.querySelector('#sideMenu')
+  //   ){
+  //     // console.log(header_tag);
+  //     let currentScroll = 0;
+  //     window.onscroll = function(e){
+  //       let nextScroll = window.scrollY;
+  //       if (nextScroll > currentScroll){
+  //         if (window.innerWidth > 992){
+  //           header_tag.style.top = "-6rem";
+  //         }
+  //       }
+  //       else {
+  //         header_tag.style.top = "0rem";
+  //       }
+  //       currentScroll = nextScroll;
+  //     }
+  //   }
+  // }
 }
 
 pageStuff.constructHTML();

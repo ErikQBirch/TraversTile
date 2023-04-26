@@ -1,36 +1,93 @@
-@import "carousel";
+// @import "carousel";
+@import "index";
 
-@mixin centered {
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align:center;
-  // margin: 0 auto;
-  width: 100%;
-}
+
+// @mixin centered {
+//   display:flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   text-align:center;
+//   // margin: 0 auto;
+//   width: 100%;
+// }
 
 @media only all and (min-width: 0){
   #gallery{
     #selectionDiv{
       @include centered;
       flex-direction: row;
-      div{
-        label{}
-        select{}
+      margin: 1rem auto;
+      justify-content: center;
+      button{
+        @include linkStylization;
+        padding: 1rem 2rem;
+        margin: 0 1rem;
+        border:none;
+        cursor: pointer;
+        &[disabled]{
+          background-color: rgba(151,152,154,1);
+          cursor: initial;
+          // color:red;
+        }
+      }
+    }
+    #materialDropDown{
+      @include centered;
+      flex-direction: row;
+      &.hide{
+        display:none;
+      }
+      label{
+        margin-right: 0.5rem;
       }
     }
     #imgDiv{
-      h2{}
-      figure{
-        img{
-          width: 100%;
+      @include centered;
+      width: 80vw;
+      h2{
+        margin: 5rem auto 1rem auto;
+        text-decoration:underline;
+      }
+      article{
+        figure{
+          img{
+            width: 100%;
+          }
         }
       }
     }
   }
 }
-@media only all and (min-width: 760px){}
+@media only all and (min-width: 760px){
+  #gallery{
+    #selectionDiv{
+      button{
+        }
+      }
+    }
+    #materialDropDown{
+      &.hide{
+      }
+      label{
+      }
+    }
+    #imgDiv{
+      h2{
+      }
+      article{
+        display:flex;
+        flex-wrap: wrap;
+        figure{
+          @include centered;
+          width: 37.5vw;
+          margin: 1rem auto;
+          img{
+          }
+        }
+      }
+    }
+  }
 @media only all and (min-width: 992px){}
 @media only all and (min-width: 1200px){}
 
