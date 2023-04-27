@@ -17,10 +17,12 @@
 }
 
 @mixin linkStylization {
+  display:flex;
   color: white;
   text-decoration: none;
   background-color:rgba(0,152,219, 0.75);
   transition: all 0.5s;
+  border:none;
   &:hover, &:active, &:focus{
     background-color:rgba(236,145,74, 0.75);
   }

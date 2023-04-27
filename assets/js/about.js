@@ -1,4 +1,6 @@
 import { helperFunctions } from "./helperFunctions.js";
+import { reviewDB } from "../resources/reviewDB.js";
+import { specialFeatures } from "./specialFeatures.js";
 
 const pageStuff = {
   constructHTML: function(
@@ -6,6 +8,7 @@ const pageStuff = {
     footer = document.querySelector('footer')
   ){
     body.insertBefore(this.main(), footer);
+    specialFeatures.carousel.functionality.setUp();
   },
   hero: function(
     hero_tag = helperFunctions.generateElement('section',"hero"),
@@ -20,10 +23,48 @@ const pageStuff = {
   },
   main: function(
     main_tag = helperFunctions.generateElement('main'),
-    hero_tag = this.hero()
+    hero_tag = this.hero(),
+    aboutSection = this.aboutSection(),
+    reviewSection = this.reviewSection()
     ){
-      main_tag = helperFunctions.appendChildren(main_tag, hero_tag);
+      main_tag = helperFunctions.appendChildren(main_tag, hero_tag, aboutSection, reviewSection);
     return main_tag;
+  },
+  aboutSection: function(
+    sectionHolder = helperFunctions.generateElement('section',"aboutSection"),
+    aboutDiv = helperFunctions.generateElement('div',"aboutDiv"),
+    h2 = helperFunctions.generateElement('h2',"","","Ian Travers Thompson"),
+    p = helperFunctions.generateElement('p', "","",reviewDB.extra.aboutContent.fullText),
+    contactBtn = helperFunctions.generateElement('a',"","","Contact"),
+    figure = helperFunctions.generateElement('figure'),
+    img = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/aboutLanding1.webp")
+  ){
+    aboutDiv = helperFunctions.appendChildren(aboutDiv, h2, p, contactBtn);
+    sectionHolder.appendChild(aboutDiv);
+    sectionHolder = helperFunctions.nestChildren(sectionHolder, figure, img);
+
+    return sectionHolder;
+  },
+  reviewSection: function(
+    sectionHolder = helperFunctions.generateElement('section',"reviewSection"),
+    filter = helperFunctions.generateElement('div',"filter"),
+    sampleArray = []
+  ){
+    for (let i = 0; i < reviewDB.array.length; i++){
+      // console.log(reviewDB.array[i]);
+      if (reviewDB.array[i].focus == "Ian"){
+        console.log(reviewDB.array[i])
+        sampleArray.push(reviewDB.array[i]);
+      }
+    }
+    // console.log(sampleArray);
+    let carousel_organism_variable = specialFeatures.carousel.carousel_organism(reviewDB.contentType, reviewDB.name, sampleArray);
+    carousel_organism_variable.forEach(element => {
+      filter.appendChild(element);
+    });
+    sectionHolder.appendChild(filter);
+    // console.log(sectionHolder);
+    return sectionHolder
   },
 }
 

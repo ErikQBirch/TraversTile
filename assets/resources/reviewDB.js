@@ -7,6 +7,7 @@ export const reviewDB = {
       "text":"Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, ",
       "rating":"⭐⭐⭐⭐⭐",
       "link":"",
+      "focus":"",
       "date":"Today"
     },
     {
@@ -14,6 +15,7 @@ export const reviewDB = {
       "text":"Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, ",
       "rating":"⭐⭐⭐⭐⭐",
       "link":"",
+      "focus":"Ian",
       "date":"Today"
     },
     {
@@ -21,6 +23,7 @@ export const reviewDB = {
       "text":"Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, ",
       "rating":"⭐⭐⭐⭐⭐",
       "link":"",
+      "focus":"Ian",
       "date":"Today"
     },
     {
@@ -28,12 +31,14 @@ export const reviewDB = {
       "text":"Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, ",
       "rating":"⭐⭐⭐⭐⭐",
       "link":"",
+      "focus":"",
       "date":"Today"
     },  {
       "name":"Soren Thompson",
       "text":"Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, ",
       "rating":"⭐⭐⭐⭐⭐",
       "link":"",
+      "focus":"Ian",
       "date":"Today"
     },
     {
@@ -41,7 +46,14 @@ export const reviewDB = {
       "text":"Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, Lots of text, ",
       "rating":"⭐⭐⭐⭐⭐",
       "link":"",
+      "focus":"Ian",
       "date":"Today"
     }
-  ]
+  ],
+  "extra": {
+    "aboutContent":{
+      "sample" : "Small about of text, Small about of text, Small about of text, Small about of text, Small about of text, Small about of text, Small about of text, Small about of text, Small about of text, ",
+      "fullText" : "LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! LOTS OF TEXT! "
+    }
+  }
 }

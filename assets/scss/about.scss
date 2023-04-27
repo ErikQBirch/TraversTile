@@ -1,0 +1,88 @@
+@import "index";
+@import "carousel";
+
+
+@media only all and (min-width: 0){
+  #aboutSection{
+    @include centered;
+    margin: 2.5rem auto;
+    #aboutDiv{
+      margin-bottom: 2.5rem;
+      h2{}
+      p{}
+      a:link, a:visited{
+        @include linkStylization;
+        margin: 1rem auto;
+        padding: 1rem 2rem;
+        width: fit-content;
+      }
+    }
+    figure{
+      img{
+        width: 100%;
+      }
+    }
+  }
+  #reviewSection{
+    @include mobileCarousel;
+    background-image: url("../resources/imgs/landing/landing5.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    #filter{
+      background-color: rgba(0,0,0,0.5);
+      a:link, a:visited {
+        @include linkStylization;
+        &.slideBtn{
+          background-color:transparent;
+          // transition: color 0.5s;
+        }
+      } 
+      a{
+        @include linkStylization;
+        &:hover, &:active, &:focus{
+          color:white;
+        }
+      }
+    }
+    
+  }
+}
+@media only all and (min-width: 760px){
+  #aboutSection{
+    width: 80%;
+    #aboutDiv{
+      h2{}
+      p{}
+      a:link, a:visited{
+      }
+    }
+    figure{
+      width: 25rem;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+@media only all and (min-width: 992px){
+  #aboutSection{
+    flex-direction: row;
+    justify-content: space-evenly;
+    #aboutDiv{
+      width: 40%;
+      h2{}
+      p{}
+      a:link, a:visited{
+      }
+    }
+    figure{
+      width: 25rem;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+@media only all and (min-width: 1200px){}

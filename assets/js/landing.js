@@ -11,7 +11,7 @@ const pageStuff = {
     img = helperFunctions.generateElement('img',"","","","assets/resources/imgs/landing/aboutLanding1.webp"),
     textHolder = helperFunctions.generateElement('div',""),
     h1 = helperFunctions.generateElement('h1',"","","About"),
-    textSample = helperFunctions.generateElement('p',"","","LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, LOTS OF TEXT, ")
+    textSample = helperFunctions.generateElement('p',"","",reviewDB.extra.aboutContent.sample)
   ){
     // sectionHolder = helperFunctions.nestChildren(sectionHolder, link, figure, img);
     sectionHolder = helperFunctions.nestChildren(sectionHolder, figure, img);

@@ -348,6 +348,20 @@ h1, h2, h3, h4, h5, p, div, article {
   footer #bottomHalf_footer {
     padding: 2rem 0 0.5rem 0;
   }
+  #backToTop {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 6;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: rgb(0, 152, 219);
+    color: white;
+    border: none;
+  }
+  #backToTop:hover {
+    background-color: rgb(236, 145, 74);
+  }
 }
 @media only all and (min-width: 760px) {
   #hero {
@@ -492,6 +506,9 @@ h1, h2, h3, h4, h5, p, div, article {
     height: 20vw;
     bottom: 20%;
     right: 2.5rem;
+  }
+  #hero a:hover, #hero a:active, #hero a:focus {
+    border-radius: 15px;
   }
   #hero:not(.landing) {
     height: 70vh;
