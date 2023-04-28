@@ -35,7 +35,7 @@ const pageStuff = {
     aboutDiv = helperFunctions.generateElement('div',"aboutDiv"),
     h2 = helperFunctions.generateElement('h2',"","","Ian Travers Thompson"),
     p = helperFunctions.generateElement('p', "","",reviewDB.extra.aboutContent.fullText),
-    contactBtn = helperFunctions.generateElement('a',"","","Contact"),
+    contactBtn = helperFunctions.generateElement('a',"","","Contact", "../pages/contact.html"),
     figure = helperFunctions.generateElement('figure'),
     img = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/aboutLanding1.webp")
   ){
@@ -50,7 +50,7 @@ const pageStuff = {
     filter = helperFunctions.generateElement('div',"filter"),
     sampleArray = []
   ){
-    for (let i = 0; i < reviewDB.array.length; i++){
+    for (let i = 0; i < 10; i++){
       // console.log(reviewDB.array[i]);
       if (reviewDB.array[i].focus == "Ian"){
         console.log(reviewDB.array[i])

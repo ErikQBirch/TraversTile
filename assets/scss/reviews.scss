@@ -1,0 +1,44 @@
+@import "index";
+
+
+@media only all and (min-width: 0){
+  #reviewSection{
+    @include centered;
+    text-align: start;
+    margin: 2.5rem auto;
+    article{
+      width: 90%;
+      margin: 0.5rem auto;
+      padding: 1rem;
+      background-color: rgba(100,100,100,0.5);
+      // background-color: red;
+      a{
+        font-weight: bold;
+      }
+      span{
+        display:flex;
+        margin: 0.5rem 0;
+      }
+      p{}
+    }
+  }
+  button#moreBtn{
+    @include centered;
+    @include linkStylization;
+    width: 90%;
+    padding: 1rem;
+  }
+}
+@media only all and (min-width: 760px){
+}
+@media only all and (min-width: 992px){
+  #reviewSection{
+    article{
+      width: 80%;
+    }
+  }
+  button#moreBtn{
+    width: 15%;
+  }
+}
+@media only all and (min-width: 1200px){}

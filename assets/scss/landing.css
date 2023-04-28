@@ -353,11 +353,13 @@ h1, h2, h3, h4, h5, p, div, article {
     bottom: 1rem;
     right: 1rem;
     z-index: 6;
-    padding: 0.5rem;
     border-radius: 50%;
+    padding: 0.75rem;
     background-color: rgb(0, 152, 219);
     color: white;
     border: none;
+    font-size: 2rem;
+    line-height: 1rem;
   }
   #backToTop:hover {
     background-color: rgb(236, 145, 74);
@@ -582,10 +584,12 @@ h1, h2, h3, h4, h5, p, div, article {
     }
   }
   #hero a {
+    display: flex;
     color: white;
     text-decoration: none;
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
+    border: none;
     background-color: rgba(0, 152, 219, 0.5);
   }
   #hero a:hover, #hero a:active, #hero a:focus {
@@ -643,10 +647,12 @@ h1, h2, h3, h4, h5, p, div, article {
     text-align: center;
     margin: 0 auto;
     width: 100%;
+    display: flex;
     color: white;
     text-decoration: none;
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
+    border: none;
     position: absolute;
     overflow: hidden;
     top: 0;
@@ -675,10 +681,12 @@ h1, h2, h3, h4, h5, p, div, article {
     text-align: center;
     margin: 0 auto;
     width: 100%;
+    display: flex;
     color: white;
     text-decoration: none;
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
+    border: none;
     margin: 1rem auto;
     padding: 1rem 2.5rem;
     width: -moz-fit-content;
@@ -730,10 +738,12 @@ h1, h2, h3, h4, h5, p, div, article {
     justify-content: flex-end;
   }
   #aboutSection div a {
+    display: flex;
     color: white;
     text-decoration: none;
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
+    border: none;
   }
   #aboutSection div a:hover, #aboutSection div a:active, #aboutSection div a:focus {
     background-color: rgba(236, 145, 74, 0.75);
@@ -849,10 +859,12 @@ h1, h2, h3, h4, h5, p, div, article {
     background-color: rgba(0, 0, 0, 0.5);
   }
   #reviewSection #filter button {
+    display: flex;
     color: white;
     text-decoration: none;
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
+    border: none;
   }
   #reviewSection #filter button:hover, #reviewSection #filter button:active, #reviewSection #filter button:focus {
     background-color: rgba(236, 145, 74, 0.75);
@@ -861,10 +873,12 @@ h1, h2, h3, h4, h5, p, div, article {
     background-color: transparent;
   }
   #reviewSection #filter a {
+    display: flex;
     color: white;
     text-decoration: none;
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
+    border: none;
   }
   #reviewSection #filter a:hover, #reviewSection #filter a:active, #reviewSection #filter a:focus {
     background-color: rgba(236, 145, 74, 0.75);
@@ -883,10 +897,12 @@ h1, h2, h3, h4, h5, p, div, article {
     width: 100%;
   }
   #gallerySection #sampleHolder article a {
+    display: flex;
     color: white;
     text-decoration: none;
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
+    border: none;
     display: flex;
     flex-direction: row;
   }

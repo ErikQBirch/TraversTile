@@ -28,20 +28,6 @@
   }
 }
 
-@mixin backToTop{
-  position:fixed;
-  bottom: 1rem;
-  right: 1rem;
-  z-index:6;
-  padding: 0.5rem;
-  border-radius:50%;
-  background-color: rgba(0,152,219, 1);
-  color:white;
-  border:none;
-  &:hover{
-    background-color:rgba(236,145,74,1);
-  }
-}
 
 *{
   margin:0;
@@ -63,7 +49,20 @@ h1,h2,h3,h4,h5,p,div,article{
   }
   @include mobileFooter;
   #backToTop{
-    @include backToTop;
+      position:fixed;
+      bottom: 1rem;
+      right: 1rem;
+      z-index:6;
+      border-radius:50%;
+      padding: 0.75rem;
+      background-color: rgba(0,152,219, 1);
+      color:white;
+      border:none;
+      font-size: 2rem;
+      line-height: 1rem;
+      &:hover{
+        background-color:rgba(236,145,74,1);
+      }
   }
 }
 @media only all and (min-width: 760px) {
