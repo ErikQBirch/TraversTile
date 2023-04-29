@@ -1,5 +1,6 @@
 import { helperFunctions } from "./helperFunctions.js";
-import { galleryDB } from "../resources/galleryDB.js"
+import { specialFeatures } from "./specialFeatures.js";
+import { galleryDB } from "../resources/galleryDB.js";
 
 const pageStuff = {
   constructHTML: function(
@@ -7,6 +8,7 @@ const pageStuff = {
     footer = document.querySelector('footer')
   ){
     body.insertBefore(this.main(), footer);
+    specialFeatures.lazyLoading();
   },
   dropDown: function(
     selectedOpt,
@@ -171,10 +173,15 @@ const pageStuff = {
       let h2 = helperFunctions.generateElement('h2',"",str,str);
       h2.classList.add('keeper');
       let article = helperFunctions.generateElement('article',"",str);
+      article.classList.add('lazyParent');
       galleryDB.array.forEach(obj => {
         if ((obj.class1 == str) && (obj.class2 == showing)){
           let figure = helperFunctions.generateElement('figure');
-          let img = helperFunctions.generateElement('img',"",`${obj.class1}`,"",`${obj.imgPath}`);
+          let img = helperFunctions.generateElement('img',"","lazyLoad","",obj.imgPath);
+          
+          img = helperFunctions.customSpecialElements(img, obj.imgPath, ""); //this comes before adding obj.class1 so that the customeSpecialElement only deals with one class
+          img.classList.add(obj.class1);
+
           article = helperFunctions.nestChildren(article, figure, img);
         }
       });

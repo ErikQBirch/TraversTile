@@ -56,17 +56,19 @@ const pageStuff = {
   backToTop: function(
     btn = helperFunctions.generateElement('button',"backToTop","",`<i class="fa-solid fa-chevron-up"></i>`)
   ){
+    btn.style.opacity = 0;
     btn.addEventListener('click',()=>{
       window.scrollTo({top: 0, behavior: 'smooth'})
     })
     window.addEventListener('scroll', (e)=>{
       let scroll = window.scrollY;
+      // console.log(scroll,document.innerHeight);
       try{
-          if (scroll > 0){
+          if ((scroll > 0)){
               btn.style.opacity=1;
           }
           else{
-              btn.style.opacity=0
+              btn.style.opacity=0;
           }
           
       }

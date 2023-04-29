@@ -16,7 +16,7 @@ export const helperFunctions = {
         element.setAttribute('loop', true);
         element.muted = 'muted';
         break;
-      case 'thumbnail':
+      case 'lazyLoad':
         element.setAttribute('src',"../assets/resources/imgs/placeholder.jpg");
         element.setAttribute('data-src', extraAttributes[0]);
         element.setAttribute('alt',extraAttributes[1]);
@@ -156,4 +156,31 @@ export const helperFunctions = {
     }
     return text;
   },
+  searchParents: function(childElement, parentClass){
+    let targetParent = undefined;
+    let guess;
+
+    console.log(parentClass);
+
+    while (targetParent == undefined){
+      guess = childElement.parentElement;
+      console.log(guess.nodeName);
+      if (guess.classList.contains(parentClass)){
+        targetParent = guess;
+        break;
+      }
+      else{
+        childElement = guess;
+      }
+      if (guess.nodeName == "BODY"){
+        break;
+      }
+      // if (counter == 5){ //arbitrary number
+      //   targetParent = null;
+      //   break;
+      // }
+    }
+    console.log(targetParent);
+    return targetParent;
+  }
 }

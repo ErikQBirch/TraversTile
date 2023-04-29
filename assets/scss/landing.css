@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, p, div, article {
+h1, h2, h3, h4, h5, p, div, article, a, button {
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -241,9 +241,9 @@ h1, h2, h3, h4, h5, p, div, article {
     background-color: rgba(0, 152, 219, 0.5);
   }
   #hero a:link, #hero a:visited {
-    color: black;
+    color: white;
     text-decoration: none;
-    text-shadow: 1rem 1rem 1rem white;
+    text-shadow: 0rem 0rem 0.25rem black;
   }
   #hero a:hover, #hero a:active, #hero a:focus {
     background-color: rgba(236, 145, 74, 0.5);
@@ -591,6 +591,8 @@ h1, h2, h3, h4, h5, p, div, article {
     transition: all 0.5s;
     border: none;
     background-color: rgba(0, 152, 219, 0.5);
+    font-size: 1.5rem;
+    font-weight: bolder;
   }
   #hero a:hover, #hero a:active, #hero a:focus {
     background-color: rgba(236, 145, 74, 0.75);
@@ -604,10 +606,6 @@ h1, h2, h3, h4, h5, p, div, article {
     margin-top: 5rem;
   }
   #gallerySection #sampleHolder article {
-    width: 100%;
-    height: 10rem;
-    overflow: hidden;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -615,6 +613,18 @@ h1, h2, h3, h4, h5, p, div, article {
     text-align: center;
     margin: 0 auto;
     width: 100%;
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+    position: relative;
+    opacity: 1;
+    transition: 0.5s;
+  }
+  #gallerySection #sampleHolder article:not(.Material) {
+    display: none;
+  }
+  #gallerySection #sampleHolder article.lazyParent {
+    opacity: 0;
   }
   #gallerySection #sampleHolder article a {
     width: 100%;
@@ -638,6 +648,11 @@ h1, h2, h3, h4, h5, p, div, article {
     margin: 0 auto;
     width: 100%;
     width: 100%;
+    transition: all 0.5s;
+    opacity: 1;
+  }
+  #gallerySection #sampleHolder article a figure img[data-src] {
+    opacity: 0;
   }
   #gallerySection #sampleHolder article a h2 {
     display: flex;
@@ -669,9 +684,6 @@ h1, h2, h3, h4, h5, p, div, article {
   #gallerySection #sampleHolder article a:hover h2, #gallerySection #sampleHolder article a:active h2, #gallerySection #sampleHolder article a:focus h2 {
     color: rgba(236, 145, 74, 0.75);
     background-color: rgba(0, 0, 0, 0.5);
-  }
-  #gallerySection #sampleHolder article:not(.Material) {
-    display: none;
   }
   #gallerySection a#moreLink {
     display: flex;
@@ -707,6 +719,11 @@ h1, h2, h3, h4, h5, p, div, article {
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 1;
+    transition: all 0.75s;
+  }
+  #aboutSection.lazyParent {
+    opacity: 0;
   }
   #aboutSection figure {
     display: flex;
@@ -744,6 +761,7 @@ h1, h2, h3, h4, h5, p, div, article {
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
     border: none;
+    flex-direction: column;
   }
   #aboutSection div a:hover, #aboutSection div a:active, #aboutSection div a:focus {
     background-color: rgba(236, 145, 74, 0.75);
@@ -905,9 +923,13 @@ h1, h2, h3, h4, h5, p, div, article {
     border: none;
     display: flex;
     flex-direction: row;
+    background-color: transparent;
   }
   #gallerySection #sampleHolder article a:hover, #gallerySection #sampleHolder article a:active, #gallerySection #sampleHolder article a:focus {
     background-color: rgba(236, 145, 74, 0.75);
+  }
+  #gallerySection #sampleHolder article a:hover, #gallerySection #sampleHolder article a:active, #gallerySection #sampleHolder article a:focus {
+    background-color: transparent;
   }
   #gallerySection #sampleHolder article a figure {
     width: 70%;

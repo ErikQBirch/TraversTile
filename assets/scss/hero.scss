@@ -25,9 +25,9 @@
       height: 15vh;
       background-color: rgba(0,152,219, 0.5);
       &:link, &:visited {
-        color:black;
+        color:white;
         text-decoration: none;
-        text-shadow: 1rem 1rem 1rem white;
+        text-shadow: 0rem 0rem 0.25rem black;
       }
       &:hover, &:active, &:focus{
         background-color:rgba(236,145,74, 0.5);

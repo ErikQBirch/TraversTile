@@ -5,14 +5,17 @@ import { reviewDB } from "../resources/reviewDB.js";
 
 const pageStuff = {
   aboutSection: function(
-    sectionHolder = helperFunctions.generateElement('section',"aboutSection"),
+    sectionHolder = helperFunctions.generateElement('section',"aboutSection", "lazyParent"),
     link = helperFunctions.generateElement('a',"","","","./pages/about.html"),
     figure = helperFunctions.generateElement('figure'),
-    img = helperFunctions.generateElement('img',"","","","assets/resources/imgs/landing/aboutLanding1.webp"),
+    img = helperFunctions.generateElement('img',"","lazyLoad"),
     textHolder = helperFunctions.generateElement('div',""),
     h1 = helperFunctions.generateElement('h1',"","","About"),
     textSample = helperFunctions.generateElement('p',"","",reviewDB.extra.aboutContent.sample)
   ){
+
+    img = helperFunctions.customSpecialElements(img,"assets/resources/imgs/landing/aboutLanding1.webp", "");
+
     // sectionHolder = helperFunctions.nestChildren(sectionHolder, link, figure, img);
     sectionHolder = helperFunctions.nestChildren(sectionHolder, figure, img);
     sectionHolder.style.backgroundImage = "url('assets/resources/imgs/landing/aboutLanding2.webp')"
@@ -26,6 +29,7 @@ const pageStuff = {
     footer = document.querySelector('footer')
   ){
     body.insertBefore(this.main(), footer);
+    specialFeatures.lazyLoading();
     this.theEvents.heroBackgrounds();
     specialFeatures.carousel.functionality.setUp();
   },
@@ -63,13 +67,17 @@ const pageStuff = {
     moreLink = helperFunctions.generateElement('a',"moreLink","","See More","./pages/gallery.html")
   ){
     list.forEach(element => {
-      let option = helperFunctions.generateElement('article',"","galleryOption");
+      let option = helperFunctions.generateElement('article',"","lazyParent");
       let link = helperFunctions.generateElement('a',"","","",`./pages/gallery.html?option=${element.class}&type=${element.item}`);
       let figure = helperFunctions.generateElement('figure');
-      let img = helperFunctions.generateElement('img',"","","",element.imgPath)
-      option = helperFunctions.nestChildren(option, link, figure, img);
-      option.classList.add(`${element.class}`);
+      let img = helperFunctions.generateElement('img',"","lazyLoad","",element.imgPath);
       let text = helperFunctions.generateElement('h2',"","",element.item);
+
+      img = helperFunctions.customSpecialElements(img, element.imgPath, "");
+      option.classList.add('galleryOption');
+
+      option = helperFunctions.nestChildren(option, link, figure, img);
+      option.classList.add(element.class);
       link.appendChild(text);
       sampleHolder.appendChild(option);
       // gallerySection = helperFunctions.nestChildren(gallerySection, option, link);

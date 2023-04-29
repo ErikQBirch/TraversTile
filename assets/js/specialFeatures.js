@@ -206,10 +206,19 @@ export const specialFeatures = {
   },
   lazyLoading: function(
     imagesToLoad = document.querySelectorAll('img[data-src]'), //images elements with the attribute "data-src"; similar to css #data-src or .data-src
+    // nonImgElements = document.querySelectorAll(".lazyLoad"),
     loadImages = (img) => {
+      // console.log(nonImgElements);
       img.setAttribute('src', img.getAttribute('data-src'));
       img.onload = () => {
         img.removeAttribute('data-src');
+        try{
+          let lazyParent = helperFunctions.searchParents(img,"lazyParent");
+          console.log(lazyParent);
+          lazyParent.classList.remove('lazyParent');
+          img.classList.remove('lazyLoad');
+        }
+        catch(err){}
       }
     },
     imgOptions = {

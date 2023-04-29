@@ -30,6 +30,8 @@
     a{
       @include linkStylization;
       background-color:rgba(0,152,219, 0.5);
+      font-size: 1.5rem;
+      font-weight: bolder;
       &:hover, &:active, &:focus{
         background-color:rgba(236,145,74, 0.5);
       }
@@ -43,11 +45,19 @@
     }
     #sampleHolder{
       article{
+        @include centered;
         width: 100%;
         height: 10rem;
         overflow: hidden;
         position: relative;
-        @include centered;
+        opacity: 1;
+        transition: 0.5s;
+        &:not(.Material){
+          display:none;
+        } 
+        &.lazyParent{
+          opacity:0;
+        }
         a {
           width:100%;
           text-decoration: none;
@@ -58,6 +68,11 @@
             // top:0;
               @include centered;
               width: 100%;
+              transition:all 0.5s;
+              opacity: 1;
+            }
+            img[data-src]{
+              opacity:0;
             }
             // &:link, &:visited{
             // }
@@ -89,10 +104,7 @@
             }
           }
         }
-        
-      }
-      article:not(.Material){
-        display:none;
+
       }
     }
     a#moreLink{
@@ -120,6 +132,11 @@
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 1;
+    transition: all 0.75s;
+    &.lazyParent{
+      opacity:0;
+    }
     figure{
       @include centered();
       justify-content: flex-start;
@@ -138,6 +155,7 @@
       justify-content: flex-end;
       a{
         @include linkStylization;
+        flex-direction: column;
           // color: white;
           // text-decoration: none;
           h1,p {
@@ -201,7 +219,10 @@
           @include linkStylization;
           display:flex;
           flex-direction:row;
-          
+          background-color: transparent;
+          &:hover, &:active, &:focus{
+            background-color:transparent;
+          }
           figure{
             width: 70%;
             overflow:hidden;
