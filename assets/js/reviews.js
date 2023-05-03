@@ -3,7 +3,7 @@ import { reviewDB } from "../resources/reviewDB.js";
 
 const pageStuff = {
   counter : 0,
-  limit: 10,
+  limit: 5,
   constructHTML: function(
     body = document.querySelector('body'),
     footer = document.querySelector('footer')

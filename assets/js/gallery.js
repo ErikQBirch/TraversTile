@@ -240,6 +240,7 @@ const pageStuff = {
           }
           galleryElement.insertBefore(newImgDiv, oldImgDiv);
           oldImgDiv.remove();
+          specialFeatures.lazyLoading();
           // console.log(v);
         })
       });
