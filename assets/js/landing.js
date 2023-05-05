@@ -160,34 +160,7 @@ const pageStuff = {
 
 
 
-      },5000)
-
-      // console.log(heroElement, figureElement, imgElement)
-
-      
-      // let fadingImg = setInterval(()=>{
-      //   let dyingImg = figureElement.children[0];
-      //   let substituteImg = figureElement.children[1]
-
-      //   if (counter == imgOptions.length){
-      //     counter = 0;
-      //   }
-      //   console.log(counter);
-
-      //   dyingImg.setAttribute('src',`${imgOptions[counter]}`);
-      //   substituteImg.setAttribute('src',`${imgOptions[counter+1]}`);
-
-      //   counter++;
-      //   let killImg = setTimeout(()=>{
-      //     dyingImg.remove();
-      //     substituteImg.classList.add('dyingImg');
-      //     if ((counter+2) == imgOptions.length){
-
-      //     }
-      //     let newImg = helperFunctions.generateElement('img',"","","",`${imgOptions[counter+2]}`);
-      //     figureElement.appendChild(newImg);
-      //   },5000)
-      // }, 5000)      
+      },5000)   
     }
   }
 }

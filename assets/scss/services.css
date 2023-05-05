@@ -1,1 +1,663 @@
-/*# sourceMappingURL=services.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, p, div, article, a, button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only all and (min-width: 0) {
+  header {
+    height: 7.5rem;
+    overflow: hidden;
+    transition: height 0.75s;
+  }
+  header div#logoArea {
+    height: 6rem;
+  }
+  header div#logoArea a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 6rem;
+    width: 100%;
+  }
+  header div#logoArea a img {
+    height: 6rem;
+  }
+  header section#mobileMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgb(96, 96, 98);
+  }
+  header section#mobileMenu a:link, header section#mobileMenu a:visited {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    height: 1.25rem;
+  }
+  header section#mobileMenu button#dropDownBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 1.5rem;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+  }
+  header section#mobileMenu button#dropDownBtn:hover {
+    background-color: rgb(151, 152, 154);
+  }
+  header section#mobileMenu button#dropDownBtn:active, header section#mobileMenu button#dropDownBtn:focus {
+    background-color: rgb(0, 152, 219);
+  }
+  header section#mobileMenu button#dropDownBtn i {
+    transition: transform 0.75s;
+  }
+  header section#mobileMenu nav#mobileNav {
+    height: 10.5rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  header section#mobileMenu nav#mobileNav ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+  }
+  header section#mobileMenu nav#mobileNav ul li {
+    height: 1.75rem;
+    width: 100%;
+  }
+  header section#mobileMenu nav#mobileNav ul li a {
+    height: 100%;
+    width: 100%;
+  }
+  header section#mobileMenu nav#mobileNav ul li a.current, header section#mobileMenu nav#mobileNav ul li a:hover {
+    background-color: rgb(151, 152, 154);
+  }
+  header section#mobileMenu nav#mobileNav ul li a:active, header section#mobileMenu nav#mobileNav ul li a:focus {
+    background-color: rgb(0, 152, 219);
+    background-color: rgb(236, 145, 74);
+  }
+  header nav#mainNav {
+    display: none;
+  }
+  header.isOpen {
+    height: 18rem;
+  }
+  header.isOpen section#mobileMenu button#dropDownBtn i {
+    transform: rotate(180deg);
+  }
+  #hero {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+  }
+  #hero figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+  #hero figure img {
+    width: 250%;
+    position: absolute;
+    top: 0;
+  }
+  #hero div#carouselMolecule {
+    position: relative;
+  }
+  #hero div#carouselMolecule #carousel {
+    color: white;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+  }
+  #hero div#carouselMolecule #carousel #slideHolder {
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 50vh;
+  }
+  #hero div#carouselMolecule #carousel #slideHolder div {
+    width: 100vw;
+    height: 50vh;
+    padding: 0 3.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #hero div#carouselMolecule #carousel #slideHolder div img {
+    height: 50vh;
+  }
+  #hero div#carouselMolecule #carousel #slideControls {
+    position: absolute;
+    top: 0;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #hero div#carouselMolecule #carousel #slideControls button {
+    color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 5rem;
+    width: 3.5rem;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.25s;
+    cursor: pointer;
+  }
+  #hero div#carouselMolecule #carousel #slideControls button:hover, #hero div#carouselMolecule #carousel #slideControls button:active, #hero div#carouselMolecule #carousel #slideControls button:focus {
+    background-color: rgba(0, 152, 219, 0.5);
+  }
+  #hero div#carouselMolecule #carousel_nav {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin: 1rem auto;
+  }
+  #hero div#carouselMolecule #carousel_nav button {
+    margin: 0 0.25rem;
+    border: none;
+    background-color: transparent;
+    transition: color 0.25s;
+    color: white;
+    cursor: pointer;
+  }
+  #hero div#carouselMolecule #carousel_nav button.currentBtn {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  #hero div#carouselMolecule #carousel_nav button:hover, #hero div#carouselMolecule #carousel_nav button:active, #hero div#carouselMolecule #carousel_nav button:focus {
+    color: rgb(0, 152, 219);
+  }
+  #hero div#carouselMolecule #carousel_note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: white;
+    width: 100%;
+  }
+  #hero div#carouselMolecule #carousel_note:hover {
+    color: rgb(0, 152, 219);
+  }
+  #hero div#carouselMolecule #carousel_note:active, #hero div#carouselMolecule #carousel_note:focus {
+    color: rgb(236, 145, 74);
+  }
+  #hero a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    height: 15vh;
+    background-color: rgba(0, 152, 219, 0.5);
+  }
+  #hero a:link, #hero a:visited {
+    color: white;
+    text-decoration: none;
+    text-shadow: 0rem 0rem 0.25rem black;
+  }
+  #hero a:hover, #hero a:active, #hero a:focus {
+    background-color: rgba(236, 145, 74, 0.5);
+  }
+  #hero:not(.landing) {
+    height: 40vh;
+  }
+  #hero:not(.landing) h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2.5rem 0;
+    bottom: 30%;
+  }
+  main {
+    padding-top: 0rem;
+    min-height: 100vh;
+    margin-bottom: 2.5rem;
+  }
+  footer {
+    width: 100%;
+    background-color: rgb(25, 25, 25);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer #topHalf_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    width: 75%;
+    flex-direction: column;
+  }
+  footer #topHalf_footer #logoArea {
+    padding: 1rem 0;
+  }
+  footer #topHalf_footer #logoArea a {
+    display: flex;
+  }
+  footer #topHalf_footer #logoArea a img {
+    width: 100%;
+  }
+  footer #topHalf_footer #footerNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    margin: 1rem auto;
+  }
+  footer #topHalf_footer #footerNav ul {
+    list-style: none;
+  }
+  footer #topHalf_footer #footerNav ul li {
+    padding: 0.5rem 0;
+  }
+  footer #topHalf_footer #footerNav ul li a:link, footer #topHalf_footer #footerNav ul li a:visited {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+  }
+  footer #topHalf_footer #footerNav ul li a:hover {
+    color: rgb(0, 152, 219);
+  }
+  footer #topHalf_footer #footerNav ul li a:active, footer #topHalf_footer #footerNav ul li a:focus {
+    color: rgb(236, 145, 74);
+  }
+  footer #topHalf_footer #contactMolecule {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+  }
+  footer #topHalf_footer #contactMolecule a:link, footer #topHalf_footer #contactMolecule a:visited {
+    font-size: 2.5rem;
+    color: white;
+  }
+  footer #topHalf_footer #contactMolecule a:hover {
+    color: rgb(0, 152, 219);
+  }
+  footer #topHalf_footer #contactMolecule a:active, footer #topHalf_footer #contactMolecule a:focus {
+    color: rgb(236, 145, 74);
+  }
+  footer #bottomHalf_footer {
+    padding: 2rem 0 0.5rem 0;
+  }
+  #backToTop {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 6;
+    border-radius: 50%;
+    padding: 0.75rem;
+    background-color: rgb(0, 152, 219);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    line-height: 1rem;
+  }
+  #backToTop:hover {
+    background-color: rgb(236, 145, 74);
+  }
+}
+@media only all and (min-width: 760px) {
+  #hero {
+    border-bottom: 2rem solid rgb(96, 96, 98);
+  }
+  #hero figure img {
+    width: 150%;
+  }
+  footer #topHalf_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr 1fr;
+  }
+  footer #topHalf_footer #logoArea {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 1rem 0;
+  }
+  footer #topHalf_footer #logoArea a {
+    display: flex;
+  }
+  footer #topHalf_footer #logoArea a img {
+    width: 100%;
+  }
+  footer #topHalf_footer #footerNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    margin: 1rem auto;
+    width: 100%;
+    grid-column: 2;
+    grid-row: 1;
+    flex-direction: row;
+  }
+  footer #topHalf_footer #footerNav ul {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  footer #topHalf_footer #footerNav ul li {
+    padding: 0.5rem 0;
+  }
+  footer #topHalf_footer #contactMolecule {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+  footer #topHalf_footer #contactMolecule a:link, footer #topHalf_footer #contactMolecule a:visited {
+    font-size: 2.5rem;
+  }
+  footer #bottomHalf_footer {
+    padding: 2rem 0 0.5rem 0;
+  }
+}
+@media only all and (min-width: 992px) {
+  header {
+    width: 95%;
+    height: 7.5rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header div#logoArea {
+    height: 7.5rem;
+  }
+  header div#logoArea a {
+    height: 7.5rem;
+  }
+  header div#logoArea a img {
+    height: 7.5rem;
+  }
+  header section#mobileMenu {
+    display: none;
+  }
+  header nav#mainNav {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+  }
+  header nav#mainNav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 900%;
+    list-style: none;
+  }
+  header nav#mainNav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+  }
+  header nav#mainNav ul li a span {
+    width: 0%;
+    border: 2px solid transparent;
+    transition: all 0.5s;
+  }
+  header nav#mainNav ul li a.current span, header nav#mainNav ul li a:hover span, header nav#mainNav ul li a:active span, header nav#mainNav ul li a:focus span {
+    border-color: rgb(0, 152, 219);
+    width: 100%;
+  }
+  header nav#mainNav ul li a.current.current, header nav#mainNav ul li a:hover.current, header nav#mainNav ul li a:active.current, header nav#mainNav ul li a:focus.current {
+    color: rgb(0, 152, 219);
+    font-weight: bolder;
+  }
+  header.isOpen {
+    height: 5rem;
+  }
+  #hero {
+    height: 80vh;
+    border-top: 2rem solid rgb(96, 96, 98);
+  }
+  #hero figure img {
+    width: 100%;
+  }
+  #hero a {
+    width: 40vw;
+    height: 20vw;
+    bottom: 20%;
+    right: 2.5rem;
+  }
+  #hero a:hover, #hero a:active, #hero a:focus {
+    border-radius: 15px;
+  }
+  #hero:not(.landing) {
+    height: 70vh;
+  }
+  #hero:not(.landing) h1 {
+    bottom: 32.5%;
+    height: 25vh;
+    font-size: 3rem;
+  }
+  footer #topHalf_footer #logoArea {
+    grid-row: 1/3;
+  }
+  footer #topHalf_footer #footerNav {
+    width: 100%;
+  }
+  footer #topHalf_footer #footerNav ul {
+    justify-content: flex-end;
+  }
+  footer #topHalf_footer #footerNav ul li {
+    margin-left: 2.5rem;
+  }
+  footer #topHalf_footer #contactMolecule {
+    width: 100%;
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: flex-end;
+  }
+  footer #topHalf_footer #contactMolecule a:link, footer #topHalf_footer #contactMolecule a:visited {
+    margin-left: 2.5rem;
+  }
+}
+@media only all and (min-width: 1200px) {
+  header {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+  header section#mobileMenu {
+    display: none;
+  }
+  header nav#mainNav {
+    width: 45%;
+  }
+  header {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+  header section#mobileMenu {
+    display: none;
+  }
+  header nav#mainNav {
+    width: 45%;
+  }
+}
+@media only all and (min-width: 0) {
+  #serviceSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2.5rem;
+    margin: 2.5rem auto;
+  }
+  #serviceSection #side1 article {
+    width: 100%;
+    background-color: rgb(96, 96, 98);
+  }
+  #serviceSection #side1 article.open h2 {
+    background-color: rgb(150, 150, 150);
+  }
+  #serviceSection #side1 article.open div {
+    padding: 1rem;
+    height: 20rem;
+  }
+  #serviceSection #side1 article h2 {
+    padding: 1rem 0;
+    background-color: rgb(0, 152, 219);
+    cursor: pointer;
+  }
+  #serviceSection #side1 article h2:hover, #serviceSection #side1 article h2:active, #serviceSection #side1 article h2:focus {
+    background-color: rgb(236, 145, 74);
+  }
+  #serviceSection #side1 article div {
+    height: 0;
+    padding: 0 1rem;
+    overflow: hidden;
+    transition: all 0.75s;
+  }
+  #serviceSection #side2 {
+    margin: 1rem auto;
+    width: 100%;
+  }
+  #serviceSection #side2 figure {
+    overflow: hidden;
+    width: 100%;
+    height: 12rem;
+    position: relative;
+  }
+  #serviceSection #side2 figure img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: all 5s;
+  }
+  #serviceSection #side2 figure img.newImg {
+    animation-name: fadeIn;
+    animation-duration: 0.75s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+@media only all and (min-width: 992px) {
+  #serviceSection {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  #serviceSection #side1 {
+    width: 45%;
+  }
+  #serviceSection #side1 article h2 {
+    text-align: left;
+    padding-left: 1rem;
+  }
+  #serviceSection #side1 article div p {
+    text-align: left;
+  }
+  #serviceSection #side2 {
+    width: 45%;
+    margin: 0;
+  }
+  #serviceSection #side2 figure {
+    height: 27.5rem;
+  }
+}/*# sourceMappingURL=services.css.map */

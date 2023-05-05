@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, p, div, article {
+h1, h2, h3, h4, h5, p, div, article, a, button {
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -241,9 +241,9 @@ h1, h2, h3, h4, h5, p, div, article {
     background-color: rgba(0, 152, 219, 0.5);
   }
   #hero a:link, #hero a:visited {
-    color: black;
+    color: white;
     text-decoration: none;
-    text-shadow: 1rem 1rem 1rem white;
+    text-shadow: 0rem 0rem 0.25rem black;
   }
   #hero a:hover, #hero a:active, #hero a:focus {
     background-color: rgba(236, 145, 74, 0.5);
