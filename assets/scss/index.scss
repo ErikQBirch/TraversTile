@@ -23,6 +23,7 @@
   background-color:rgba(0,152,219, 0.75);
   transition: all 0.5s;
   border:none;
+  cursor:pointer;
   &:hover, &:active, &:focus{
     background-color:rgba(236,145,74, 0.75);
   }
@@ -60,6 +61,7 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
       border:none;
       font-size: 2rem;
       line-height: 1rem;
+      cursor:pointer;
       &:hover{
         background-color:rgba(236,145,74,1);
       }

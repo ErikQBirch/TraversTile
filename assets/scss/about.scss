@@ -7,6 +7,7 @@
     @include centered;
     margin: 2.5rem auto;
     #aboutDiv{
+      @include centered;
       margin-bottom: 2.5rem;
       h2{}
       p{}
@@ -15,9 +16,16 @@
         margin: 1rem auto;
         padding: 1rem 2rem;
         width: fit-content;
+        &:hover, &:active, &:focus{
+          border-radius: 10px;
+        }
       }
     }
     figure{
+      border: 1px solid black;
+      box-shadow: 1px 1px 5px black;
+      width: 100vw;
+      height: 100vw;
       img{
         width: 100%;
       }
@@ -60,6 +68,7 @@
     }
     figure{
       width: 25rem;
+      height: 25rem;
       img{
         width: 100%;
       }
@@ -70,15 +79,22 @@
   #aboutSection{
     flex-direction: row;
     justify-content: space-evenly;
+    align-items:flex-start;
     #aboutDiv{
       width: 40%;
-      h2{}
-      p{}
+      align-items: flex-start;
+      margin:initial;
+      h2{
+        margin: 1rem 0;
+      }
+      p{
+        text-align:left;
+      }
       a:link, a:visited{
+        margin: 1rem 0;
       }
     }
     figure{
-      width: 25rem;
       img{
         width: 100%;
       }

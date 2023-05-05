@@ -27,6 +27,9 @@
     @include linkStylization;
     width: 90%;
     padding: 1rem;
+    &:hover, &:active, &:focus{
+      border-radius: 10px;
+    }
   }
 }
 @media only all and (min-width: 760px){

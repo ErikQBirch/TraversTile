@@ -170,15 +170,13 @@
               border: 2px solid transparent;
               transition: all 0.5s;
             }
-            &.current, &:hover, &:active, &:focus{
-              span{
+            &.current{
+              color: rgb(0,152,219);
+              font-weight: bolder;
+            }
+            &:hover, &:active, &:focus{
                 border-color: rgb(0,152,219);
                 width: 100%;
-              }
-              &.current{
-                color: rgb(0,152,219);
-                font-weight: bolder;
-              }
             }
           }
         }

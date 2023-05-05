@@ -20,9 +20,9 @@
           }
         }
         h2{
+          @include linkStylization;
           padding: 1rem 0;
           background-color:rgba(0,152,219, 1);
-          cursor:pointer;
           &:hover, &:active, &:focus{
             background-color: rgba(236,145,74, 1);
           }

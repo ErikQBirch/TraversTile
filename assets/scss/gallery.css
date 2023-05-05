@@ -360,6 +360,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     border: none;
     font-size: 2rem;
     line-height: 1rem;
+    cursor: pointer;
   }
   #backToTop:hover {
     background-color: rgb(236, 145, 74);
@@ -485,13 +486,13 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     border: 2px solid transparent;
     transition: all 0.5s;
   }
-  header nav#mainNav ul li a.current span, header nav#mainNav ul li a:hover span, header nav#mainNav ul li a:active span, header nav#mainNav ul li a:focus span {
-    border-color: rgb(0, 152, 219);
-    width: 100%;
-  }
-  header nav#mainNav ul li a.current.current, header nav#mainNav ul li a:hover.current, header nav#mainNav ul li a:active.current, header nav#mainNav ul li a:focus.current {
+  header nav#mainNav ul li a.current {
     color: rgb(0, 152, 219);
     font-weight: bolder;
+  }
+  header nav#mainNav ul li a:hover, header nav#mainNav ul li a:active, header nav#mainNav ul li a:focus {
+    border-color: rgb(0, 152, 219);
+    width: 100%;
   }
   header.isOpen {
     height: 5rem;
@@ -588,10 +589,10 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
     border: none;
+    cursor: pointer;
     padding: 1rem 2rem;
     margin: 0 1rem;
     border: none;
-    cursor: pointer;
   }
   #gallery #selectionDiv button:hover, #gallery #selectionDiv button:active, #gallery #selectionDiv button:focus {
     background-color: rgba(236, 145, 74, 0.75);
@@ -599,6 +600,9 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   #gallery #selectionDiv button[disabled] {
     background-color: rgb(151, 152, 154);
     cursor: initial;
+  }
+  #gallery #selectionDiv button:hover, #gallery #selectionDiv button:active, #gallery #selectionDiv button:focus {
+    border-radius: 10px;
   }
   #gallery #materialDropDown {
     display: flex;

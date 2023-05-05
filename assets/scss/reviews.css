@@ -360,6 +360,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     border: none;
     font-size: 2rem;
     line-height: 1rem;
+    cursor: pointer;
   }
   #backToTop:hover {
     background-color: rgb(236, 145, 74);
@@ -485,13 +486,13 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     border: 2px solid transparent;
     transition: all 0.5s;
   }
-  header nav#mainNav ul li a.current span, header nav#mainNav ul li a:hover span, header nav#mainNav ul li a:active span, header nav#mainNav ul li a:focus span {
-    border-color: rgb(0, 152, 219);
-    width: 100%;
-  }
-  header nav#mainNav ul li a.current.current, header nav#mainNav ul li a:hover.current, header nav#mainNav ul li a:active.current, header nav#mainNav ul li a:focus.current {
+  header nav#mainNav ul li a.current {
     color: rgb(0, 152, 219);
     font-weight: bolder;
+  }
+  header nav#mainNav ul li a:hover, header nav#mainNav ul li a:active, header nav#mainNav ul li a:focus {
+    border-color: rgb(0, 152, 219);
+    width: 100%;
   }
   header.isOpen {
     height: 5rem;
@@ -607,11 +608,15 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
     border: none;
+    cursor: pointer;
     width: 90%;
     padding: 1rem;
   }
   button#moreBtn:hover, button#moreBtn:active, button#moreBtn:focus {
     background-color: rgba(236, 145, 74, 0.75);
+  }
+  button#moreBtn:hover, button#moreBtn:active, button#moreBtn:focus {
+    border-radius: 10px;
   }
 }
 @media only all and (min-width: 992px) {

@@ -24,11 +24,13 @@
         padding: 1rem 2rem;
         margin: 0 1rem;
         border:none;
-        cursor: pointer;
         &[disabled]{
           background-color: rgba(151,152,154,1);
           cursor: initial;
           // color:red;
+        }
+        &:hover, &:active, &:focus{
+          border-radius: 10px;
         }
       }
     }
