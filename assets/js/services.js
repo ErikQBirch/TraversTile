@@ -11,7 +11,7 @@ const pageStuff = {
   hero: function(
     hero_tag = helperFunctions.generateElement('section',"hero"),
     figure_tag = helperFunctions.generateElement('figure'),
-    img_tag = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/banner1.webp"),
+    img_tag = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/banner4.webp"),
     banner_tag = helperFunctions.generateElement('h1',"","",`${document.querySelector('a.current').innerHTML}`)
   ){
     figure_tag = helperFunctions.appendChildren(figure_tag, img_tag);
@@ -114,7 +114,6 @@ const pageStuff = {
     fadingServiceImg: function(
       option,
       serviceFigure = document.querySelector('#serviceFigure'),
-      // nextToDie = serviceFigure.children[1],
       newImg = helperFunctions.generateElement('img',"","newImg"),
       imgOptions = [
         "../assets/resources/imgs/landing/banner1.webp",
@@ -124,12 +123,9 @@ const pageStuff = {
         "../assets/resources/imgs/landing/banner5.webp"
       ],
     ){
-
       if (serviceFigure.children.length  == 2){
         serviceFigure.children[0].remove();
       }
-
-
       serviceFigure.appendChild(newImg);
       switch(option){
         case "Standard":
@@ -145,7 +141,6 @@ const pageStuff = {
           newImg.setAttribute('src',imgOptions[0])
           break;
       }
-
       serviceFigure.appendChild(newImg);
 
     }

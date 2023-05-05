@@ -30,7 +30,6 @@ export const footer = {
     navOptions.forEach(opt => {
       let li_tag = helperFunctions.generateElement('li');
       let a_tag;
-      // console.log(this.currentPage);
       if (opt.toLocaleUpperCase() == this.currentPage.toUpperCase()){
         a_tag = helperFunctions.generateElement('a',"","current",opt + "<span class=underline></span>",`${this.pathAdjuster[1]}${opt.toLowerCase()}.html`);
       }
@@ -60,7 +59,6 @@ export const footer = {
     molecule = helperFunctions.generateElement('div',"contactMolecule")
   ){
     for (let key in options){
-      // console.log(key);
       molecule.innerHTML += (options[key])
     }
     return molecule;

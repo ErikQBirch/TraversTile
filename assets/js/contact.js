@@ -12,9 +12,7 @@ const pageStuff = {
     figure_tag = helperFunctions.generateElement('figure'),
     img_tag = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/banner1.webp"),
     banner_tag = helperFunctions.generateElement('h1',"","",`${document.querySelector('a.current').innerHTML}`),
-    // infoSection = this.infoSection()
   ){
-    // infoSection.classList.add('hero');
     figure_tag = helperFunctions.appendChildren(figure_tag, img_tag);
     hero_tag = helperFunctions.appendChildren(hero_tag, figure_tag, banner_tag)
     
@@ -25,14 +23,11 @@ const pageStuff = {
     hero_tag = this.hero(),
     infoSection = this.infoSection(),
     ){
-      // infoSection.classList.add('main');
       main_tag = helperFunctions.appendChildren(main_tag, hero_tag, infoSection);
     return main_tag;
   },
   infoSection: function(
     sectionHolder = helperFunctions.generateElement('section',"", "infoSection"),
-    // div = helperFunctions.generateElement('div'),
-    // h2 = helperFunctions.generateElement('h2',"","","Info"),
     options = [
       {"name":"Address",
         "info":"685 W 2050 N<br>Provo, UT 84604",
@@ -57,8 +52,6 @@ const pageStuff = {
       article = helperFunctions.appendChildren(article, h2, iconDiv, p);
       sectionHolder.appendChild(article);
     });
-    
-    // sectionHolder.appendChild(div);
     return sectionHolder;
   }
 }

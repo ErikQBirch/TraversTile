@@ -129,12 +129,18 @@
               transition: all 0.5s;
             }
             &.current{
-              color: rgb(0,152,219);
               font-weight: bolder;
+              color: rgb(0,152,219);
+              span{
+                width: 100%;
+                border-color: rgb(0,152,219);
+              }
             }
             &:hover, &:active, &:focus{
+              span{
                 border-color: rgb(0,152,219);
                 width: 100%;
+              }
             }
           }
         }

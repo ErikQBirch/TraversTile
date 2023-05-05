@@ -9,7 +9,6 @@ export const navigation = {
     this.setGlobalVariables();
     let moleculePackage = [
       this.logo_molecule(),
-      // this.hamburger_atom(),
       this.mobileNav_molecule(),
       this.nav_molecule()
     ]
@@ -43,7 +42,6 @@ export const navigation = {
     navOptions.forEach(opt => {
       let li_tag = helperFunctions.generateElement('li');
       let a_tag;
-      // console.log(this.currentPage);
       if (opt.toLocaleUpperCase() == this.currentPage.toUpperCase()){
         a_tag = helperFunctions.generateElement('a',"","current",opt + "<span class=underline></span>",`${this.pathAdjuster[1]}${opt.toLowerCase()}.html`);
       }
@@ -75,15 +73,11 @@ export const navigation = {
   },
   mobileNav_molecule: function(
     mobileNav_tag = helperFunctions.generateElement('section',"mobileMenu"),
-    // phone = helperFunctions.generateElement('a',"phone","","208-749-6666","tel:208-749-6666"),
-    // menuBtn = this.hamburger_atom(),
     nav = this.nav_molecule(),
     dropDownBtn = helperFunctions.generateElement('button',"dropDownBtn","",`<i class="fa-solid fa-chevron-down"></i>`)
   ){
     mobileNav_tag = helperFunctions.appendChildren(mobileNav_tag, 
-      // phone, 
       dropDownBtn, nav);
-    // nav.insertBefore(menuBtn, nav.children[0]);
     nav.id = "mobileNav";
     return mobileNav_tag;
   },

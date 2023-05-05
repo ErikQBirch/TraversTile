@@ -12,12 +12,13 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
 
 @media only all and (min-width: 0) {
   header {
-    height: 7.5rem;
+    height: 8.5rem;
     overflow: hidden;
     transition: height 0.75s;
   }
   header div#logoArea {
     height: 6rem;
+    margin-bottom: 1rem;
   }
   header div#logoArea a {
     display: flex;
@@ -110,7 +111,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     display: none;
   }
   header.isOpen {
-    height: 18rem;
+    height: 19rem;
   }
   header.isOpen section#mobileMenu button#dropDownBtn i {
     transform: rotate(180deg);
@@ -120,6 +121,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     height: 70vh;
     overflow: hidden;
     position: relative;
+    border-bottom: 1.5rem solid rgb(96, 96, 98);
   }
   #hero figure {
     display: flex;
@@ -369,9 +371,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
 }
 @media only all and (min-width: 760px) {
-  #hero {
-    border-bottom: 2rem solid rgb(96, 96, 98);
-  }
   #hero figure img {
     width: 150%;
   }
@@ -404,7 +403,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
 @media only all and (min-width: 992px) {
   header {
     width: 95%;
-    height: 7.5rem;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -413,6 +411,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   header div#logoArea {
     height: 7.5rem;
+    margin: 0;
   }
   header div#logoArea a {
     height: 7.5rem;
@@ -452,10 +451,14 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     transition: all 0.5s;
   }
   header nav#mainNav ul li a.current {
-    color: rgb(0, 152, 219);
     font-weight: bolder;
+    color: rgb(0, 152, 219);
   }
-  header nav#mainNav ul li a:hover, header nav#mainNav ul li a:active, header nav#mainNav ul li a:focus {
+  header nav#mainNav ul li a.current span {
+    width: 100%;
+    border-color: rgb(0, 152, 219);
+  }
+  header nav#mainNav ul li a:hover span, header nav#mainNav ul li a:active span, header nav#mainNav ul li a:focus span {
     border-color: rgb(0, 152, 219);
     width: 100%;
   }
@@ -507,24 +510,12 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
 @media only all and (min-width: 1200px) {
   header {
     width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-  }
-  header section#mobileMenu {
-    display: none;
   }
   header nav#mainNav {
     width: 47.5%;
   }
   header {
     width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-  }
-  header section#mobileMenu {
-    display: none;
   }
   header nav#mainNav {
     width: 47.5%;
@@ -562,7 +553,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     background-color: rgb(151, 152, 154);
     cursor: initial;
   }
-  #gallery #selectionDiv button:hover, #gallery #selectionDiv button:active, #gallery #selectionDiv button:focus {
+  #gallery #selectionDiv button:hover:not([disabled]), #gallery #selectionDiv button:active:not([disabled]), #gallery #selectionDiv button:focus:not([disabled]) {
     border-radius: 10px;
   }
   #gallery #materialDropDown {

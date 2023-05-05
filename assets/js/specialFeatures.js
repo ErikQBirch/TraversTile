@@ -15,7 +15,6 @@ export const specialFeatures = {
     ){
       
       carouselArray.forEach(item => {
-        // console.log(item)
         let slide = this.carousel_singleSlide(contentType, item, counter);
         slideHolder.appendChild(slide);
         carousel_nav = this.carousel_navBtns(carousel_nav, counter);
@@ -66,7 +65,6 @@ export const specialFeatures = {
           default:
             break;
         }
-        // console.log(returnedSlide)
         return returnedSlide;
     },
     functionality: {
@@ -208,7 +206,7 @@ export const specialFeatures = {
     imagesToLoad = document.querySelectorAll('img[data-src]'), //images elements with the attribute "data-src"; similar to css #data-src or .data-src
     // nonImgElements = document.querySelectorAll(".lazyLoad"),
     loadImages = (img) => {
-      // console.log(nonImgElements);
+
       img.setAttribute('src', img.getAttribute('data-src'));
       img.onload = () => {
         img.removeAttribute('data-src');

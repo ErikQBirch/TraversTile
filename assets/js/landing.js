@@ -1,7 +1,6 @@
 import { helperFunctions } from "./helperFunctions.js";
 import { specialFeatures } from "./specialFeatures.js";
 import { reviewDB } from "../resources/reviewDB.js";
-// import { footer } from "./footer,.js";
 
 const pageStuff = {
   aboutSection: function(
@@ -16,10 +15,8 @@ const pageStuff = {
 
     img = helperFunctions.customSpecialElements(img,"assets/resources/imgs/landing/aboutLanding1.webp", "");
 
-    // sectionHolder = helperFunctions.nestChildren(sectionHolder, link, figure, img);
     sectionHolder = helperFunctions.nestChildren(sectionHolder, figure, img);
     sectionHolder.style.backgroundImage = "url('assets/resources/imgs/landing/aboutLanding2.webp')"
-    // link.appendChild(textHolder);
     link = helperFunctions.appendChildren(link, h1, textSample)
     sectionHolder = helperFunctions.nestChildren(sectionHolder, textHolder, link);
     return sectionHolder;
@@ -80,7 +77,6 @@ const pageStuff = {
       option.classList.add(element.class);
       link.appendChild(text);
       sampleHolder.appendChild(option);
-      // gallerySection = helperFunctions.nestChildren(gallerySection, option, link);
     });
     gallerySection = helperFunctions.appendChildren(gallerySection, h1, sampleHolder, moreLink);
     return gallerySection;
@@ -114,16 +110,13 @@ const pageStuff = {
   ){
     console.log(reviewDB);
     for (let i = 0; i < 4; i++){
-      // console.log(reviewDB.array[i]);
       sampleArray.push(reviewDB.array[i]);
     }
-    // console.log(sampleArray);
     let carousel_organism_variable = specialFeatures.carousel.carousel_organism(reviewDB.contentType, reviewDB.name, sampleArray);
     carousel_organism_variable.forEach(element => {
       filter.appendChild(element);
     });
     sectionHolder.appendChild(filter);
-    // console.log(sectionHolder);
     return sectionHolder
   },
   theEvents: {
@@ -138,7 +131,6 @@ const pageStuff = {
         "assets/resources/imgs/landing/banner5.webp"
       ],
       counter = 2,
-      // newCounter = counter+1
     ){
 
       let fadingImg = setInterval(()=>{
@@ -151,15 +143,9 @@ const pageStuff = {
         if (counter == imgOptions.length){
           counter = 0;
         }
-
-
         dyingImg.remove();
         substituteImg.classList.add("dyingImg");
         figureElement.appendChild(newImg);
-
-
-
-
       },5000)   
     }
   }

@@ -451,10 +451,14 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     transition: all 0.5s;
   }
   header nav#mainNav ul li a.current {
-    color: rgb(0, 152, 219);
     font-weight: bolder;
+    color: rgb(0, 152, 219);
   }
-  header nav#mainNav ul li a:hover, header nav#mainNav ul li a:active, header nav#mainNav ul li a:focus {
+  header nav#mainNav ul li a.current span {
+    width: 100%;
+    border-color: rgb(0, 152, 219);
+  }
+  header nav#mainNav ul li a:hover span, header nav#mainNav ul li a:active span, header nav#mainNav ul li a:focus span {
     border-color: rgb(0, 152, 219);
     width: 100%;
   }
@@ -618,5 +622,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   #serviceSection #side2 figure {
     height: 27.5rem;
+  }
+  #serviceSection #side2 figure img {
+    width: 101%;
   }
 }/*# sourceMappingURL=services.css.map */

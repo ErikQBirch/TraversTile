@@ -13,7 +13,7 @@ const pageStuff = {
   hero: function(
     hero_tag = helperFunctions.generateElement('section',"hero"),
     figure_tag = helperFunctions.generateElement('figure'),
-    img_tag = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/banner1.webp"),
+    img_tag = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/aboutLanding2.webp"),
     banner_tag = helperFunctions.generateElement('h1',"","",`${document.querySelector('a.current').innerHTML}`)
   ){
     figure_tag = helperFunctions.appendChildren(figure_tag, img_tag);
@@ -51,19 +51,16 @@ const pageStuff = {
     sampleArray = []
   ){
     for (let i = 0; i < 10; i++){
-      // console.log(reviewDB.array[i]);
       if (reviewDB.array[i].focus == "Ian"){
         console.log(reviewDB.array[i])
         sampleArray.push(reviewDB.array[i]);
       }
     }
-    // console.log(sampleArray);
     let carousel_organism_variable = specialFeatures.carousel.carousel_organism(reviewDB.contentType, reviewDB.name, sampleArray);
     carousel_organism_variable.forEach(element => {
       filter.appendChild(element);
     });
     sectionHolder.appendChild(filter);
-    // console.log(sectionHolder);
     return sectionHolder
   },
 }

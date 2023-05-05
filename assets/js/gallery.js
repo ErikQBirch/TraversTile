@@ -21,7 +21,6 @@ const pageStuff = {
       let option = helperFunctions.generateElement('option',"","",str);
       console.log(str, selectedOpt)
       if (str == selectedOpt){
-        // option.setAttribute('selected',true);
         option.selected = true;
       }
       select.appendChild(option);
@@ -59,7 +58,6 @@ const pageStuff = {
     catch(err){}
      
 
-    // console.log(selectDiv, imgDiv);
     section = helperFunctions.appendChildren(section, selectDiv, materialDropDown, imgDiv);
 
     return section;
@@ -67,7 +65,7 @@ const pageStuff = {
   hero: function(
     hero_tag = helperFunctions.generateElement('section',"hero"),
     figure_tag = helperFunctions.generateElement('figure'),
-    img_tag = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/banner1.webp"),
+    img_tag = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/banner5.webp"),
     banner_tag = helperFunctions.generateElement('h1',"","",`${document.querySelector('a.current').innerHTML}`)
   ){
     figure_tag = helperFunctions.appendChildren(figure_tag, img_tag);
@@ -241,7 +239,6 @@ const pageStuff = {
           galleryElement.insertBefore(newImgDiv, oldImgDiv);
           oldImgDiv.remove();
           specialFeatures.lazyLoading();
-          // console.log(v);
         })
       });
     },

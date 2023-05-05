@@ -13,7 +13,7 @@ const pageStuff = {
   hero: function(
     hero_tag = helperFunctions.generateElement('section',"hero"),
     figure_tag = helperFunctions.generateElement('figure'),
-    img_tag = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/banner1.webp"),
+    img_tag = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/landing5.webp"),
     banner_tag = helperFunctions.generateElement('h1',"","",`${document.querySelector('a.current').innerHTML}`)
   ){
     figure_tag = helperFunctions.appendChildren(figure_tag, img_tag);
@@ -69,13 +69,11 @@ const pageStuff = {
     for (this.counter = 0; this.counter < this.limit; this.counter++){
       let obj = reviewDB.array[this.counter];
       let article = this.singleReview(obj);
-
         sectionHolder.appendChild(article);
     }
     return sectionHolder;
   },
   singleReview: function(obj){
-    // console.log(obj);
     let article = helperFunctions.generateElement('article',`reviewNumb${this.counter}`,"",
         `
         <a href="${obj.link}">${obj.name}</a>

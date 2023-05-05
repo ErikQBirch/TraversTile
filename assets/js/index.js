@@ -23,7 +23,6 @@ const pageStuff = {
       navigationPackage[0],
       navigationPackage[1], 
       navigationPackage[2],
-      // navigationPackage[3]
       );
     return header_tag;
   },
@@ -48,7 +47,6 @@ const pageStuff = {
     package_array.forEach(item => {
       topHalf.appendChild(item)
     });
-    // console.log(package_array)
     bottomHalf.appendChild(text);
     footer_tag = helperFunctions.appendChildren(footer_tag, topHalf, bottomHalf);
     return footer_tag;
@@ -62,7 +60,6 @@ const pageStuff = {
     })
     window.addEventListener('scroll', (e)=>{
       let scroll = window.scrollY;
-      // console.log(scroll,document.innerHeight);
       try{
           if ((scroll > 0)){
               btn.style.opacity=1;
@@ -76,28 +73,6 @@ const pageStuff = {
     })
     return btn;
   },
-  
-  // scrollEvents:{
-  //   headerScroll: function(
-  //     header_tag = document.querySelector('header'),
-  //     sideMenu = document.querySelector('#sideMenu')
-  //   ){
-  //     // console.log(header_tag);
-  //     let currentScroll = 0;
-  //     window.onscroll = function(e){
-  //       let nextScroll = window.scrollY;
-  //       if (nextScroll > currentScroll){
-  //         if (window.innerWidth > 992){
-  //           header_tag.style.top = "-6rem";
-  //         }
-  //       }
-  //       else {
-  //         header_tag.style.top = "0rem";
-  //       }
-  //       currentScroll = nextScroll;
-  //     }
-  //   }
-  // }
 }
 
 pageStuff.constructHTML();

@@ -127,7 +127,6 @@ export const helperFunctions = {
     if (isIndex == false){
       pathAdjuster = ["../",""];
     }
-    // console.log(pathAdjuster);
   return pathAdjuster;
   },
   metaInfo: function(
@@ -143,7 +142,6 @@ export const helperFunctions = {
     head = helperFunctions.appendChildren(head, keywords,description,author)
   },
   nestChildren: function(parent, ...elementChildren){
-    // console.log(elementChildren)
     parent.appendChild(elementChildren[0]);
     for (let i=1; i<elementChildren.length; i++){
         elementChildren[i-1].appendChild(elementChildren[i]);
