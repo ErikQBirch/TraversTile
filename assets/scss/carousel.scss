@@ -4,9 +4,7 @@
       color: white;
       width: 100%;
       height: 50vh;
-      // background-color:rgba(0,0,0,0.5);
       overflow:hidden;
-      // cursor: pointer;
       #slideHolder{
         display:flex;
         width: fit-content;
@@ -14,7 +12,7 @@
         div{
           width: 100vw;
           height: 50vh;
-          padding: 0 3.5rem;
+          padding: 0 5rem;
           overflow:hidden;
           display:flex;
           flex-direction: column;
@@ -22,7 +20,6 @@
           justify-content:center;
           img{
             height: 50vh;
-            // width: 100vw;
           }
         }
       }
@@ -76,8 +73,6 @@
       @include centered;
       margin: 1rem auto;
       padding: 1rem;
-      // display:flex;
-      // justify-content: center;
       width: fit-content;
       color:white;
       width: 100%;
@@ -88,39 +83,4 @@
         color:rgba(236,145,74,1);
       }
     }
-}
-@mixin minCarousel {
-  // main{
-  //   margin-top: 0;
-  // }
-}
-@mixin medCarousel {
-  #carousel{
-    outline: 5px solid black;
-    width: 45vw;
-    margin: 0 auto;
-    #slideHolder{
-      figure{
-        width: 45vw;
-        img{
-        }
-      }
-    }
-    #slideControls{
-      width: 45vw;
-      button{     
-      }
-      button:hover,
-      button:active{
-      }
-    }
-  }
-  #carousel_nav{
-    button{}
-    button.currentBtn{
-
-    }
-  }
-}
-@mixin maxCarousel {
 }

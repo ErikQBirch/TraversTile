@@ -12,12 +12,13 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
 
 @media only all and (min-width: 0) {
   header {
-    height: 7.5rem;
+    height: 8.5rem;
     overflow: hidden;
     transition: height 0.75s;
   }
   header div#logoArea {
     height: 6rem;
+    margin-bottom: 1rem;
   }
   header div#logoArea a {
     display: flex;
@@ -110,7 +111,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     display: none;
   }
   header.isOpen {
-    height: 18rem;
+    height: 19rem;
   }
   header.isOpen section#mobileMenu button#dropDownBtn i {
     transform: rotate(180deg);
@@ -120,6 +121,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     height: 70vh;
     overflow: hidden;
     position: relative;
+    border-bottom: 1.5rem solid rgb(96, 96, 98);
   }
   #hero figure {
     display: flex;
@@ -153,7 +155,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   #hero div#carouselMolecule #carousel #slideHolder div {
     width: 100vw;
     height: 50vh;
-    padding: 0 3.5rem;
+    padding: 0 5rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -311,9 +313,11 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     margin: 0 auto;
     width: 100%;
     margin: 1rem auto;
+    width: 100%;
   }
   footer #topHalf_footer #footerNav ul {
     list-style: none;
+    width: 100%;
   }
   footer #topHalf_footer #footerNav ul li {
     padding: 0.5rem 0;
@@ -367,20 +371,10 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
 }
 @media only all and (min-width: 760px) {
-  #hero {
-    border-bottom: 2rem solid rgb(96, 96, 98);
-  }
   #hero figure img {
     width: 150%;
   }
   footer #topHalf_footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
     width: 95%;
     display: grid;
     grid-template-columns: 30% 70%;
@@ -389,57 +383,26 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   footer #topHalf_footer #logoArea {
     grid-column: 1;
     grid-row: 1;
-    padding: 1rem 0;
-  }
-  footer #topHalf_footer #logoArea a {
-    display: flex;
-  }
-  footer #topHalf_footer #logoArea a img {
-    width: 100%;
   }
   footer #topHalf_footer #footerNav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    margin: 1rem auto;
-    width: 100%;
     grid-column: 2;
     grid-row: 1;
     flex-direction: row;
   }
   footer #topHalf_footer #footerNav ul {
     display: flex;
-    width: 100%;
-    list-style: none;
     flex-direction: row;
     justify-content: space-around;
   }
-  footer #topHalf_footer #footerNav ul li {
-    padding: 0.5rem 0;
-  }
   footer #topHalf_footer #contactMolecule {
     width: 75%;
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem auto;
     grid-column: 1/3;
     grid-row: 2;
-  }
-  footer #topHalf_footer #contactMolecule a:link, footer #topHalf_footer #contactMolecule a:visited {
-    font-size: 2.5rem;
-  }
-  footer #bottomHalf_footer {
-    padding: 2rem 0 0.5rem 0;
   }
 }
 @media only all and (min-width: 992px) {
   header {
     width: 95%;
-    height: 7.5rem;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -448,6 +411,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   header div#logoArea {
     height: 7.5rem;
+    margin: 0;
   }
   header div#logoArea a {
     height: 7.5rem;
@@ -524,9 +488,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   footer #topHalf_footer #logoArea {
     grid-row: 1/3;
   }
-  footer #topHalf_footer #footerNav {
-    width: 100%;
-  }
   footer #topHalf_footer #footerNav ul {
     justify-content: flex-end;
   }
@@ -534,7 +495,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     margin-left: 2.5rem;
   }
   footer #topHalf_footer #contactMolecule {
-    width: 100%;
     grid-column: 2;
     grid-row: 2;
     justify-content: flex-end;
@@ -546,27 +506,15 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
 @media only all and (min-width: 1200px) {
   header {
     width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-  }
-  header section#mobileMenu {
-    display: none;
   }
   header nav#mainNav {
-    width: 45%;
+    width: 47.5%;
   }
   header {
     width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-  }
-  header section#mobileMenu {
-    display: none;
   }
   header nav#mainNav {
-    width: 45%;
+    width: 47.5%;
   }
 }
 @media only all and (min-width: 0) {
@@ -591,6 +539,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
     border: none;
+    cursor: pointer;
     background-color: rgba(0, 152, 219, 0.5);
     font-size: 1.5rem;
     font-weight: bolder;
@@ -613,7 +562,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     justify-content: center;
     text-align: center;
     margin: 0 auto;
-    width: 100%;
     width: 100%;
     height: 10rem;
     overflow: hidden;
@@ -669,14 +617,15 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
     border: none;
+    cursor: pointer;
     position: absolute;
     overflow: hidden;
     top: 0;
     left: 0;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(0, 152, 219);
-    text-shadow: 0px 0px 5px white;
+    color: white;
+    text-shadow: 0px 0px 10px rgb(0, 152, 219);
     font-size: 2rem;
   }
   #gallerySection #sampleHolder article a h2:hover, #gallerySection #sampleHolder article a h2:active, #gallerySection #sampleHolder article a h2:focus {
@@ -700,6 +649,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
     border: none;
+    cursor: pointer;
     margin: 1rem auto;
     padding: 1rem 2.5rem;
     width: -moz-fit-content;
@@ -762,6 +712,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
     border: none;
+    cursor: pointer;
     flex-direction: column;
   }
   #aboutSection div a:hover, #aboutSection div a:active, #aboutSection div a:focus {
@@ -801,7 +752,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   #reviewSection #carousel #slideHolder div {
     width: 100vw;
     height: 50vh;
-    padding: 0 3.5rem;
+    padding: 0 5rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -884,6 +835,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
     border: none;
+    cursor: pointer;
   }
   #reviewSection #filter button:hover, #reviewSection #filter button:active, #reviewSection #filter button:focus {
     background-color: rgba(236, 145, 74, 0.75);
@@ -898,6 +850,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
     border: none;
+    cursor: pointer;
   }
   #reviewSection #filter a:hover, #reviewSection #filter a:active, #reviewSection #filter a:focus {
     background-color: rgba(236, 145, 74, 0.75);
@@ -913,7 +866,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   #gallerySection #sampleHolder article {
     margin: 1rem auto;
-    width: 100%;
+    box-shadow: 2.5px 2.5px 10px black;
   }
   #gallerySection #sampleHolder article a {
     display: flex;
@@ -922,6 +875,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     background-color: rgba(0, 152, 219, 0.75);
     transition: all 0.5s;
     border: none;
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     background-color: transparent;
@@ -953,6 +907,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   #aboutSection {
     width: 80%;
+    box-shadow: 5px 5px 10px black;
   }
   #aboutSection figure img {
     width: 100%;
@@ -967,10 +922,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     flex-wrap: wrap;
   }
   #gallerySection #sampleHolder article {
-    margin: 1rem;
     width: 30vw;
     height: 100%;
-    margin-top: 1rem;
     transition: margin-top 0.5s;
   }
   #gallerySection #sampleHolder article a {
@@ -989,9 +942,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     width: 100%;
     padding: 1rem 0;
   }
-  #gallerySection #sampleHolder article a:hover h2, #gallerySection #sampleHolder article a:active h2, #gallerySection #sampleHolder article a:focus h2 {
-    background-color: rgba(236, 145, 74, 0.75);
-  }
   #gallerySection #sampleHolder article:nth-of-type(2n) a {
     flex-direction: column;
   }
@@ -1002,11 +952,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     margin-top: -0.5rem;
   }
   #aboutSection {
-    width: 100%;
-    width: 80%;
     margin: 5rem auto;
     flex-direction: row;
-    text-decoration: none;
     align-items: flex-start;
   }
   #aboutSection figure img {

@@ -2,16 +2,6 @@
 @import "index";
 
 
-// @mixin centered {
-//   display:flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   text-align:center;
-//   // margin: 0 auto;
-//   width: 100%;
-// }
-
 @media only all and (min-width: 0){
   #gallery{
     #selectionDiv{
@@ -27,7 +17,6 @@
         &[disabled]{
           background-color: rgba(151,152,154,1);
           cursor: initial;
-          // color:red;
         }
         &:hover, &:active, &:focus{
           border-radius: 10px;
@@ -56,6 +45,9 @@
         transition:all 0.5s;
         width: 100%;
         figure{
+          @include centered;
+          box-shadow: 2.5px 2.5px 10px black;
+          margin: 1rem auto;
           img{
             width: 100%;
             opacity:1;
@@ -74,28 +66,12 @@
 }
 @media only all and (min-width: 760px){
   #gallery{
-    #selectionDiv{
-      button{
-        }
-      }
-    }
-    #materialDropDown{
-      &.hide{
-      }
-      label{
-      }
-    }
-    #imgDiv{
-      h2{
-      }
-      article{
-        display:flex;
-        flex-wrap: wrap;
-        figure{
-          @include centered;
-          width: 37.5vw;
-          margin: 1rem auto;
-          img{
+      #imgDiv{
+        article{
+          display:flex;
+          flex-wrap: wrap;
+          figure{
+            width: 37.5vw;
           }
         }
       }

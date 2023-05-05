@@ -6,6 +6,7 @@
     height: 70vh;
     overflow: hidden;
     position:relative;
+    border-bottom: 1.5rem solid rgb(96,96,98);
     figure{
       @include centered;
       img{
@@ -45,19 +46,15 @@
       color:white;
       padding: 2.5rem 0;
       bottom: 30%;
-      // height: 15vh;
     }
   }
 }
 @mixin minHero{
   #hero{
-    border-bottom: 2rem solid rgb(96,96,98);
     figure{
       img{
         width: 150%;
       }
-    }
-    a{
     }
   }
 }
@@ -65,7 +62,6 @@
   #hero{
     height: 80vh;
     border-top: 2rem solid rgb(96,96,98);
-    // border: 
     figure{
       img{
         width: 100%;

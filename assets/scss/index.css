@@ -12,12 +12,13 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
 
 @media only all and (min-width: 0) {
   header {
-    height: 7.5rem;
+    height: 8.5rem;
     overflow: hidden;
     transition: height 0.75s;
   }
   header div#logoArea {
     height: 6rem;
+    margin-bottom: 1rem;
   }
   header div#logoArea a {
     display: flex;
@@ -110,7 +111,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     display: none;
   }
   header.isOpen {
-    height: 18rem;
+    height: 19rem;
   }
   header.isOpen section#mobileMenu button#dropDownBtn i {
     transform: rotate(180deg);
@@ -153,7 +154,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   #hero div#carouselMolecule #carousel #slideHolder div {
     width: 100vw;
     height: 50vh;
-    padding: 0 3.5rem;
+    padding: 0 5rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -311,9 +312,11 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     margin: 0 auto;
     width: 100%;
     margin: 1rem auto;
+    width: 100%;
   }
   footer #topHalf_footer #footerNav ul {
     list-style: none;
+    width: 100%;
   }
   footer #topHalf_footer #footerNav ul li {
     padding: 0.5rem 0;
@@ -374,13 +377,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     width: 150%;
   }
   footer #topHalf_footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
     width: 95%;
     display: grid;
     grid-template-columns: 30% 70%;
@@ -389,57 +385,26 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   footer #topHalf_footer #logoArea {
     grid-column: 1;
     grid-row: 1;
-    padding: 1rem 0;
-  }
-  footer #topHalf_footer #logoArea a {
-    display: flex;
-  }
-  footer #topHalf_footer #logoArea a img {
-    width: 100%;
   }
   footer #topHalf_footer #footerNav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    margin: 1rem auto;
-    width: 100%;
     grid-column: 2;
     grid-row: 1;
     flex-direction: row;
   }
   footer #topHalf_footer #footerNav ul {
     display: flex;
-    width: 100%;
-    list-style: none;
     flex-direction: row;
     justify-content: space-around;
   }
-  footer #topHalf_footer #footerNav ul li {
-    padding: 0.5rem 0;
-  }
   footer #topHalf_footer #contactMolecule {
     width: 75%;
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem auto;
     grid-column: 1/3;
     grid-row: 2;
-  }
-  footer #topHalf_footer #contactMolecule a:link, footer #topHalf_footer #contactMolecule a:visited {
-    font-size: 2.5rem;
-  }
-  footer #bottomHalf_footer {
-    padding: 2rem 0 0.5rem 0;
   }
 }
 @media only all and (min-width: 992px) {
   header {
     width: 95%;
-    height: 7.5rem;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -524,9 +489,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   footer #topHalf_footer #logoArea {
     grid-row: 1/3;
   }
-  footer #topHalf_footer #footerNav {
-    width: 100%;
-  }
   footer #topHalf_footer #footerNav ul {
     justify-content: flex-end;
   }
@@ -534,7 +496,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     margin-left: 2.5rem;
   }
   footer #topHalf_footer #contactMolecule {
-    width: 100%;
     grid-column: 2;
     grid-row: 2;
     justify-content: flex-end;
@@ -554,7 +515,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     display: none;
   }
   header nav#mainNav {
-    width: 45%;
+    width: 47.5%;
   }
   header {
     width: 90%;
@@ -566,6 +527,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     display: none;
   }
   header nav#mainNav {
-    width: 45%;
+    width: 47.5%;
   }
 }/*# sourceMappingURL=index.css.map */

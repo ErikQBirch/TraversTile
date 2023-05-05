@@ -1,10 +1,11 @@
 @mixin mobileHeader{
   header{
-    height: 7.5rem;
+    height: 8.5rem;
     overflow: hidden;
     transition: height 0.75s;
     div#logoArea{
       height: 6rem;
+      margin-bottom: 1rem;
       a{
         @include centered;
         height: 6rem;
@@ -72,22 +73,10 @@
     }
     nav#mainNav{
       display:none;
-      ul{
-        li{
-          a{}
-        }
-      }
     }
-
   }
   header.isOpen{
-    height: 18rem;
-    div#logoArea{
-      a{
-        img{
-        }
-      }
-    }
+    height: 19rem;
     section#mobileMenu{
       button#dropDownBtn{
         i{
@@ -95,21 +84,12 @@
         }
       }
     }
-    nav#mainNav{
-      ul{
-        li{
-          a{}
-        }
-      }
-    }
-
   }
 }
 @mixin minHeader{}
 @mixin medHeader{
   header{
     width: 95%;
-    height: 7.5rem;
     margin: 0 auto;
     display:flex;
     flex-direction:row;
@@ -117,6 +97,7 @@
     align-items: center;
     div#logoArea{
       height: 7.5rem;
+      margin:0;
       a{
         height: 7.5rem;
         img{
@@ -126,31 +107,8 @@
     }
     section#mobileMenu{
       display:none;
-      a:link, a:visited{
-      }
-      button#dropDownBtn{
-        &:hover{
-        }
-        &:active, &:focus{
-        }
-        i {
-        }
-      }
-      nav#mobileNav{
-        ul{
-          li{
-            a{
-              &:hover{
-              }
-              &:active, &:focus{
-              }
-            }
-          }
-        }
-      }
     }
     nav#mainNav{
-      // width: 50%;
       font-family: Arial, Helvetica, sans-serif;
       display:flex;
       ul{
@@ -191,62 +149,9 @@
 @mixin maxHeader{
   header{
     width: 90%;
-    // height: 5rem;
-    margin: 0 auto;
-    display:flex;
-    flex-direction:row;
-    // justify-content: space-between;
-    // align-items: center;
-    div#logoArea{
-      // height: 4rem;
-      a{
-        // height: 4rem;
-        img{
-          // height: 4rem;
-        }
-      }
-    }
-    section#mobileMenu{
-      display:none;
-      a:link, a:visited{
-      }
-      button#dropDownBtn{
-        &:hover{
-        }
-        &:active, &:focus{
-        }
-        i {
-        }
-      }
-      nav#mobileNav{
-        ul{
-          li{
-            a{
-              &:hover{
-              }
-              &:active, &:focus{
-              }
-            }
-          }
-        }
-      }
-    }
     nav#mainNav{
-      width: 45%;
-      ul{
-        li{
-          a{
-            span{
-            }
-            &:hover, &:active, &:focus{
-              span{
-              }
-            }
-          }
-        }
-      }
+      width: 47.5%;
     }
-
   }
 }
 

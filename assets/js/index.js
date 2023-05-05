@@ -41,7 +41,7 @@ const pageStuff = {
   footer: function(
     footer_tag = helperFunctions.generateElement('footer'),
     package_array = (footer.getNavigationPackage()),
-    text = helperFunctions.generateElement('p',"","","Erik Q. Birch | ©2023 | TripleA™"),
+    text = helperFunctions.generateElement('p',"","","Erik Q. Birch | ©2023 | AWDs™"),
     topHalf = helperFunctions.generateElement('div',"topHalf_footer"),
     bottomHalf = helperFunctions.generateElement('div',"bottomHalf_footer")
   ){

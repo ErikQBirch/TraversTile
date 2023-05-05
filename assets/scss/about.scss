@@ -9,8 +9,9 @@
     #aboutDiv{
       @include centered;
       margin-bottom: 2.5rem;
-      h2{}
-      p{}
+      h2{
+        margin: 1rem auto;
+      }
       a:link, a:visited{
         @include linkStylization;
         margin: 1rem auto;
@@ -23,7 +24,6 @@
     }
     figure{
       border: 1px solid black;
-      box-shadow: 1px 1px 5px black;
       width: 100vw;
       height: 100vw;
       img{
@@ -44,7 +44,6 @@
         @include linkStylization;
         &.slideBtn{
           background-color:transparent;
-          // transition: color 0.5s;
         }
       } 
       a{
@@ -60,18 +59,10 @@
 @media only all and (min-width: 760px){
   #aboutSection{
     width: 80%;
-    #aboutDiv{
-      h2{}
-      p{}
-      a:link, a:visited{
-      }
-    }
     figure{
       width: 25rem;
       height: 25rem;
-      img{
-        width: 100%;
-      }
+      box-shadow: 2.5px 2.5px 10px black;
     }
   }
 }
@@ -92,11 +83,6 @@
       }
       a:link, a:visited{
         margin: 1rem 0;
-      }
-    }
-    figure{
-      img{
-        width: 100%;
       }
     }
   }
