@@ -4,153 +4,183 @@ export const galleryDB = {
   "array": [
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Porcelain",
-      "class2":"Material"
+      "type":"Porcelain",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Porcelain",
-      "class2":"Material"
+      "type":"Porcelain",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Porcelain",
-      "class2":"Material"
+      "type":"Porcelain",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Porcelain",
-      "class2":"Material"
+      "type":"Porcelain",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Porcelain",
-      "class2":"Material"
+      "type":"Porcelain",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Porcelain",
-      "class2":"Material"
+      "type":"Porcelain",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Stone",
-      "class2":"Material"
+      "type":"Stone",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Stone",
-      "class2":"Material"
+      "type":"Stone",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Stone",
-      "class2":"Material"
+      "type":"Stone",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Stone",
-      "class2":"Material"
+      "type":"Stone",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Stone",
-      "class2":"Material"
+      "type":"Stone",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Ceramic",
-      "class2":"Material"
+      "type":"Ceramic",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Ceramic",
-      "class2":"Material"
+      "type":"Ceramic",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Ceramic",
-      "class2":"Material"
+      "type":"Ceramic",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Ceramic",
-      "class2":"Material"
+      "type":"Ceramic",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Travertine",
-      "class2":"Material"
+      "type":"Travertine",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Travertine",
-      "class2":"Material"
+      "type":"Travertine",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Travertine",
-      "class2":"Material"
+      "type":"Travertine",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Marble",
-      "class2":"Material"
+      "type":"Marble",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Marble",
-      "class2":"Material"
+      "type":"Marble",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeholder.jpg",
-      "class1":"Glass",
-      "class2":"Material"
+      "type":"Glass",
+      "option":"Material"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
-      "class1":"Kitchens",
-      "class2":"Service"
+      "type":"Kitchens",
+      "option":"Service"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
-      "class1":"Kitchens",
-      "class2":"Service"
+      "type":"Kitchens",
+      "option":"Service"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
-      "class1":"Kitchens",
-      "class2":"Service"
+      "type":"Kitchens",
+      "option":"Service"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
-      "class1":"Kitchens",
-      "class2":"Service"
+      "type":"Kitchens",
+      "option":"Service"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
-      "class1":"Kitchens",
-      "class2":"Service"
+      "type":"Kitchens",
+      "option":"Service"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
-      "class1":"Bathrooms",
-      "class2":"Service"
+      "type":"Bathrooms",
+      "option":"Service"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
-      "class1":"Bathrooms",
-      "class2":"Service"
+      "type":"Bathrooms",
+      "option":"Service"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
-      "class1":"Bathrooms",
-      "class2":"Service"
+      "type":"Bathrooms",
+      "option":"Service"
     },
     {
       "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
-      "class1":"Bathrooms",
-      "class2":"Service"
+      "type":"Bathrooms",
+      "option":"Service"
     },
-  ]
+    {
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "type":"Starter",
+      "option":"Basic"
+    },
+    {
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "type":"Starter",
+      "option":"Basic"
+    },
+    {
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "type":"Starter",
+      "option":"Basic"
+    },
+    {
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "type":"Starter",
+      "option":"Basic"
+    },
+    {
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "type":"Starter",
+      "option":"Basic"
+    },
+    {
+      "imgPath":"../assets/resources/imgs/gallery/placeHolder2.png",
+      "type":"Starter",
+      "option":"Basic"
+    },
+  ],
 }

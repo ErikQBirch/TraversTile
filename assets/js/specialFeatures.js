@@ -212,7 +212,7 @@ export const specialFeatures = {
         img.removeAttribute('data-src');
         try{
           let lazyParent = helperFunctions.searchParents(img,"lazyParent");
-          console.log(lazyParent);
+          // console.log(lazyParent);
           lazyParent.classList.remove('lazyParent');
           img.classList.remove('lazyLoad');
         }

@@ -80,7 +80,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     transition: transform 0.75s;
   }
   header section#mobileMenu nav#mobileNav {
-    height: 10.5rem;
+    height: -moz-fit-content;
+    height: fit-content;
     width: 100%;
     margin-bottom: 0.5rem;
   }
@@ -97,7 +98,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     width: 100%;
   }
   header section#mobileMenu nav#mobileNav ul li a {
-    height: 100%;
+    height: 1.75rem;
     width: 100%;
   }
   header section#mobileMenu nav#mobileNav ul li a.current, header section#mobileMenu nav#mobileNav ul li a:hover {
@@ -111,14 +112,14 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     display: none;
   }
   header.isOpen {
-    height: 19rem;
+    height: 15.5rem;
   }
   header.isOpen section#mobileMenu button#dropDownBtn i {
     transform: rotate(180deg);
   }
   #hero {
     width: 100%;
-    height: 70vh;
+    height: 55vh;
     overflow: hidden;
     position: relative;
     border-bottom: 1.5rem solid rgb(96, 96, 98);
@@ -451,10 +452,14 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     transition: all 0.5s;
   }
   header nav#mainNav ul li a.current {
-    color: rgb(0, 152, 219);
     font-weight: bolder;
+    color: rgb(0, 152, 219);
   }
-  header nav#mainNav ul li a:hover, header nav#mainNav ul li a:active, header nav#mainNav ul li a:focus {
+  header nav#mainNav ul li a.current span {
+    width: 100%;
+    border-color: rgb(0, 152, 219);
+  }
+  header nav#mainNav ul li a:hover span, header nav#mainNav ul li a:active span, header nav#mainNav ul li a:focus span {
     border-color: rgb(0, 152, 219);
     width: 100%;
   }
@@ -506,15 +511,53 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
 @media only all and (min-width: 1200px) {
   header {
     width: 90%;
+    height: 7rem;
+  }
+  header div#logoArea {
+    height: 6rem;
+    margin-bottom: 0rem;
+  }
+  header div#logoArea a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 6rem;
+    width: 100%;
+  }
+  header div#logoArea a img {
+    height: 6rem;
   }
   header nav#mainNav {
-    width: 47.5%;
+    width: 25%;
   }
   header {
     width: 90%;
+    height: 7rem;
+  }
+  header div#logoArea {
+    height: 6rem;
+    margin-bottom: 0rem;
+  }
+  header div#logoArea a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 6rem;
+    width: 100%;
+  }
+  header div#logoArea a img {
+    height: 6rem;
   }
   header nav#mainNav {
-    width: 47.5%;
+    width: 25%;
   }
 }
 @media only all and (min-width: 0) {

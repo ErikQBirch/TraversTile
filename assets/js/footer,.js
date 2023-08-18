@@ -1,7 +1,8 @@
 import { helperFunctions } from "./helperFunctions.js"
 
 export const footer = {
-  pageList: ["services","gallery","about","reviews","contact","deadEnd"],
+  // pageList: ["services","gallery","about","reviews","contact","deadEnd"],
+  pageList: ["gallery","about","contact","deadEnd"],
   pathAdjuster: [],
   currentPage:  "",
   getNavigationPackage: function(){
@@ -23,7 +24,7 @@ export const footer = {
     return div;
   },
   nav_molecule:function(
-    navOptions = ["Home","Gallery","Services","About","Reviews","Contact"],
+    navOptions = ["Home","Gallery","About","Contact"],
     nav_tag = helperFunctions.generateElement('nav',"footerNav"),
     ul_tag = helperFunctions.generateElement('ul'))
   {

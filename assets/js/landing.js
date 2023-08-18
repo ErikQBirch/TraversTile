@@ -10,7 +10,7 @@ const pageStuff = {
     img = helperFunctions.generateElement('img',"","lazyLoad"),
     textHolder = helperFunctions.generateElement('div',""),
     h1 = helperFunctions.generateElement('h1',"","","About"),
-    textSample = helperFunctions.generateElement('p',"","",reviewDB.extra.aboutContent.sample)
+    textSample = helperFunctions.generateElement('p',"","","Travers Tile offers a variety of services in porcelain, ceramic, natural stone, marble, and glass tile, for your floor, shower, backsplash, or any other space.")
   ){
 
     img = helperFunctions.customSpecialElements(img,"assets/resources/imgs/landing/aboutLanding1.webp", "");
@@ -28,7 +28,7 @@ const pageStuff = {
     body.insertBefore(this.main(), footer);
     specialFeatures.lazyLoading();
     this.theEvents.heroBackgrounds();
-    specialFeatures.carousel.functionality.setUp();
+    // specialFeatures.carousel.functionality.setUp();
   },
   gallerySection: function(
     gallerySection = helperFunctions.generateElement('section',"gallerySection"),
@@ -59,7 +59,12 @@ const pageStuff = {
         "item":"Bathrooms",
         "class":"Service",
         "imgPath": "assets/resources/imgs/landing/gallerySample5.webp"
-      }
+      },
+      {
+        "item":"Custom",
+        "class":"Service",
+        "imgPath": "assets/resources/imgs/landing/gallerySample6.webp"
+      },
     ],
     moreLink = helperFunctions.generateElement('a',"moreLink","","See More","./pages/gallery.html")
   ){
@@ -86,7 +91,7 @@ const pageStuff = {
     figure_tag = helperFunctions.generateElement('figure'),
     img_tag = helperFunctions.generateElement('img',"","dyingImg","","assets/resources/imgs/landing/banner1.webp"),
     img_tag2 = helperFunctions.generateElement('img',"","","","assets/resources/imgs/landing/banner2.webp"),
-    banner_tag = helperFunctions.generateElement('a', "banner","","Talk with an Expert Today! <br>208-749-6666","tel:208-749-6666"),
+    banner_tag = helperFunctions.generateElement('a', "banner","","Talk with an Expert Today! <br>(208) 432-2846","tel:208-432-2846"),
   ){
     figure_tag = helperFunctions.appendChildren(figure_tag, img_tag, img_tag2);
     hero_tag = helperFunctions.appendChildren(hero_tag, figure_tag, banner_tag)
@@ -98,9 +103,9 @@ const pageStuff = {
     hero_tag = this.hero(),
     gallery_tag = this.gallerySection(),
     aboutSection = this.aboutSection(),
-    reviewSection = this.reviewSection()
+    // reviewSection = this.reviewSection()
     ){
-      main_tag = helperFunctions.appendChildren(main_tag, hero_tag, gallery_tag, aboutSection, reviewSection);
+      main_tag = helperFunctions.appendChildren(main_tag, hero_tag, gallery_tag, aboutSection);
     return main_tag;
   },
   reviewSection: function(

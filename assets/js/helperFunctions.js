@@ -22,7 +22,7 @@ export const helperFunctions = {
         element.setAttribute('alt',extraAttributes[1]);
         break;
       case 'email':
-        console.log(element);
+      
         element.setAttribute('href',"#/");
         navigator.clipboard.writeText(extraAttributes[0]);
         element.addEventListener('click',()=>{
@@ -61,11 +61,11 @@ export const helperFunctions = {
       case 'btn':
         if (paramClass.includes('clipboard') && paramLink){
           navigator.clipboard.writeText(paramLink);
-          console.log(paramLink);
+        
         }
         else if (paramLink){
           element.addEventListener('click',()=>{
-            console.log(window.location.href);
+          
             window.location.replace(paramLink);
           })
         }
@@ -158,11 +158,11 @@ export const helperFunctions = {
     let targetParent = undefined;
     let guess;
 
-    console.log(parentClass);
+  
 
     while (targetParent == undefined){
       guess = childElement.parentElement;
-      console.log(guess.nodeName);
+    
       if (guess.classList.contains(parentClass)){
         targetParent = guess;
         break;
@@ -178,7 +178,7 @@ export const helperFunctions = {
       //   break;
       // }
     }
-    console.log(targetParent);
+  
     return targetParent;
   }
 }

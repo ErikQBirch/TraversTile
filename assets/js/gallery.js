@@ -19,7 +19,6 @@ const pageStuff = {
   ){
     array_m.forEach(str => {
       let option = helperFunctions.generateElement('option',"","",str);
-      console.log(str, selectedOpt)
       if (str == selectedOpt){
         option.selected = true;
       }
@@ -39,23 +38,23 @@ const pageStuff = {
     selectDiv = this.selectDiv(urlParams),
     materialDropDown = this.dropDown(urlType)
   ){
-    let imgDiv; 
+    let imgDiv;
 
-    if (urlOption == "Material"){
-      imgDiv = this.showImgs("Material");
+    switch(urlOption){
+      case "Material":
+        imgDiv = this.showImgs("Material");
+        break;
+      case "Service":
+        imgDiv = this.showImgs("Service");
+        materialDropDown.classList.add('hide');
+        break;
+      case "Starter":
+        imgDiv = this.showImgs("Starter");  
+      break;
+      default:
+        imgDiv = this.showImgs("Material");
+        break;
     }
-    else if (urlOption == "Service"){
-      imgDiv = this.showImgs("Service");
-      materialDropDown.classList.add('hide');
-    }
-    else {
-      imgDiv = this.showImgs("Material");
-    }
-
-    try {
-
-    }
-    catch(err){}
      
 
     section = helperFunctions.appendChildren(section, selectDiv, materialDropDown, imgDiv);
@@ -65,7 +64,7 @@ const pageStuff = {
   hero: function(
     hero_tag = helperFunctions.generateElement('section',"hero"),
     figure_tag = helperFunctions.generateElement('figure'),
-    img_tag = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/banner5.webp"),
+    img_tag = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/banner1.webp"),
     banner_tag = helperFunctions.generateElement('h1',"","",`${document.querySelector('a.current').innerHTML}`)
   ){
     figure_tag = helperFunctions.appendChildren(figure_tag, img_tag);
@@ -128,11 +127,19 @@ const pageStuff = {
     array_using = []
   ){
     //STEP1: check which array will be used based on showing option
-    if (showing == "Material"){
-      array_using = array_m;
-    }
-    else if (showing = "Service"){
-      array_using = array_s;
+    switch(showing){
+      case "Material":
+        array_using = array_m;
+        break;
+        case "Service":
+        array_using = array_s;
+        break;
+      case "Starter":
+        array_using = array_start;
+        break;
+      default:
+        array_using = array_start;
+        break;
     }
 
     //STEP2: check for urlType
@@ -173,12 +180,12 @@ const pageStuff = {
       let article = helperFunctions.generateElement('article',"",str);
       article.classList.add('lazyParent');
       galleryDB.array.forEach(obj => {
-        if ((obj.class1 == str) && (obj.class2 == showing)){
+        if ((obj.type == str) && (obj.option == showing)){
           let figure = helperFunctions.generateElement('figure');
           let img = helperFunctions.generateElement('img',"","lazyLoad","",obj.imgPath);
           
-          img = helperFunctions.customSpecialElements(img, obj.imgPath, ""); //this comes before adding obj.class1 so that the customeSpecialElement only deals with one class
-          img.classList.add(obj.class1);
+          img = helperFunctions.customSpecialElements(img, obj.imgPath, ""); //this comes before adding obj.type so that the customeSpecialElement only deals with one class
+          img.classList.add(obj.type);
 
           article = helperFunctions.nestChildren(article, figure, img);
         }

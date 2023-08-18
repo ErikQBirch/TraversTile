@@ -10,7 +10,7 @@ const pageStuff = {
   hero: function(
     hero_tag = helperFunctions.generateElement('section',"hero"),
     figure_tag = helperFunctions.generateElement('figure'),
-    img_tag = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/banner1.webp"),
+    img_tag = helperFunctions.generateElement('img',"","","","../assets/resources/imgs/landing/banner3.webp"),
     banner_tag = helperFunctions.generateElement('h1',"","",`${document.querySelector('a.current').innerHTML}`),
   ){
     figure_tag = helperFunctions.appendChildren(figure_tag, img_tag);
@@ -30,16 +30,17 @@ const pageStuff = {
     sectionHolder = helperFunctions.generateElement('section',"", "infoSection"),
     options = [
       {"name":"Address",
-        "info":"685 W 2050 N<br>Provo, UT 84604",
+        "info":"Twin Falls Area<br>Magic Valley Area<br>Sun Valley Area",
         "icon":`<i class="fa-solid fa-map-location-dot"></i>`},
       {"name":"Phone",
-        "info":"(208)-749-6666",
+        "info":"(208) 432-2846",
         "icon":`<i class="fa-solid fa-phone-volume"></i>`},
+        {"name":"Email",
+        "info":"ian.travers@gmail.com",
+        "icon":`<i class="fa-solid fa-envelope"></i>`},
       {"name":"Hours",
         "info":`
-          Mon-Fri: 9am-5pm<br>
-          Sat: 10am - 6pm<br>
-          Sun: NA`,
+          Mon-Fri: <br>9am-5pm`,
         "icon":`<i class="fa-solid fa-hourglass-half"></i>`},
     ]
   ){

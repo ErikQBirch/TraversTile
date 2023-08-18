@@ -47,11 +47,13 @@
         &.lazyParent{
           opacity:0;
         }
-        a {
+        a:link {
           width:100%;
           text-decoration: none;
+          @include centered;
           figure{
             @include centered;
+            // border: 5px solid red;
             img{
               @include centered;
               width: 100%;
@@ -64,21 +66,25 @@
           }
           h2{
             @include centered;
-            @include linkStylization;
+            // @include linkStylization;
             position: absolute;
             overflow:hidden;
             top:0;
             left: 0;
             height: 100%;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0,0,0,0.25);
             color:white;
             text-shadow: 0px 0px 10px rgba(0,152,219, 1);
             font-size: 2rem;
           }
           &:hover, &:active, &:focus{
             h2{
-              color:rgba(236,145,74, 0.75);
-              background-color: rgba(0,0,0,0.5);
+              // color:rgba(236,145,74, 0.75);
+              // text-shadow: 0px 0px 10px rgba(236,145,74, 0.75);
+              // background-color: rgba(0,0,0,0.75);
+              @include linkStylization;
+              color:white;
+              text-shadow: 0px 0px 10px black;
             }
           }
         }
@@ -124,7 +130,7 @@
       position: absolute;
       height: 100%;
       top:0;
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0,0,0,0.25);
       justify-content: flex-end;
       a{
         @include linkStylization;
@@ -191,7 +197,7 @@
           h2{
             position:initial;
             width: 30%;
-            background-color: rgba(0,152,219, 0.75);
+            // background-color: rgba(0,152,219, 0.75);
             color:white;
             text-shadow:none;
             font-size: 1.5rem;
