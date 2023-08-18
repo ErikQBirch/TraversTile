@@ -61,6 +61,8 @@ const pageStuff = {
     }
     else {
       section = helperFunctions.appendChildren(section, imgDiv);
+      section.querySelector('h2').style.display="none";
+      section.style.marginTop="2.5rem";
     }
 
     return section;
@@ -199,7 +201,8 @@ const pageStuff = {
 
           
           figure.addEventListener('click',()=>{
-            console.log(figure)
+            // console.log(obj)
+            this.showPopUp(obj);
           })
         }
       });
@@ -209,10 +212,23 @@ const pageStuff = {
     console.log(urlType, imgDiv)
     this.reorder(urlType, imgDiv);
 
-    
-
-
     return imgDiv;
+  },
+  showPopUp: function(
+    obj,
+    main = document.querySelector('main'),
+    section = helperFunctions.generateElement('section',"popUp"),
+    div = helperFunctions.generateElement('div',"popUpHolder"),
+    button = helperFunctions.generateElement('button',"","","X"),
+    figure = helperFunctions.generateElement('figure'),
+    img = helperFunctions.generateElement('img',"","","",obj.imgPath)
+  ){
+    main = helperFunctions.nestChildren(main, section,div,figure,img);
+    div.insertBefore(button,div.children[0]);
+
+    button.addEventListener('click',()=>{
+      section.remove();
+    })
   },
   theEvents: {
     startEvents: function(){

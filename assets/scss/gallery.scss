@@ -65,6 +65,31 @@
       }
     }
   }
+  #popUp{
+    position:fixed;
+    top:0;
+    height: 100vh;
+    @include centered;
+    z-index:7;
+    background-color: rgba(0,0,0,0.85);
+    div#popUpHolder{
+      @include centered;
+      width: 75%;
+      button{
+        display:flex;
+        align-self:flex-end;
+      }
+      figure{
+        @include centered;
+        box-shadow: 0 0 2.5rem white;
+        border-radius: 5px;
+        overflow:hidden;
+        img{
+          @include centered;
+        }
+      }
+    }
+  }
 }
 @media only all and (min-width: 760px){
   #gallery{
