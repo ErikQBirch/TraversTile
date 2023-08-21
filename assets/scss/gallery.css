@@ -621,7 +621,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     text-align: center;
     margin: 0 auto;
     width: 100%;
-    width: 75vw;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   #gallery #imgDiv h2 {
     margin: 2.5rem auto 1rem auto;

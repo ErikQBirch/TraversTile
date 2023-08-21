@@ -37,7 +37,7 @@
     }
     #imgDiv{
       @include centered;
-      width: 75vw;
+      width: fit-content;
       h2{
         margin: 2.5rem auto 1rem auto;
         text-decoration:underline;

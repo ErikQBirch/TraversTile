@@ -582,9 +582,13 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     margin: 0 auto;
     width: 100%;
     margin-bottom: 2.5rem;
+    width: 90%;
   }
   #aboutSection #aboutDiv h2 {
     margin: 1rem auto;
+  }
+  #aboutSection #aboutDiv p {
+    line-height: 1.5rem;
   }
   #aboutSection #aboutDiv a:link, #aboutSection #aboutDiv a:visited {
     display: flex;
@@ -769,6 +773,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   #aboutSection #aboutDiv p {
     text-align: left;
+    line-height: 2rem;
   }
   #aboutSection #aboutDiv a:link, #aboutSection #aboutDiv a:visited {
     margin: 1rem 0;
