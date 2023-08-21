@@ -621,8 +621,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     text-align: center;
     margin: 0 auto;
     width: 100%;
-    width: -moz-fit-content;
-    width: fit-content;
   }
   #gallery #imgDiv h2 {
     margin: 2.5rem auto 1rem auto;
@@ -745,14 +743,13 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     width: 80%;
   }
 }
-@media only all and (min-width: 0) and (min-width: 600px) {
+@media only all and (min-width: 600px) {
   #popUp div#popUpHolder.portrait {
     width: 65%;
   }
 }
 @media only all and (min-width: 760px) {
   #gallery #imgDiv article {
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     -moz-column-gap: 15px;

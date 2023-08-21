@@ -37,7 +37,8 @@
     }
     #imgDiv{
       @include centered;
-      width: fit-content;
+      // width: fit-content;
+      // width: 75vw;
       h2{
         margin: 2.5rem auto 1rem auto;
         text-decoration:underline;
@@ -124,22 +125,34 @@
       &.portrait{
         width: 80%;
       }
-      @media only all and (min-width:600px ) {
-        &.portrait{
-          width: 65%;
-        }
-      }
+
     }
   }
 }
 
+@media only all and (min-width:600px ) {
+  #gallery{
+    #selectionDiv{
+      #imgDiv{
+        // width: 75vw;
+      }
+    }
+  }
+  #popUp{
+    div#popUpHolder{
+      &.portrait{
+        width: 65%;
+      }
+    }
+  }
+}
 @media only all and (min-width: 760px){
   #gallery{
       #imgDiv{
         article{
           // display:flex;
           // flex-wrap: wrap;
-          width: 100%;
+          // width: 50%;
           display:grid;
           grid-template-columns: 1fr 1fr 1fr;
           column-gap: 15px;
