@@ -5,6 +5,9 @@
 @import "hero";
 @import "footer";
 
+$color1:rgba(0,152,219);
+$color2:rgba(236,145,74);
+
 
 @mixin centered {
   display:flex;

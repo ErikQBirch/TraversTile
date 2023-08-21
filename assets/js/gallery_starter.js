@@ -194,9 +194,11 @@ const pageStuff = {
       galleryDB.array.forEach(obj => {
         if ((obj.type == str) && (obj.option == showing)){
           let figure = helperFunctions.generateElement('figure');
-          let img = helperFunctions.generateElement('img',"","lazyLoad","",obj.imgPath);
-          img = helperFunctions.customSpecialElements(img, obj.imgPath, ""); //this comes before adding obj.type so that the customeSpecialElement only deals with one class
+          let filter = helperFunctions.generateElement('div',"","filter");
+          let img = helperFunctions.generateElement('img',"","lazyLoad","",obj.thmbPath);
+          img = helperFunctions.customSpecialElements(img, obj.thmbPath, ""); //this comes before adding obj.type so that the customeSpecialElement only deals with one class
           img.classList.add(obj.type);
+          figure.insertBefore(filter,figure.children[0]);
           article = helperFunctions.nestChildren(article, figure, img);
 
           
@@ -218,9 +220,9 @@ const pageStuff = {
     obj,
     main = document.querySelector('main'),
     section = helperFunctions.generateElement('section',"popUp"),
-    div = helperFunctions.generateElement('div',"popUpHolder"),
+    div = helperFunctions.generateElement('div',"popUpHolder",obj.orientation),
     button = helperFunctions.generateElement('button',"","","X"),
-    figure = helperFunctions.generateElement('figure'),
+    figure = helperFunctions.generateElement('figure',""),
     img = helperFunctions.generateElement('img',"","","",obj.imgPath)
   ){
     main = helperFunctions.nestChildren(main, section,div,figure,img);
@@ -228,6 +230,13 @@ const pageStuff = {
 
     button.addEventListener('click',()=>{
       section.remove();
+    })
+
+    addEventListener("keypress", (e)=>{
+      console.log(e.key)
+      if (e.key == "Escape"){
+        console.log("ESCAPE")
+      }
     })
   },
   theEvents: {

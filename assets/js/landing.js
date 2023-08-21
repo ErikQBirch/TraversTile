@@ -70,7 +70,8 @@ const pageStuff = {
   ){
     list.forEach(element => {
       let option = helperFunctions.generateElement('article',"","lazyParent");
-      let link = helperFunctions.generateElement('a',"","","",`./pages/gallery.html?option=${element.class}&type=${element.item}`);
+      // let link = helperFunctions.generateElement('a',"","","",`./pages/gallery.html?option=${element.class}&type=${element.item}`);
+      let link = helperFunctions.generateElement('a',"","","",`./pages/gallery.html`); //STARTER
       let figure = helperFunctions.generateElement('figure');
       let img = helperFunctions.generateElement('img',"","lazyLoad","",element.imgPath);
       let text = helperFunctions.generateElement('h2',"","",element.item);

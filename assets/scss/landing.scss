@@ -47,7 +47,7 @@
         &.lazyParent{
           opacity:0;
         }
-        a:link {
+        a:link, a:visited {
           width:100%;
           text-decoration: none;
           @include centered;
@@ -59,6 +59,9 @@
               width: 100%;
               transition:all 0.5s;
               opacity: 1;
+              position: relative;
+              // top:0;
+              // left:0;
             }
             img[data-src]{
               opacity:0;
@@ -72,10 +75,9 @@
             top:0;
             left: 0;
             height: 100%;
-            background-color: rgba(0,0,0,0.25);
-            color:white;
             text-shadow: 0px 0px 10px rgba(0,152,219, 1);
             font-size: 2rem;
+            color:white;
           }
           &:hover, &:active, &:focus{
             h2{
@@ -83,7 +85,6 @@
               // text-shadow: 0px 0px 10px rgba(236,145,74, 0.75);
               // background-color: rgba(0,0,0,0.75);
               @include linkStylization;
-              color:white;
               text-shadow: 0px 0px 10px black;
             }
           }
@@ -150,27 +151,27 @@
     }
   }
   #reviewSection{
-    @include mobileCarousel;
-    background-image: url("../resources/imgs/landing/landing5.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-clip: content-box;
-    #filter{
-      background-color: rgba(0,0,0,0.5);
-      button {
-        @include linkStylization;
-        &.slideBtn{
-          background-color:transparent;
-        }
-      } 
-      a{
-        @include linkStylization;
-        &:hover, &:active, &:focus{
-          color:white;
-        }
-      }
-    }
+    // @include mobileCarousel;
+    // background-image: url("../resources/imgs/landing/landing5.webp");
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-clip: content-box;
+    // #filter{
+    //   background-color: rgba(0,0,0,0.5);
+    //   button {
+    //     @include linkStylization;
+    //     &.slideBtn{
+    //       background-color:transparent;
+    //     }
+    //   } 
+    //   a{
+    //     @include linkStylization;
+    //     &:hover, &:active, &:focus{
+    //       color:white;
+    //     }
+    //   }
+    // }
     
   }
 }
@@ -183,26 +184,26 @@
         margin: 1rem auto;
         box-shadow: 2.5px 2.5px 10px black;
         a {
-          @include linkStylization;
-          display:flex;
-          flex-direction:row;
-          background-color: transparent;
+          &:link, &:visited{
+            @include linkStylization;
+            display:flex;
+            flex-direction:row;
+            background-color: transparent;
+            figure{
+              width: 70%;
+              overflow:hidden;
+            }
+            h2{
+              position:initial;
+              width: 30%;
+              background-color: rgba(0,152,219, 0.75);
+              color:white;
+              text-shadow:none;
+              font-size: 1.5rem;
+            }
+          }
           &:hover, &:active, &:focus{
             background-color:transparent;
-          }
-          figure{
-            width: 70%;
-            overflow:hidden;
-          }
-          h2{
-            position:initial;
-            width: 30%;
-            // background-color: rgba(0,152,219, 0.75);
-            color:white;
-            text-shadow:none;
-            font-size: 1.5rem;
-          }
-          &:hover, &:active, &:focus{
             h2{
               color:white;
               background-color:rgba(236,145,74, 0.75);
@@ -240,26 +241,31 @@
         width: 30vw;
         height: 100%;
         transition: margin-top 0.5s;
-        a {     
-          flex-direction: column;
-          align-items:center;
-          figure{
-            width: 40rem;
-          }
-          h2{
-            position:absolute;
-            height: fit-content;
-            top: initial;
-            bottom: 0;
-            width: 100%;
-            padding: 1rem 0;
-            
+        a {  
+          &:link,&:visited{
+            flex-direction: column;
+            align-items:center;
+            figure{
+              width: 40rem;
+              img{
+                transform: translateX(-12.5%);
+              }            }
+            h2{
+              position:absolute;
+              height: fit-content;
+              top: initial;
+              bottom: 0;
+              width: 100%;
+              padding: 1rem 0;
+              
+            }
           }
         }
         
       }
       article:nth-of-type(2n){
         a{
+          &:link,&:visited{}
           flex-direction: column;
         }
       }
@@ -267,7 +273,7 @@
         display:flex;
       }
       article:hover{
-        margin-top: -0.5rem;
+        margin-top: -0.25rem;
       }
     }
   }

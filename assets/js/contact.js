@@ -29,8 +29,8 @@ const pageStuff = {
   infoSection: function(
     sectionHolder = helperFunctions.generateElement('section',"", "infoSection"),
     options = [
-      {"name":"Address",
-        "info":"Twin Falls Area<br>Magic Valley Area<br>Sun Valley Area",
+      {"name":"Locations",
+        "info":"Twin Falls<br>Magic Valley<br>Sun Valley",
         "icon":`<i class="fa-solid fa-map-location-dot"></i>`},
       {"name":"Phone",
         "info":"(208) 432-2846",

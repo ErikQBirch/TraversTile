@@ -5,15 +5,15 @@
   .infoSection{
     @include centered;
     width: 100%;
-    padding: 0 1rem;
+    padding: 0;
     margin: 2.5rem auto;
     z-index: 2;
     article{
       background-color: rgb(96,96,98);
       color: white;
-      width: 100%;
+      width: 300px;
       display: grid;
-      grid-template-columns: 30% 70%;
+      grid-template-columns: 40% 60%;
       grid-template-rows: 30% 70%;
       padding: 1rem;
       margin: 1rem auto;
@@ -43,20 +43,14 @@
 }
 @media only all and (min-width: 760px){
   .infoSection{
-    padding: 0 10rem;
-    article{
-      padding: 3rem 1rem;
-    }
-  }
-}
-@media only all and (min-width: 992px){
-  .infoSection{
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 0 auto;
+    width: 760px;
     article{
       @include centered;
       justify-content: flex-start;
-      width: 12.5rem;
+      width: 175px;
       height: 17.5rem;
       margin: 2.5rem auto;
       div{
@@ -68,9 +62,20 @@
     }
   }
 }
+@media only all and (min-width: 992px){
+  .infoSection{
+    width: 800px;
+    article{
+      div{
+        i{
+        }
+      }
+    }
+  }
+}
 @media only all and (min-width: 1200px){
   .infoSection{
-    padding: 0 22.5vw;
+    // width: 65vw;
   }
 
 }
