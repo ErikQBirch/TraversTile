@@ -744,6 +744,9 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
 }
 @media only all and (min-width: 600px) {
+  #gallery #imgDiv {
+    width: 75vw;
+  }
   #popUp div#popUpHolder.portrait {
     width: 65%;
   }

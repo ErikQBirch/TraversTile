@@ -132,10 +132,8 @@
 
 @media only all and (min-width:600px ) {
   #gallery{
-    #selectionDiv{
-      #imgDiv{
-        // width: 75vw;
-      }
+    #imgDiv{
+      width: 75vw;
     }
   }
   #popUp{
