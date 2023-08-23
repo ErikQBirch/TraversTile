@@ -589,6 +589,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   #aboutSection #aboutDiv p {
     line-height: 1.5rem;
+    text-indent: 2.5rem;
   }
   #aboutSection #aboutDiv a:link, #aboutSection #aboutDiv a:visited {
     display: flex;
