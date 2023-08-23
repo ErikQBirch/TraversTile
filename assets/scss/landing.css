@@ -853,10 +853,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     align-items: center;
   }
   #gallerySection #sampleHolder article a:link figure, #gallerySection #sampleHolder article a:visited figure {
-    width: 40rem;
-  }
-  #gallerySection #sampleHolder article a:link figure img, #gallerySection #sampleHolder article a:visited figure img {
-    transform: translateX(-12.5%);
+    width: 30vw;
   }
   #gallerySection #sampleHolder article a:link h2, #gallerySection #sampleHolder article a:visited h2 {
     position: absolute;
