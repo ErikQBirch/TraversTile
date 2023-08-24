@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -137,97 +138,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     width: 250%;
     position: absolute;
     top: 0;
-  }
-  #hero div#carouselMolecule {
-    position: relative;
-  }
-  #hero div#carouselMolecule #carousel {
-    color: white;
-    width: 100%;
-    height: 50vh;
-    overflow: hidden;
-  }
-  #hero div#carouselMolecule #carousel #slideHolder {
-    display: flex;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: 50vh;
-  }
-  #hero div#carouselMolecule #carousel #slideHolder div {
-    width: 100vw;
-    height: 50vh;
-    padding: 0 5rem;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  #hero div#carouselMolecule #carousel #slideHolder div img {
-    height: 50vh;
-  }
-  #hero div#carouselMolecule #carousel #slideControls {
-    position: absolute;
-    top: 0;
-    height: 50vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  #hero div#carouselMolecule #carousel #slideControls button {
-    color: rgba(255, 255, 255, 0.75);
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 5rem;
-    width: 3.5rem;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.25s;
-    cursor: pointer;
-  }
-  #hero div#carouselMolecule #carousel #slideControls button:hover, #hero div#carouselMolecule #carousel #slideControls button:active, #hero div#carouselMolecule #carousel #slideControls button:focus {
-    background-color: rgba(0, 152, 219, 0.5);
-  }
-  #hero div#carouselMolecule #carousel_nav {
-    display: flex;
-    width: 50%;
-    justify-content: center;
-    margin: 1rem auto;
-  }
-  #hero div#carouselMolecule #carousel_nav button {
-    margin: 0 0.25rem;
-    border: none;
-    background-color: transparent;
-    transition: color 0.25s;
-    color: white;
-    cursor: pointer;
-  }
-  #hero div#carouselMolecule #carousel_nav button.currentBtn {
-    color: rgba(255, 255, 255, 0.5);
-  }
-  #hero div#carouselMolecule #carousel_nav button:hover, #hero div#carouselMolecule #carousel_nav button:active, #hero div#carouselMolecule #carousel_nav button:focus {
-    color: rgb(0, 152, 219);
-  }
-  #hero div#carouselMolecule #carousel_note {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    margin: 1rem auto;
-    padding: 1rem;
-    width: -moz-fit-content;
-    width: fit-content;
-    color: white;
-    width: 100%;
-  }
-  #hero div#carouselMolecule #carousel_note:hover {
-    color: rgb(0, 152, 219);
-  }
-  #hero div#carouselMolecule #carousel_note:active, #hero div#carouselMolecule #carousel_note:focus {
-    color: rgb(236, 145, 74);
   }
   #hero a {
     display: flex;
@@ -511,31 +421,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
 }
 @media only all and (min-width: 1200px) {
-  header {
-    width: 90%;
-    height: 7rem;
-  }
-  header div#logoArea {
-    height: 6rem;
-    margin-bottom: 0rem;
-  }
-  header div#logoArea a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    height: 6rem;
-    width: 100%;
-  }
-  header div#logoArea a img {
-    height: 6rem;
-  }
-  header nav#mainNav {
-    width: 25%;
-  }
   header {
     width: 90%;
     height: 7rem;

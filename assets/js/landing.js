@@ -1,6 +1,4 @@
 import { helperFunctions } from "./helperFunctions.js";
-import { specialFeatures } from "./specialFeatures.js";
-import { reviewDB } from "../resources/reviewDB.js";
 
 const pageStuff = {
   aboutSection: function(
@@ -26,9 +24,8 @@ const pageStuff = {
     footer = document.querySelector('footer')
   ){
     body.insertBefore(this.main(), footer);
-    specialFeatures.lazyLoading();
+    helperFunctions.lazyLoading();
     this.theEvents.heroBackgrounds();
-    // specialFeatures.carousel.functionality.setUp();
   },
   gallerySection: function(
     gallerySection = helperFunctions.generateElement('section',"gallerySection"),
@@ -104,26 +101,9 @@ const pageStuff = {
     hero_tag = this.hero(),
     gallery_tag = this.gallerySection(),
     aboutSection = this.aboutSection(),
-    // reviewSection = this.reviewSection()
     ){
       main_tag = helperFunctions.appendChildren(main_tag, hero_tag, gallery_tag, aboutSection);
     return main_tag;
-  },
-  reviewSection: function(
-    sectionHolder = helperFunctions.generateElement('section',"reviewSection"),
-    filter = helperFunctions.generateElement('div',"filter"),
-    sampleArray = []
-  ){
-    console.log(reviewDB);
-    for (let i = 0; i < 4; i++){
-      sampleArray.push(reviewDB.array[i]);
-    }
-    let carousel_organism_variable = specialFeatures.carousel.carousel_organism(reviewDB.contentType, reviewDB.name, sampleArray);
-    carousel_organism_variable.forEach(element => {
-      filter.appendChild(element);
-    });
-    sectionHolder.appendChild(filter);
-    return sectionHolder
   },
   theEvents: {
     heroBackgrounds: function(

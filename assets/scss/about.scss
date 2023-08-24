@@ -36,30 +36,6 @@
       }
     }
   }
-  #reviewSection{
-    @include mobileCarousel;
-    background-image: url("../resources/imgs/landing/landing5.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-clip: content-box;
-    #filter{
-      background-color: rgba(0,0,0,0.5);
-      a:link, a:visited {
-        @include linkStylization;
-        &.slideBtn{
-          background-color:transparent;
-        }
-      } 
-      a{
-        @include linkStylization;
-        &:hover, &:active, &:focus{
-          color:white;
-        }
-      }
-    }
-    
-  }
 }
 @media only all and (min-width: 760px){
   #aboutSection{
@@ -93,4 +69,3 @@
     }
   }
 }
-@media only all and (min-width: 1200px){}

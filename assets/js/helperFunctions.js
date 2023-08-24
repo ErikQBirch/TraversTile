@@ -129,6 +129,50 @@ export const helperFunctions = {
     }
   return pathAdjuster;
   },
+  lazyLoading: function(
+    imagesToLoad = document.querySelectorAll('img[data-src]'), //images elements with the attribute "data-src"; similar to css #data-src or .data-src
+    // nonImgElements = document.querySelectorAll(".lazyLoad"),
+    loadImages = (img) => {
+
+      img.setAttribute('src', img.getAttribute('data-src'));
+      img.onload = () => {
+        img.removeAttribute('data-src');
+        try{
+          let lazyParent = helperFunctions.searchParents(img,"lazyParent");
+          // console.log(lazyParent);
+          lazyParent.classList.remove('lazyParent');
+          img.classList.remove('lazyLoad');
+        }
+        catch(err){}
+      }
+    },
+    imgOptions = {
+      threshold: 0,
+      rootMargin: "0px 0px -200px 0px" //make bottom positive so images load before entering screen;
+    },
+  ){
+    //imagesToLoad - 
+    //loadImages - 
+    //imgOptions - 
+    //Step1 - 
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((items, observer) => {
+        items.forEach((item) => {
+          if(item.isIntersecting) {
+            loadImages(item.target);
+            observer.unobserve(item.target);
+          }
+        });
+      }, imgOptions);
+      imagesToLoad.forEach((img) => {
+        observer.observe(img);
+      });
+    } else {
+      imagesToLoad.forEach((img)=> {
+        loadImages(img);
+      });
+    }
+  },
   metaInfo: function(
     content = {
       "keywordList": "",

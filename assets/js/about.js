@@ -1,6 +1,4 @@
 import { helperFunctions } from "./helperFunctions.js";
-import { reviewDB } from "../resources/reviewDB.js";
-import { specialFeatures } from "./specialFeatures.js";
 
 const pageStuff = {
   constructHTML: function(
@@ -8,7 +6,6 @@ const pageStuff = {
     footer = document.querySelector('footer')
   ){
     body.insertBefore(this.main(), footer);
-    // specialFeatures.carousel.functionality.setUp();
   },
   hero: function(
     hero_tag = helperFunctions.generateElement('section',"hero"),
@@ -25,7 +22,6 @@ const pageStuff = {
     main_tag = helperFunctions.generateElement('main'),
     hero_tag = this.hero(),
     aboutSection = this.aboutSection(),
-    // reviewSection = this.reviewSection()
     ){
       main_tag = helperFunctions.appendChildren(main_tag, hero_tag, aboutSection);
     return main_tag;
@@ -42,26 +38,7 @@ const pageStuff = {
     aboutDiv = helperFunctions.appendChildren(aboutDiv, h2, p, contactBtn);
     sectionHolder.appendChild(aboutDiv);
     sectionHolder = helperFunctions.nestChildren(sectionHolder, figure, img);
-
     return sectionHolder;
-  },
-  reviewSection: function(
-    sectionHolder = helperFunctions.generateElement('section',"reviewSection"),
-    filter = helperFunctions.generateElement('div',"filter"),
-    sampleArray = []
-  ){
-    for (let i = 0; i < 10; i++){
-      if (reviewDB.array[i].focus == "Ian"){
-        console.log(reviewDB.array[i])
-        sampleArray.push(reviewDB.array[i]);
-      }
-    }
-    let carousel_organism_variable = specialFeatures.carousel.carousel_organism(reviewDB.contentType, reviewDB.name, sampleArray);
-    carousel_organism_variable.forEach(element => {
-      filter.appendChild(element);
-    });
-    sectionHolder.appendChild(filter);
-    return sectionHolder
   },
 }
 

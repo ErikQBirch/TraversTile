@@ -66,8 +66,7 @@ const pageStuff = {
           }
           else{
               btn.style.opacity=0;
-          }
-          
+          }      
       }
       catch(err){console.log(err)};
     })
