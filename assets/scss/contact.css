@@ -16,6 +16,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     height: 8.5rem;
     overflow: hidden;
     transition: height 0.75s;
+    background-color: white;
   }
   header div#logoArea {
     height: 6rem;
@@ -180,6 +181,11 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     padding: 2.5rem 0;
     bottom: 30%;
   }
+  body {
+    background: linear-gradient(135deg, white 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px), linear-gradient(225deg, white 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px) 0 64px;
+    background-color: white;
+    background-size: 64px 128px;
+  }
   main {
     padding-top: 0rem;
     min-height: 100vh;
@@ -322,8 +328,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
 }
 @media only all and (min-width: 992px) {
   header {
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 2.5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -422,32 +428,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
 }
 @media only all and (min-width: 1200px) {
   header {
-    width: 90%;
-    height: 7rem;
-  }
-  header div#logoArea {
-    height: 6rem;
-    margin-bottom: 0rem;
-  }
-  header div#logoArea a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    height: 6rem;
-    width: 100%;
-  }
-  header div#logoArea a img {
-    height: 6rem;
-  }
-  header nav#mainNav {
-    width: 25%;
-  }
-  header {
-    width: 90%;
     height: 7rem;
   }
   header div#logoArea {
