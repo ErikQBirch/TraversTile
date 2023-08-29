@@ -73,10 +73,11 @@
             text-shadow: 0px 0px 10px rgba(0,152,219, 1);
             font-size: 2rem;
             color:white;
+            transition: all 0.5s;
           }
           &:hover, &:active, &:focus{
             h2{
-              @include linkStylization;
+              // @include linkStylization;
               text-shadow: 0px 0px 10px black;
             }
           }
@@ -153,7 +154,7 @@
         box-shadow: 2.5px 2.5px 10px black;
         a {
           &:link, &:visited{
-            @include linkStylization;
+            // @include linkStylization;
             display:flex;
             flex-direction:row;
             background-color: transparent;

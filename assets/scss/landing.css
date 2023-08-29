@@ -562,19 +562,10 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     text-shadow: 0px 0px 10px rgb(0, 152, 219);
     font-size: 2rem;
     color: white;
+    transition: all 0.5s;
   }
   #gallerySection #sampleHolder article a:link:hover h2, #gallerySection #sampleHolder article a:link:active h2, #gallerySection #sampleHolder article a:link:focus h2, #gallerySection #sampleHolder article a:visited:hover h2, #gallerySection #sampleHolder article a:visited:active h2, #gallerySection #sampleHolder article a:visited:focus h2 {
-    display: flex;
-    color: white;
-    text-decoration: none;
-    background-color: rgba(0, 152, 219, 0.75);
-    transition: all 0.5s;
-    border: none;
-    cursor: pointer;
     text-shadow: 0px 0px 10px black;
-  }
-  #gallerySection #sampleHolder article a:link:hover h2:hover, #gallerySection #sampleHolder article a:link:hover h2:active, #gallerySection #sampleHolder article a:link:hover h2:focus, #gallerySection #sampleHolder article a:link:active h2:hover, #gallerySection #sampleHolder article a:link:active h2:active, #gallerySection #sampleHolder article a:link:active h2:focus, #gallerySection #sampleHolder article a:link:focus h2:hover, #gallerySection #sampleHolder article a:link:focus h2:active, #gallerySection #sampleHolder article a:link:focus h2:focus, #gallerySection #sampleHolder article a:visited:hover h2:hover, #gallerySection #sampleHolder article a:visited:hover h2:active, #gallerySection #sampleHolder article a:visited:hover h2:focus, #gallerySection #sampleHolder article a:visited:active h2:hover, #gallerySection #sampleHolder article a:visited:active h2:active, #gallerySection #sampleHolder article a:visited:active h2:focus, #gallerySection #sampleHolder article a:visited:focus h2:hover, #gallerySection #sampleHolder article a:visited:focus h2:active, #gallerySection #sampleHolder article a:visited:focus h2:focus {
-    background-color: rgba(236, 145, 74, 0.75);
   }
   #gallerySection a#moreLink {
     display: flex;
@@ -682,18 +673,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   #gallerySection #sampleHolder article a:link, #gallerySection #sampleHolder article a:visited {
     display: flex;
-    color: white;
-    text-decoration: none;
-    background-color: rgba(0, 152, 219, 0.75);
-    transition: all 0.5s;
-    border: none;
-    cursor: pointer;
-    display: flex;
     flex-direction: row;
     background-color: transparent;
-  }
-  #gallerySection #sampleHolder article a:link:hover, #gallerySection #sampleHolder article a:link:active, #gallerySection #sampleHolder article a:link:focus, #gallerySection #sampleHolder article a:visited:hover, #gallerySection #sampleHolder article a:visited:active, #gallerySection #sampleHolder article a:visited:focus {
-    background-color: rgba(236, 145, 74, 0.75);
   }
   #gallerySection #sampleHolder article a:link figure, #gallerySection #sampleHolder article a:visited figure {
     width: 70%;
