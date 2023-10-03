@@ -1,8 +1,8 @@
 import { helperFunctions } from "./helperFunctions.js"
 
 export const navigation = {
-  // pageList: ["services","gallery","about","reviews","contact","deadEnd"],
-  pageList: ["gallery","about","contact","deadEnd"],
+  // pageList: ["services","gallery","about","reviews","contact",],
+  pageList: ["gallery","about","contact"],
   pathAdjuster: [],
   currentPage:  "",
 
