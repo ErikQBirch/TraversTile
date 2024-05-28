@@ -37,8 +37,6 @@
     }
     #imgDiv{
       @include centered;
-      // width: fit-content;
-      // width: 75vw;
       h2{
         margin: 2.5rem auto 1rem auto;
         text-decoration:underline;
@@ -60,7 +58,6 @@
             height: 100%;
             position:absolute;
             top:0;
-            // transition:background-color 0.5s;
             &:hover,&:focus{
               background-color: rgba(0,152,219,0.5);
             }
@@ -148,16 +145,12 @@
   #gallery{
       #imgDiv{
         article{
-          // display:flex;
-          // flex-wrap: wrap;
-          // width: 50%;
           display:grid;
           grid-template-columns: 1fr 1fr 1fr;
           column-gap: 15px;
           figure{
             width: 100%;
             height: initial;
-            img {}
           }
         }
       }

@@ -1,5 +1,4 @@
 import { helperFunctions } from "./helperFunctions.js";
-import { specialFeatures } from "./specialFeatures.js";
 import { galleryDB } from "../resources/galleryDB.js";
 
 const pageStuff = {
@@ -8,7 +7,7 @@ const pageStuff = {
     footer = document.querySelector('footer')
   ){
     body.insertBefore(this.main(), footer);
-    specialFeatures.lazyLoading();
+    helperFunctions.lazyLoading();
   },
   dropDown: function(
     selectedOpt,
@@ -203,7 +202,6 @@ const pageStuff = {
 
           
           figure.addEventListener('click',()=>{
-            // console.log(obj)
             this.showPopUp(obj);
           })
         }
@@ -289,7 +287,7 @@ const pageStuff = {
           }
           galleryElement.insertBefore(newImgDiv, oldImgDiv);
           oldImgDiv.remove();
-          specialFeatures.lazyLoading();
+          helperFunctions.lazyLoading();
         })
       });
     },

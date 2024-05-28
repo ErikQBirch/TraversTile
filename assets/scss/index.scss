@@ -46,6 +46,13 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
 @media only all and (min-width: 0) {
   @include mobileHeader;
   @include mobileHero;
+  body{
+    background:
+    linear-gradient(135deg, white 21px, #dddddd 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+    linear-gradient(225deg, white 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+    background-color:white;
+    background-size: 64px 128px;
+  }
   main{
     padding-top: 0rem;
     min-height: 100vh;
@@ -71,7 +78,6 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
   }
 }
 @media only all and (min-width: 760px) {
-  @include minHeader;
   @include minHero;
   @include minFooter;
 }
@@ -81,6 +87,5 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
   @include medFooter;
 }
 @media only all and (min-width: 1200px) {
-  @include maxHeader;
   @include maxHeader;
 }

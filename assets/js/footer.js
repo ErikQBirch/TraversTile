@@ -1,8 +1,8 @@
 import { helperFunctions } from "./helperFunctions.js"
 
 export const footer = {
-  // pageList: ["services","gallery","about","reviews","contact","deadEnd"],
-  pageList: ["gallery","about","contact","deadEnd"],
+  // pageList: ["services","gallery","about","reviews","contact"],
+  pageList: ["gallery","about","contact"],
   pathAdjuster: [],
   currentPage:  "",
   getNavigationPackage: function(){
@@ -52,10 +52,10 @@ export const footer = {
   contact_molecule: function(
     options = 
     {
-      "call":"<a href='tel:208-749-6666'><i class='fa-solid fa-phone-volume'></i></a>",
-      "text":"<a href='sms:208-749-6666'><i class='fa-solid fa-message'></i></a>",
-      "email":"<a href='email:erikqbirch@gmail.com'><i class='fa-solid fa-envelope'></i></a>",
-      "facebook":"<a href='https://www.facebook.com/profile.php?id=100013516478893'><i class='fa-brands fa-facebook'></i></a>"
+      "call":"<a href='tel:208-432-2846'><i class='fa-solid fa-phone-volume'></i></a>",
+      "text":"<a href='sms:208-432-2846'><i class='fa-solid fa-message'></i></a>",
+      "email":"<a href='mailto:ian.travers@gmail.com'><i class='fa-solid fa-envelope'></i></a>",
+      "facebook":"<a href='https://www.facebook.com/profile.php?id=100054383476477'><i class='fa-brands fa-facebook'></i></a>"
     },
     molecule = helperFunctions.generateElement('div',"contactMolecule")
   ){
