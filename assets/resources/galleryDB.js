@@ -280,7 +280,7 @@ export const galleryDB = {
       "imgPath":"../assets/resources/imgs/gallery/gallery5.webp",
       "type":"Starter",
       "option":"Basic",
-      "orientation":"portrait",
+      "orientation":"square",
     },
     {
       "id":35,
@@ -328,7 +328,7 @@ export const galleryDB = {
       "imgPath":"../assets/resources/imgs/gallery/gallery11.webp",
       "type":"Starter",
       "option":"Basic",
-      "orientation":"portrait",
+      "orientation":"lanscape",
     },
     {
       "id":41,
@@ -338,7 +338,46 @@ export const galleryDB = {
       "option":"Basic",
       "orientation":"portrait",
     },
-
+    {
+      "id":30,
+      "thmbPath":"../assets/resources/imgs/gallery/gallery13_thmb.webp",
+      "imgPath":"../assets/resources/imgs/gallery/gallery13.webp",
+      "type":"Starter",
+      "option":"Basic",
+      "orientation":"portrait",
+    },
+    {
+      "id":31,
+      "thmbPath":"../assets/resources/imgs/gallery/gallery14_thmb.webp",
+      "imgPath":"../assets/resources/imgs/gallery/gallery14.webp",
+      "type":"Starter",
+      "option":"Basic",
+      "orientation":"portrait",
+    },
+    {
+      "id":32,
+      "thmbPath":"../assets/resources/imgs/gallery/gallery15_thmb.webp",
+      "imgPath":"../assets/resources/imgs/gallery/gallery15.webp",
+      "type":"Starter",
+      "option":"Basic",
+      "orientation":"portrait",
+    },
+    {
+      "id":33,
+      "thmbPath":"../assets/resources/imgs/gallery/gallery16_thmb.webp",
+      "imgPath":"../assets/resources/imgs/gallery/gallery16.webp",
+      "type":"Starter",
+      "option":"Basic",
+      "orientation":"portrait",
+    },
+    {
+      "id":34,
+      "thmbPath":"../assets/resources/imgs/gallery/gallery17_thmb.webp",
+      "imgPath":"../assets/resources/imgs/gallery/gallery17.webp",
+      "type":"Starter",
+      "option":"Basic",
+      "orientation":"landscape",
+    },
 
     
   ],

@@ -1,4 +1,4 @@
-// @import "carousel";
+
 @import "index";
 
 
@@ -58,6 +58,7 @@
             height: 100%;
             position:absolute;
             top:0;
+            transition: all 0.4s;
             &:hover,&:focus{
               background-color: rgba(0,152,219,0.5);
             }
@@ -114,6 +115,16 @@
         box-shadow: 0 0 2.5rem white;
         border-radius: 5px;
         overflow:hidden;
+        position:relative;
+        div{
+          @include centered;
+          position:absolute;
+          bottom:0;
+          z-index:2;
+          height: 15%;
+          background-color:rgba(0,0,0,0.5);
+          color:white;
+        }
         img{
           @include centered;
         }
@@ -121,6 +132,9 @@
       }
       &.portrait{
         width: 80%;
+      }
+      &.square{
+        width: 90%;
       }
 
     }
@@ -137,6 +151,9 @@
     div#popUpHolder{
       &.portrait{
         width: 65%;
+      }
+      &.square{
+        width: 75%;
       }
     }
   }
@@ -160,6 +177,9 @@
         &.portrait{
           width: 50%;
         }
+        &.square{
+          width: 60%;
+        }
       }
     }
   }
@@ -175,6 +195,9 @@
     div#popUpHolder{
       &.portrait{
         width: 40%;
+      }
+      &.square{
+        width: 50%;
       }
     }
   }
@@ -193,12 +216,24 @@
         box-shadow: 0 0 2.5rem white;
         border-radius: 5px;
         overflow:hidden;
+        div{
+          margin-bottom: -20%;
+          transition: all 0.75s;
+        }
+        &:hover, :active, &:focus{
+          div{
+            margin-bottom:0;
+          }
+        }
         img{
           @include centered;
         }
       }
       &.portrait{
         width: 30%;
+      }
+      &.square{
+        width: 40%;
       }
     }
   }

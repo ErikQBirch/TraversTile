@@ -58,14 +58,14 @@ const pageStuff = {
         "imgPath": "assets/resources/imgs/landing/gallerySample3.webp"
       },
       {
-        "item":"Kitchens",
-        "class":"Service",
-        "imgPath": "assets/resources/imgs/landing/gallerySample4.webp"
-      },
-      {
         "item":"Bathrooms",
         "class":"Service",
         "imgPath": "assets/resources/imgs/landing/gallerySample5.webp"
+      },
+      {
+        "item":"Kitchens",
+        "class":"Service",
+        "imgPath": "assets/resources/imgs/landing/gallerySample4.webp"
       },
       {
         "item":"Custom",
@@ -85,7 +85,8 @@ const pageStuff = {
     //Step1
     list.forEach(element => {
       let option = helperFunctions.generateElement('article',"","lazyParent");
-      let link = helperFunctions.generateElement('a',"","","",`./pages/gallery.html`); //STARTER
+      let link = helperFunctions.generateElement('a',"","","",`./pages/gallery.html?option=${element.item}&type=${element.class}`);
+      // let link = helperFunctions.generateElement('a',"","","",`./pages/gallery.html`); //STARTER
       let figure = helperFunctions.generateElement('figure');
       let img = helperFunctions.generateElement('img',"","lazyLoad","",element.imgPath);
       let text = helperFunctions.generateElement('h2',"","",element.item);

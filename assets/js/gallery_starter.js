@@ -209,8 +209,87 @@ const pageStuff = {
       imgDiv = helperFunctions.appendChildren(imgDiv, h2, article);
     });
 
-    console.log(urlType, imgDiv)
-    this.reorder(urlType, imgDiv);
+    // console.log(urlType, imgDiv)
+    // this.reorder(urlType, imgDiv);
+
+    return imgDiv;
+  },
+  showImgs_starter: function(
+    showing,
+    urlParams = new URLSearchParams(window.location.search),
+    urlOption = urlParams.get('option'),
+    urlType = urlParams.get('type'),
+    standard = true,
+    imgDiv = helperFunctions.generateElement('div',"imgDiv"),
+    showingBtn = document.querySelector('button.show'),
+  ){
+    //STEP1: check which array will be used based on showing option
+    // switch(showing){
+    //   case "Material":
+    //     array_using = array_m;
+    //     break;
+    //     case "Service":
+    //     array_using = array_s;
+    //     break;
+    //   case "Basic":
+    //     array_using = array_basic;
+    //     break;
+    //   default:
+    //     array_using = array_basic;
+    //     break;
+    // }
+
+    // //STEP2: check for urlType
+    // //STEP2a: if none, assign urlType a value (base it off of whichever button has the "show" class if possible)
+    // //STEP2b: if there is a urlType, page wasn't reached via header's nav bar (standard), base future urlType on "show" button
+    // if (urlType == null){
+    //   try {
+    //     if(showingBtn.innerHTML == urlOption){
+    //     }
+    //     else if(showingBtn.innerHTML == "Material"){
+    //       urlType = "Porcelain";
+    //     }
+    //     else if (showingBtn.innerHTML == "Service"){
+    //       urlType = "Bathroom";
+    //     }
+    //   }
+    //   catch(err){
+    //     urlType = "Starter";
+    //   }
+    // }
+    // else{
+    //   standard=false;
+    //   // try{
+
+    //   // }
+    // }
+
+    array_using.forEach(str => {
+      let h2 = helperFunctions.generateElement('h2',"",str,str);
+      h2.classList.add('keeper');
+      let article = helperFunctions.generateElement('article',"",str);
+      article.classList.add('lazyParent');
+      galleryDB.array.forEach(obj => {
+        if ((obj.type == str) && (obj.option == showing)){
+          let figure = helperFunctions.generateElement('figure');
+          let filter = helperFunctions.generateElement('div',"","filter");
+          let img = helperFunctions.generateElement('img',"","lazyLoad","",obj.thmbPath);
+          img = helperFunctions.customSpecialElements(img, obj.thmbPath, ""); //this comes before adding obj.type so that the customeSpecialElement only deals with one class
+          img.classList.add(obj.type);
+          figure.insertBefore(filter,figure.children[0]);
+          article = helperFunctions.nestChildren(article, figure, img);
+
+          
+          figure.addEventListener('click',()=>{
+            this.showPopUp(obj);
+          })
+        }
+      });
+      imgDiv = helperFunctions.appendChildren(imgDiv, h2, article);
+    });
+
+    // console.log(urlType, imgDiv)
+    // this.reorder(urlType, imgDiv);
 
     return imgDiv;
   },
@@ -221,9 +300,11 @@ const pageStuff = {
     div = helperFunctions.generateElement('div',"popUpHolder",obj.orientation),
     button = helperFunctions.generateElement('button',"","","X"),
     figure = helperFunctions.generateElement('figure',""),
+    descript = helperFunctions.generateElement('div',"","",`Material:${obj.type} / Service: ${obj.option}`),
     img = helperFunctions.generateElement('img',"","","",obj.imgPath)
   ){
-    main = helperFunctions.nestChildren(main, section,div,figure,img);
+    main = helperFunctions.nestChildren(main, section,div,figure,descript);
+    figure.appendChild(img);
     div.insertBefore(button,div.children[0]);
 
     button.addEventListener('click',()=>{
@@ -297,4 +378,4 @@ const pageStuff = {
 
 
 pageStuff.constructHTML();
-pageStuff.theEvents.startEvents()
+pageStuff.theEvents.startEvents();

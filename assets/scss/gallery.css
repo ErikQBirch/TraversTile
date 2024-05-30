@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -547,6 +546,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     height: 100%;
     position: absolute;
     top: 0;
+    transition: all 0.4s;
   }
   #gallery #imgDiv article figure div.filter:hover, #gallery #imgDiv article figure div.filter:focus {
     background-color: rgba(0, 152, 219, 0.5);
@@ -619,6 +619,22 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     box-shadow: 0 0 2.5rem white;
     border-radius: 5px;
     overflow: hidden;
+    position: relative;
+  }
+  #popUp div#popUpHolder figure div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    height: 15%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
   }
   #popUp div#popUpHolder figure img {
     display: flex;
@@ -632,6 +648,9 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   #popUp div#popUpHolder.portrait {
     width: 80%;
   }
+  #popUp div#popUpHolder.square {
+    width: 90%;
+  }
 }
 @media only all and (min-width: 600px) {
   #gallery #imgDiv {
@@ -639,6 +658,9 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   #popUp div#popUpHolder.portrait {
     width: 65%;
+  }
+  #popUp div#popUpHolder.square {
+    width: 75%;
   }
 }
 @media only all and (min-width: 760px) {
@@ -655,6 +677,9 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   #popUp div#popUpHolder.portrait {
     width: 50%;
   }
+  #popUp div#popUpHolder.square {
+    width: 60%;
+  }
 }
 @media only all and (min-width: 992px) {
   #gallery #imgDiv article {
@@ -662,6 +687,9 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   #popUp div#popUpHolder.portrait {
     width: 40%;
+  }
+  #popUp div#popUpHolder.square {
+    width: 50%;
   }
 }
 @media only all and (min-width: 1200px) {
@@ -685,6 +713,13 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     border-radius: 5px;
     overflow: hidden;
   }
+  #popUp div#popUpHolder figure div {
+    margin-bottom: -20%;
+    transition: all 0.75s;
+  }
+  #popUp div#popUpHolder figure:hover div, #popUp div#popUpHolder figure :active div, #popUp div#popUpHolder figure:focus div {
+    margin-bottom: 0;
+  }
   #popUp div#popUpHolder figure img {
     display: flex;
     flex-direction: column;
@@ -696,5 +731,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   #popUp div#popUpHolder.portrait {
     width: 30%;
+  }
+  #popUp div#popUpHolder.square {
+    width: 40%;
   }
 }/*# sourceMappingURL=gallery.css.map */
