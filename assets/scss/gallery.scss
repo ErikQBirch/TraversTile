@@ -3,168 +3,204 @@
 
 
 @media only all and (min-width: 0){
-  #gallery{
-    #selectionDiv{
-      @include centered;
-      flex-direction: row;
-      margin: 1rem auto;
-      justify-content: center;
-      button{
-        @include linkStylization;
-        padding: 1rem 2rem;
-        margin: 0 1rem;
-        border:none;
-        &[disabled]{
-          background-color: rgba(151,152,154,1);
-          cursor: initial;
-        }
-        &:hover, &:active, &:focus{
-          &:not([disabled]){
-            border-radius: 10px;
-          }
-        }
-      }
+  body{
+    #noteToUser{
+      display:flex;
+      width: 85vw;
+      margin: 2.5rem auto;
+      font-size:1.5rem;
     }
-    #materialDropDown{
-      @include centered;
-      flex-direction: row;
-      &.hide{
-        display:none;
-      }
-      label{
-        margin-right: 0.5rem;
-      }
-    }
-    #imgDiv{
-      @include centered;
-      h2{
-        margin: 2.5rem auto 1rem auto;
-        text-decoration:underline;
-      }
-      article{
-        opacity:1;
-        transition:all 0.5s;
-        width: 100%;
-        figure{
-          @include centered;
-          box-shadow: 2.5px 2.5px 10px black;
-          margin: 1rem auto;
-          cursor:pointer;
-          position:relative;
-          width: 300px;
-          height: 200px;
-          div.filter{
-            @include centered;
-            height: 100%;
-            position:absolute;
-            top:0;
-            transition: all 0.4s;
-            &:hover,&:focus{
-              background-color: rgba(0,152,219,0.5);
-            }
-            &:active{
-              background-color: rgba(236,145,74,0.5);
-            }
-          }
-          img{
-            width: 100%;
-            height: 100%;
-            opacity:1;
-            transition:all 0.5s;
-          }
-          img[data-src]{
-            opacity:0;
-          }
-        }
-      }
-      article.lazyParent{
-        opacity:0;
-      }
-    }
-  }
-  #popUp{
-    position:fixed;
-    top:0;
-    height: 100vh;
-    @include centered;
-    z-index:7;
-    background-color: rgba(0,0,0,0.85);
-    div#popUpHolder{
-      @include centered;
-      width: 90%;
-      button{
-        display:flex;
-        align-self:flex-end;
-        margin-bottom:1rem;
-        color:white;
-        background-color: transparent;
-        padding: 0.5rem;
-        border: .5px solid white;
-        transition:all 0.5s;
-        &:hover,&:focus{
-          background-color: $color1;
-          border: 0.5px solid $color1;
-        }
-        &:active{
-          background-color: $color2;
-          border: 0.5px solid $color2;
-        }
-      }
-      figure{
+    #gallery{
+      #selectionDiv{
         @include centered;
-        box-shadow: 0 0 2.5rem white;
-        border-radius: 5px;
-        overflow:hidden;
-        position:relative;
-        div{
-          @include centered;
+        flex-direction: row;
+        margin: 1rem auto;
+        justify-content: center;
+        button{
+          @include linkStylization;
+          padding: 1rem 2rem;
+          margin: 0 1rem;
+          border:none;
+          &[disabled]{
+            background-color: rgba(151,152,154,1);
+            cursor: initial;
+          }
+          &:hover, &:active, &:focus{
+            &:not([disabled]){
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+      #materialDropDown{
+        @include centered;
+        flex-direction: row;
+        &.hide{
+          display:none;
+        }
+        label{
+          margin-right: 0.5rem;
+        }
+      }
+      #imgDiv{
+        @include centered;
+        h2{
+          margin: 2.5rem auto 1rem auto;
+          text-decoration:underline;
+        }
+        article{
+          opacity:1;
+          transition:all 0.5s;
+          width: 100%;
+          figure{
+            @include centered;
+            box-shadow: 2.5px 2.5px 10px black;
+            margin: 1rem auto;
+            cursor:pointer;
+            position:relative;
+            width: 300px;
+            height: 200px;
+            div.filter{
+              @include centered;
+              height: 100%;
+              position:absolute;
+              top:0;
+              transition: all 0.4s;
+              &:hover,&:focus{
+                background-color: rgba(0,152,219,0.5);
+              }
+              &:active{
+                background-color: rgba(236,145,74,0.5);
+              }
+            }
+            img{
+              width: 100%;
+              height: 100%;
+              opacity:1;
+              transition:all 0.5s;
+            }
+            img[data-src]{
+              opacity:0;
+            }
+          }
+        }
+        article.lazyParent{
+          opacity:0;
+        }
+      }
+    }
+    #popUp{
+      position:fixed;
+      top:0;
+      height: 100vh;
+      @include centered;
+      z-index:7;
+      background-color: rgba(0,0,0,0.85);
+      div#popUpHolder{
+        @include centered;
+        width: 90%;
+        height: 100%;
+
+        button{
+          display:flex;
+          align-self:flex-end;
+          margin-bottom:1rem;
+          color:white;
+          background-color: transparent;
+          border: .5px solid white;
+          transition:all 0.5s;
+          width:40px;
+          height: 40px;
+          align-items: center;
+          justify-content: center;
+          
+          
+          &:hover,&:focus{
+            background-color: $color1;
+            border: 0.5px solid $color1;
+          }
+          &:active{
+            background-color: $color2;
+            border: 0.5px solid $color2;
+          }
+        }
+        #closeBtn{
+          z-index:1;
+          position:absolute;
+          top:5vh;
+        }
+        #zoomBtns_div{
           position:absolute;
           bottom:0;
-          z-index:2;
-          height: 15%;
-          background-color:rgba(0,0,0,0.5);
-          color:white;
+          display:flex;
+          flex-direction:row;
+          width: 7.5rem;
+          justify-content: space-between;
+          button{
+            width:40px;
+            margin-bottom:4rem;
+          }
         }
-        img{
+        figure{
           @include centered;
+          box-shadow: 0 0 2.5rem white;
+          border-radius: 5px;
+          overflow:hidden;
+          position:relative;
+          height:100%;
+          div{
+            @include centered;
+            position:absolute;
+            bottom:0;
+            z-index:2;
+            height: 15%;
+            background-color:rgba(0,0,0,0.5);
+            color:white;
+          }
+          img{
+            @include centered;
+            display:flex;
+            width: 100%;
+            min-width: 100%;
+
+              position:absolute; //parent element needs to be "position:relative"
+              top:50%;
+              left:50%;
+              transform: translate(-50%, -50%)
+          }
+          &.portrait{
+            max-width: 80vw;
+            max-height:50vh;
+          }
+          &.square{
+            max-width: 80vw;
+            max-height:50vh;
+          }
+          &.landscape{
+            max-width: 90vw;
+            max-height:30vh;
+          }
+  
         }
-
+  
       }
-      &.portrait{
-        width: 80%;
-      }
-      &.square{
-        width: 90%;
-      }
-
     }
   }
 }
 
 @media only all and (min-width:600px ) {
-  #gallery{
-    #imgDiv{
-      width: 75vw;
+  body{
+    #noteToUser{
+      width: 80vw;
+      font-size:1.25rem;
     }
-  }
-  #popUp{
-    div#popUpHolder{
-      &.portrait{
-        width: 65%;
-      }
-      &.square{
-        width: 75%;
-      }
-    }
-  }
-}
-@media only all and (min-width: 760px){
-  #gallery{
+    #gallery{
       #imgDiv{
+        width: 80vw;
         article{
           display:grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          column-gap: 15px;
+          grid-template-columns: 1fr 1fr;
+          column-gap:15px;
           figure{
             width: 100%;
             height: initial;
@@ -177,63 +213,111 @@
         &.portrait{
           width: 50%;
         }
+        &.landscape{
+          width: 75%;
+        }
         &.square{
           width: 60%;
         }
       }
     }
   }
-@media only all and (min-width: 992px){
-  #gallery{
-    #imgDiv{
-      article{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media only all and (min-width: 760px){
+  body{
+    #noteToUser{
+      width: 75vw;
+      font-size:1.25rem;
+    }
+    #gallery{
+        #imgDiv{
+          article{
+            // display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            // column-gap: 15px;
+            // figure{
+            //   width: 100%;
+            //   height: initial;
+            // }
+          }
+        }
+      }
+    #popUp{
+      div#popUpHolder{
+        &.portrait{
+          width: 40%;
+        }
+        &.square{
+          width: 50%;
+        }
+        &.landscape{
+          width:70%;
+        }
       }
     }
   }
-  #popUp{
-    div#popUpHolder{
-      &.portrait{
-        width: 40%;
+  }
+@media only all and (min-width: 992px){
+  body{
+    #gallery{
+      #imgDiv{
+        article{
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
       }
-      &.square{
-        width: 50%;
+    }
+    #popUp{
+      div#popUpHolder{
+        &.portrait{
+          width: 30%;
+        }
+        &.square{
+          width: 40%;
+        }
+        &.landscape{
+          width: 50%;
+        }
       }
     }
   }
 }
 @media only all and (min-width: 1200px){
-  #popUp{
-    div#popUpHolder{
-      width: 50%;
-      button{
-        display:flex;
-        align-self:flex-end;
-        margin-bottom:1rem;
-      }
-      figure{
-        @include centered;
-        box-shadow: 0 0 2.5rem white;
-        border-radius: 5px;
-        overflow:hidden;
-        div{
-          margin-bottom: -20%;
-          transition: all 0.75s;
+  body{
+    #popUp{
+      div#popUpHolder{
+        width: 50%;
+        button{
+          display:flex;
+          align-self:flex-end;
+          margin-bottom:1rem;
         }
-        &:hover, :active, &:focus{
+        figure{
+          @include centered;
+          box-shadow: 0 0 2.5rem white;
+          border-radius: 5px;
+          overflow:hidden;
           div{
-            margin-bottom:0;
+            margin-bottom: -20%;
+            transition: all 0.75s;
+          }
+          &:hover, :active, &:focus{
+            div{
+              margin-bottom:0;
+            }
+          }
+          img{
+            @include centered;
           }
         }
-        img{
-          @include centered;
+        &.portrait{
+          width: 25%;
         }
-      }
-      &.portrait{
-        width: 30%;
-      }
-      &.square{
-        width: 40%;
+        &.square{
+          width: 35%;
+        }
+        &.landscape{
+          width:40%;
+        }
       }
     }
   }

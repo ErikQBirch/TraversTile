@@ -56,7 +56,8 @@ const pageStuff = {
     }
      
 
-    section = helperFunctions.appendChildren(section, selectDiv, materialDropDown, imgDiv);
+    // section = helperFunctions.appendChildren(section, selectDiv, materialDropDown, imgDiv);
+    section = helperFunctions.appendChildren(section,imgDiv);
 
     return section;
   },
@@ -74,10 +75,17 @@ const pageStuff = {
   main: function(
     main_tag = helperFunctions.generateElement('main'),
     hero_tag = this.hero(),
-    gallery_tag = this.gallery()
+    gallery_tag = this.gallery(),
+    note_tag = this.noteToUser()
     ){
-      main_tag = helperFunctions.appendChildren(main_tag, hero_tag, gallery_tag);
+      console.log(note_tag)
+      main_tag = helperFunctions.appendChildren(main_tag, hero_tag, note_tag, gallery_tag);
     return main_tag;
+  },
+  noteToUser: function(
+    note = helperFunctions.generateElement("span","noteToUser","","Feast your eyes on expert craftsmanship of high-quality materials! Whether it be for bathrooms, kitchens, or custom services TraversTile uses [high-quality material] proven for [customer satifaction]. Click on the images for a more detailed look!")
+  ){
+    return note;
   },
   reorder:function(
     urlType,
@@ -87,7 +95,7 @@ const pageStuff = {
   ){
     imgDiv.insertBefore(holdArticle, imgDiv.children[0]);
     imgDiv.insertBefore(holdH2, imgDiv.children[0]);
-    return imgDiv
+    return imgDiv;
   },
 
   selectDiv: function(
@@ -123,9 +131,11 @@ const pageStuff = {
     showingBtn = document.querySelector('button.show'),
     array_m = ["Porcelain","Stone","Ceramic","Travertine","Marble","Glass"],
     array_s = ["Kitchens","Bathrooms"],
+    array_basic = ["Starter"],
     array_using = []
   ){
     //STEP1: check which array will be used based on showing option
+    
     switch(showing){
       case "Material":
         array_using = array_m;
@@ -133,20 +143,24 @@ const pageStuff = {
         case "Service":
         array_using = array_s;
         break;
-      case "Starter":
-        array_using = array_start;
+      case "Basic":
+        array_using = array_basic;
         break;
       default:
-        array_using = array_start;
+        array_using = array_basic;
         break;
     }
 
     //STEP2: check for urlType
     //STEP2a: if none, assign urlType a value (base it off of whichever button has the "show" class if possible)
     //STEP2b: if there is a urlType, page wasn't reached via header's nav bar (standard), base future urlType on "show" button
+    
+    // console.log(showingBtn.innerHTML);
     if (urlType == null){
       try {
-        if(showingBtn.innerHTML == "Material"){
+        if(showingBtn.innerHTML == urlOption){
+        }
+        else if(showingBtn.innerHTML == "Material"){
           urlType = "Porcelain";
         }
         else if (showingBtn.innerHTML == "Service"){
@@ -154,32 +168,33 @@ const pageStuff = {
         }
       }
       catch(err){
-        urlType = "Porcelain";
+        urlType = "Starter";
       }
     }
     else {
       standard = false;
       try{
-        if(showingBtn.innerHTML == urlOption){
-        }
-        else if (showingBtn.innerHTML == "Material"){
+        if (showingBtn.innerHTML == "Material"){
           urlType = "Porcelain"
         }
         else if (showingBtn.innerHTML == "Service"){
           urlType = "Kitchens";
         }
       }
-      catch(err){}
+      catch(err){
+      }
     }
 
     //STEP3: create sections based on urlType
-    array_using.forEach(str => {
-      let h2 = helperFunctions.generateElement('h2',"",str,str);
-      h2.classList.add('keeper');
-      let article = helperFunctions.generateElement('article',"",str);
-      article.classList.add('lazyParent');
+    // array_using.forEach(str => {
+      // let h2 = helperFunctions.generateElement('h2',"",str,str);
+      // h2.classList.add('keeper');
+      // let article = helperFunctions.generateElement('article',"",str);
+      let article = helperFunctions.generateElement('article');
+      // article.classList.add('lazyParent');
+      console.log(galleryDB);
       galleryDB.array.forEach(obj => {
-        if ((obj.type == str) && (obj.option == showing)){
+        // if ((obj.type == str) && (obj.option == showing)){
           let figure = helperFunctions.generateElement('figure');
           let filter = helperFunctions.generateElement('div',"","filter");
           let img = helperFunctions.generateElement('img',"","lazyLoad","",obj.thmbPath);
@@ -192,15 +207,15 @@ const pageStuff = {
           figure.addEventListener('click',()=>{
             this.showPopUp(obj);
           })
-        }
+        // }
       });
-      imgDiv = helperFunctions.appendChildren(imgDiv, h2, article);
-    });
+      // imgDiv = helperFunctions.appendChildren(imgDiv, h2, article);
+      imgDiv = helperFunctions.appendChildren(imgDiv, article);
+      // imgDiv.style.marginTop = "2.5rem" //change this when you upgrade
+    // });
 
-    this.reorder(urlType, imgDiv);
-
-    
-
+    // console.log(urlType, imgDiv)
+    // this.reorder(urlType, imgDiv);
 
     return imgDiv;
   },
@@ -208,16 +223,39 @@ const pageStuff = {
     obj,
     main = document.querySelector('main'),
     section = helperFunctions.generateElement('section',"popUp"),
-    div = helperFunctions.generateElement('div',"popUpHolder",obj.orientation),
-    button = helperFunctions.generateElement('button',"","","X"),
-    figure = helperFunctions.generateElement('figure',""),
-    img = helperFunctions.generateElement('img',"","","",obj.imgPath)
+    div = helperFunctions.generateElement('div',"popUpHolder"),
+    closeBtn = helperFunctions.generateElement('button',"closeBtn","","X"),
+    zoomBtns_div = helperFunctions.generateElement('div',"zoomBtns_div"),
+    zoomInBtn = helperFunctions.generateElement('button',"zoomIn","","ZI"),
+    zoomOutBtn = helperFunctions.generateElement('button',"zoomOut","","ZO"),
+    figure = helperFunctions.generateElement('figure',"",obj.orientation),
+    descript = helperFunctions.generateElement('div',"","descript",`Material: ${obj.material} / Service: ${obj.service}`),
+    img = helperFunctions.generateElement('img',"","popupImage","",obj.imgPath)
   ){
-    main = helperFunctions.nestChildren(main, section,div,figure,img);
-    div.insertBefore(button,div.children[0]);
+    main = helperFunctions.nestChildren(main, section,div,figure,descript);
+    zoomBtns_div = helperFunctions.appendChildren(zoomBtns_div, zoomOutBtn,zoomInBtn);
+    figure.appendChild(img);
+    img.style.width = "100%";
+    div.insertBefore(closeBtn,div.children[0]);
+    div.insertBefore(zoomBtns_div,div.children[0]);
 
-    button.addEventListener('click',()=>{
+    console.log(img.style);
+    closeBtn.addEventListener('click',()=>{
       section.remove();
+    });
+    zoomInBtn.addEventListener('click',()=>{
+      let imgWidth = img.style.width;
+      imgWidth = parseInt(imgWidth.substr(0,imgWidth.length-1));
+      console.log(imgWidth);
+      img.style.width = `${imgWidth + 75}%`;
+    })
+    zoomOutBtn.addEventListener('click',()=>{
+      let imgWidth = img.style.width;
+      imgWidth = parseInt(imgWidth.substr(0,imgWidth.length-1));
+      console.log(imgWidth);
+      if (imgWidth > 100){
+        img.style.width = `${imgWidth - 75}%`;
+      }
     })
 
     addEventListener("keypress", (e)=>{
@@ -282,4 +320,4 @@ const pageStuff = {
 
 
 pageStuff.constructHTML();
-pageStuff.theEvents.startEvents()
+// pageStuff.theEvents.startEvents()

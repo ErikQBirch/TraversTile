@@ -452,7 +452,13 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
 }
 @media only all and (min-width: 0) {
-  #gallery #selectionDiv {
+  body #noteToUser {
+    display: flex;
+    width: 85vw;
+    margin: 2.5rem auto;
+    font-size: 1.5rem;
+  }
+  body #gallery #selectionDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -464,7 +470,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     margin: 1rem auto;
     justify-content: center;
   }
-  #gallery #selectionDiv button {
+  body #gallery #selectionDiv button {
     display: flex;
     color: white;
     text-decoration: none;
@@ -476,17 +482,17 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     margin: 0 1rem;
     border: none;
   }
-  #gallery #selectionDiv button:hover, #gallery #selectionDiv button:active, #gallery #selectionDiv button:focus {
+  body #gallery #selectionDiv button:hover, body #gallery #selectionDiv button:active, body #gallery #selectionDiv button:focus {
     background-color: rgba(236, 145, 74, 0.75);
   }
-  #gallery #selectionDiv button[disabled] {
+  body #gallery #selectionDiv button[disabled] {
     background-color: rgb(151, 152, 154);
     cursor: initial;
   }
-  #gallery #selectionDiv button:hover:not([disabled]), #gallery #selectionDiv button:active:not([disabled]), #gallery #selectionDiv button:focus:not([disabled]) {
+  body #gallery #selectionDiv button:hover:not([disabled]), body #gallery #selectionDiv button:active:not([disabled]), body #gallery #selectionDiv button:focus:not([disabled]) {
     border-radius: 10px;
   }
-  #gallery #materialDropDown {
+  body #gallery #materialDropDown {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -496,13 +502,13 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     width: 100%;
     flex-direction: row;
   }
-  #gallery #materialDropDown.hide {
+  body #gallery #materialDropDown.hide {
     display: none;
   }
-  #gallery #materialDropDown label {
+  body #gallery #materialDropDown label {
     margin-right: 0.5rem;
   }
-  #gallery #imgDiv {
+  body #gallery #imgDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -511,16 +517,16 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     margin: 0 auto;
     width: 100%;
   }
-  #gallery #imgDiv h2 {
+  body #gallery #imgDiv h2 {
     margin: 2.5rem auto 1rem auto;
     text-decoration: underline;
   }
-  #gallery #imgDiv article {
+  body #gallery #imgDiv article {
     opacity: 1;
     transition: all 0.5s;
     width: 100%;
   }
-  #gallery #imgDiv article figure {
+  body #gallery #imgDiv article figure {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -535,7 +541,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     width: 300px;
     height: 200px;
   }
-  #gallery #imgDiv article figure div.filter {
+  body #gallery #imgDiv article figure div.filter {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -548,25 +554,25 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     top: 0;
     transition: all 0.4s;
   }
-  #gallery #imgDiv article figure div.filter:hover, #gallery #imgDiv article figure div.filter:focus {
+  body #gallery #imgDiv article figure div.filter:hover, body #gallery #imgDiv article figure div.filter:focus {
     background-color: rgba(0, 152, 219, 0.5);
   }
-  #gallery #imgDiv article figure div.filter:active {
+  body #gallery #imgDiv article figure div.filter:active {
     background-color: rgba(236, 145, 74, 0.5);
   }
-  #gallery #imgDiv article figure img {
+  body #gallery #imgDiv article figure img {
     width: 100%;
     height: 100%;
     opacity: 1;
     transition: all 0.5s;
   }
-  #gallery #imgDiv article figure img[data-src] {
+  body #gallery #imgDiv article figure img[data-src] {
     opacity: 0;
   }
-  #gallery #imgDiv article.lazyParent {
+  body #gallery #imgDiv article.lazyParent {
     opacity: 0;
   }
-  #popUp {
+  body #popUp {
     position: fixed;
     top: 0;
     height: 100vh;
@@ -580,7 +586,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     z-index: 7;
     background-color: rgba(0, 0, 0, 0.85);
   }
-  #popUp div#popUpHolder {
+  body #popUp div#popUpHolder {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -589,26 +595,47 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     margin: 0 auto;
     width: 100%;
     width: 90%;
+    height: 100%;
   }
-  #popUp div#popUpHolder button {
+  body #popUp div#popUpHolder button {
     display: flex;
     align-self: flex-end;
     margin-bottom: 1rem;
     color: white;
     background-color: transparent;
-    padding: 0.5rem;
     border: 0.5px solid white;
     transition: all 0.5s;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
   }
-  #popUp div#popUpHolder button:hover, #popUp div#popUpHolder button:focus {
+  body #popUp div#popUpHolder button:hover, body #popUp div#popUpHolder button:focus {
     background-color: rgb(0, 152, 219);
     border: 0.5px solid rgb(0, 152, 219);
   }
-  #popUp div#popUpHolder button:active {
+  body #popUp div#popUpHolder button:active {
     background-color: rgb(236, 145, 74);
     border: 0.5px solid rgb(236, 145, 74);
   }
-  #popUp div#popUpHolder figure {
+  body #popUp div#popUpHolder #closeBtn {
+    z-index: 1;
+    position: absolute;
+    top: 5vh;
+  }
+  body #popUp div#popUpHolder #zoomBtns_div {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    width: 7.5rem;
+    justify-content: space-between;
+  }
+  body #popUp div#popUpHolder #zoomBtns_div button {
+    width: 40px;
+    margin-bottom: 4rem;
+  }
+  body #popUp div#popUpHolder figure {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -620,8 +647,9 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     border-radius: 5px;
     overflow: hidden;
     position: relative;
+    height: 100%;
   }
-  #popUp div#popUpHolder figure div {
+  body #popUp div#popUpHolder figure div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -636,7 +664,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
   }
-  #popUp div#popUpHolder figure img {
+  body #popUp div#popUpHolder figure img {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -644,64 +672,97 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     text-align: center;
     margin: 0 auto;
     width: 100%;
+    display: flex;
+    width: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  #popUp div#popUpHolder.portrait {
-    width: 80%;
+  body #popUp div#popUpHolder figure.portrait {
+    max-width: 80vw;
+    max-height: 50vh;
   }
-  #popUp div#popUpHolder.square {
-    width: 90%;
+  body #popUp div#popUpHolder figure.square {
+    max-width: 80vw;
+    max-height: 50vh;
+  }
+  body #popUp div#popUpHolder figure.landscape {
+    max-width: 90vw;
+    max-height: 30vh;
   }
 }
 @media only all and (min-width: 600px) {
-  #gallery #imgDiv {
-    width: 75vw;
+  body #noteToUser {
+    width: 80vw;
+    font-size: 1.25rem;
   }
-  #popUp div#popUpHolder.portrait {
-    width: 65%;
+  body #gallery #imgDiv {
+    width: 80vw;
   }
-  #popUp div#popUpHolder.square {
-    width: 75%;
-  }
-}
-@media only all and (min-width: 760px) {
-  #gallery #imgDiv article {
+  body #gallery #imgDiv article {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     -moz-column-gap: 15px;
          column-gap: 15px;
   }
-  #gallery #imgDiv article figure {
+  body #gallery #imgDiv article figure {
     width: 100%;
     height: initial;
   }
-  #popUp div#popUpHolder.portrait {
+  body #popUp div#popUpHolder.portrait {
     width: 50%;
   }
-  #popUp div#popUpHolder.square {
+  body #popUp div#popUpHolder.landscape {
+    width: 75%;
+  }
+  body #popUp div#popUpHolder.square {
     width: 60%;
   }
 }
-@media only all and (min-width: 992px) {
-  #gallery #imgDiv article {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+@media only all and (min-width: 760px) {
+  body #noteToUser {
+    width: 75vw;
+    font-size: 1.25rem;
   }
-  #popUp div#popUpHolder.portrait {
+  body #gallery #imgDiv article {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  body #popUp div#popUpHolder.portrait {
     width: 40%;
   }
-  #popUp div#popUpHolder.square {
+  body #popUp div#popUpHolder.square {
+    width: 50%;
+  }
+  body #popUp div#popUpHolder.landscape {
+    width: 70%;
+  }
+}
+@media only all and (min-width: 992px) {
+  body #gallery #imgDiv article {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  body #popUp div#popUpHolder.portrait {
+    width: 30%;
+  }
+  body #popUp div#popUpHolder.square {
+    width: 40%;
+  }
+  body #popUp div#popUpHolder.landscape {
     width: 50%;
   }
 }
 @media only all and (min-width: 1200px) {
-  #popUp div#popUpHolder {
+  body #popUp div#popUpHolder {
     width: 50%;
   }
-  #popUp div#popUpHolder button {
+  body #popUp div#popUpHolder button {
     display: flex;
     align-self: flex-end;
     margin-bottom: 1rem;
   }
-  #popUp div#popUpHolder figure {
+  body #popUp div#popUpHolder figure {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -713,14 +774,14 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     border-radius: 5px;
     overflow: hidden;
   }
-  #popUp div#popUpHolder figure div {
+  body #popUp div#popUpHolder figure div {
     margin-bottom: -20%;
     transition: all 0.75s;
   }
-  #popUp div#popUpHolder figure:hover div, #popUp div#popUpHolder figure :active div, #popUp div#popUpHolder figure:focus div {
+  body #popUp div#popUpHolder figure:hover div, body #popUp div#popUpHolder figure :active div, body #popUp div#popUpHolder figure:focus div {
     margin-bottom: 0;
   }
-  #popUp div#popUpHolder figure img {
+  body #popUp div#popUpHolder figure img {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -729,10 +790,13 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     margin: 0 auto;
     width: 100%;
   }
-  #popUp div#popUpHolder.portrait {
-    width: 30%;
+  body #popUp div#popUpHolder.portrait {
+    width: 25%;
   }
-  #popUp div#popUpHolder.square {
+  body #popUp div#popUpHolder.square {
+    width: 35%;
+  }
+  body #popUp div#popUpHolder.landscape {
     width: 40%;
   }
 }/*# sourceMappingURL=gallery.css.map */
